@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumi Broker CRM - Gestão de Leads Seguro Fiança</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b0d13;--bg2:#131628;--bg3:#1a1d35;--card:#1e2140;--purple:#8b6cf6;--purpleL:#a98ff7;--purpleD:#6e54d4;--txt:#e8eaf6;--txt2:#8b92b0;--green:#10b981;--yellow:#f59e0b;--orange:#f97316;--red:#ef4444;--border:#2a2f4a}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden}
+.wrap{max-width:1400px;margin:0 auto;padding:20px}
+.hdr{background:linear-gradient(135deg,var(--bg2),var(--bg3));border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:20px}
+.hdr-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:8px}
+.hdr h1{font-size:26px;color:var(--purpleL);font-weight:700}
+.hdr h1 span{color:var(--txt2);font-weight:400;font-size:14px;margin-left:8px}
+.ts{font-size:11px;color:var(--txt2)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:18px}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px 10px;text-align:center}
+.kpi-v{font-size:28px;font-weight:800}.kpi-l{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--txt2);margin-top:2px}
+.summ{background:linear-gradient(135deg,rgba(139,108,246,.12),rgba(139,108,246,.04));border:1px solid var(--purpleD);border-radius:8px;padding:14px 18px;font-size:13px;line-height:1.7;color:var(--txt)}
+.summ b{color:var(--purpleL)}
+.tabs{display:flex;gap:4px;margin-bottom:20px;border-bottom:1px solid var(--border);flex-wrap:wrap;padding-bottom:0}
+.tab{padding:10px 18px;background:transparent;border:none;color:var(--txt2);cursor:pointer;font-size:13px;font-weight:500;border-bottom:2px solid transparent;transition:.2s;letter-spacing:.3px}
+.tab:hover{color:var(--purpleL)}.tab.on{color:var(--purpleL);border-bottom-color:var(--purple)}
+.tab .cnt{background:var(--purple);color:#fff;padding:1px 7px;border-radius:10px;font-size:10px;font-weight:700;margin-left:5px}
+.sec{display:none}.sec.on{display:block}
+.rtitle{font-size:17px;font-weight:600;color:var(--purpleL);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.tbl{width:100%;border-collapse:collapse;background:var(--card);border-radius:8px;overflow:hidden;border:1px solid var(--border);font-size:13px}
+.tbl thead{background:linear-gradient(90deg,var(--purpleD),var(--purple))}
+.tbl th{padding:11px 12px;text-align:left;font-weight:600;color:#fff;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+.tbl td{padding:10px 12px;border-bottom:1px solid var(--border)}
+.tbl tbody tr:last-child td{border-bottom:none}
+.tbl tbody tr:hover{background:rgba(139,108,246,.08)}
+.mono{font-family:'Courier New',monospace;font-size:11px;color:var(--txt2)}
+.sc{font-weight:700;font-size:14px;text-align:center}
+.badge{display:inline-block;padding:3px 9px;border-radius:4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;min-width:65px;text-align:center}
+.b-bom{background:rgba(16,185,129,.18);color:var(--green);border:1px solid rgba(16,185,129,.4)}
+.b-reg{background:rgba(245,158,11,.18);color:var(--yellow);border:1px solid rgba(245,158,11,.4)}
+.b-bai{background:rgba(249,115,22,.18);color:var(--orange);border:1px solid rgba(249,115,22,.4)}
+.b-rui{background:rgba(239,68,68,.18);color:var(--red);border:1px solid rgba(239,68,68,.4)}
+.b-inv{background:rgba(239,68,68,.25);color:#ff6b6b;border:1px solid rgba(239,68,68,.5)}
+.b-rec{background:rgba(239,68,68,.12);color:#f87171;border:1px solid rgba(239,68,68,.3)}
+.st{display:inline-block;padding:3px 9px;border-radius:4px;font-size:10px;font-weight:600;letter-spacing:.2px}
+.st-col{background:rgba(96,165,250,.15);color:#60a5fa;border:1px solid rgba(96,165,250,.3)}
+.st-imo{background:rgba(245,158,11,.15);color:#fbbf24;border:1px solid rgba(245,158,11,.3)}
+.st-rec{background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.3)}
+.st-inv{background:rgba(239,68,68,.25);color:#ff6b6b;border:1px solid rgba(239,68,68,.5)}
+.st-nao{background:rgba(107,114,128,.15);color:#9ca3af;border:1px solid rgba(107,114,128,.3)}
+.rg{background:rgba(16,185,129,.06)}.ry{background:rgba(245,158,11,.06)}.ro{background:rgba(249,115,22,.06)}.rr{background:rgba(239,68,68,.06)}.rx{background:rgba(107,114,128,.06)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px;margin-bottom:24px}
+.crd{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;cursor:pointer;transition:.2s;position:relative}
+.crd:hover{border-color:var(--purple);box-shadow:0 4px 12px rgba(139,108,246,.15);transform:translateY(-1px)}
+.crd-h{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.crd-n{font-size:15px;font-weight:600}.crd-sub{font-size:11px;color:var(--txt2);font-family:monospace;margin-top:2px}
+.crd-sc{text-align:center;min-width:50px}.crd-sc b{font-size:22px;font-weight:800;color:var(--purpleL)}.crd-sc .stars{color:var(--yellow);font-size:11px;letter-spacing:2px}
+.crd-body{display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);font-size:12px;line-height:1.8}
+.crd.open .crd-body{display:block}
+.crd-row{display:flex;gap:6px}.crd-row .l{color:var(--txt2);min-width:100px}.crd-row .v{color:var(--txt);font-weight:500}
+.crd-note{margin-top:10px;padding:10px;background:rgba(139,108,246,.08);border-radius:6px;border-left:3px solid var(--purple);font-size:11px;line-height:1.6}
+.crd-note b{color:var(--purpleL)}
+.crd-gl{border-left:4px solid var(--green)}.crd-rl{border-left:4px solid var(--red)}.crd-xl{border-left:4px solid #4b5563}
+.stitle{font-size:15px;font-weight:600;color:var(--purpleL);margin-bottom:16px;padding-left:10px;border-left:3px solid var(--purple)}
+.coll-h{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:8px;cursor:pointer;margin-bottom:12px;transition:.2s}
+.coll-h:hover{border-color:var(--purple)}
+.coll-t{font-weight:600;font-size:13px}.coll-c{background:var(--purple);color:#fff;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700}
+.coll-b{display:none;margin-bottom:20px}.coll-b.open{display:block}
+.chv{color:var(--txt2);transition:.3s;font-size:11px}
+footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:var(--txt2);font-size:11px;margin-top:30px}
+@media(max-width:768px){.kpis{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.tbl{font-size:11px}.tbl th,.tbl td{padding:8px 6px}.tab{padding:8px 12px;font-size:12px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hdr">
+  <div class="hdr-top">
+    <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
+    <div class="ts">Atualizado: 28/02/2026 às 16:00</div>
+  </div>
+  <div class="kpis">
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">71</div><div class="kpi-l">Total Leads</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">33</div><div class="kpi-l">CPFs Compartilhados</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">19</div><div class="kpi-l">Crédito Verificado</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">7</div><div class="kpi-l">Enviados a Broker</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--red)">8</div><div class="kpi-l">Recusadas/Inválidas</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Aprovadas</div></div>
+  </div>
+  <div class="summ">
+    <b>Resumo:</b> 19 créditos verificados (13 por consulta própria + 6 pelo broker). <b>1 viável</b> (Roberto 683 — BOM). <b>2 borderline</b> (Horácio 475, Daiane 462). <b>2 CPFs inválidos</b> (Fabiana, Bruna Caroline). <b>6 recusadas pelo broker</b>. Os 3 leads prioritários estão em fase de coleta de dados do imóvel.
+  </div>
+</div>
+<div class="tabs">
+  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">19</span></button>
+  <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">3</span></button>
+  <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">8</span></button>
+  <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">8</span></button>
+</div>
+<div id="s-todos" class="sec on">
+<div class="rtitle">Ranking Completo de Crédito Verificado</div>
+<table class="tbl">
+<thead><tr><th style="width:3%">#</th><th style="width:22%">Nome</th><th style="width:13%">CPF</th><th style="width:6%">Score</th><th style="width:8%">Rating</th><th style="width:12%">Renda</th><th style="width:14%">Status</th><th style="width:10%">Verificado por</th><th style="width:12%">Viabilidade</th></tr></thead>
+<tbody>
+<tr class="rg"><td style="font-weight:700;color:var(--purpleL)">1</td><td style="font-weight:600">Roberto Jesus da Silva</td><td class="mono">739.976.929-04</td><td class="sc" style="color:var(--green)">683</td><td><span class="badge b-bom">BOM</span></td><td>R$6.000/mês</td><td><span class="st st-imo">Coletando imóvel</span></td><td>Consulta própria</td><td style="color:var(--green);font-weight:600">★ Enviar ao broker</td></tr>
+<tr class="ry"><td style="font-weight:700;color:var(--purpleL)">2</td><td style="font-weight:600">Horácio Batista Matos</td><td class="mono">012.754.096-28</td><td class="sc" style="color:var(--yellow)">475</td><td><span class="badge b-reg">REGULAR</span></td><td>R$7.500/mês</td><td><span class="st st-imo">Coletando imóvel</span></td><td>Consulta própria</td><td style="color:var(--yellow);font-weight:500">Vale tentar</td></tr>
+<tr class="ry"><td style="font-weight:700;color:var(--purpleL)">3</td><td style="font-weight:600">Daiane Ap. Alves dos Santos</td><td class="mono">081.385.799-60</td><td class="sc" style="color:var(--yellow)">462</td><td><span class="badge b-reg">REGULAR</span></td><td>R$6.000/mês</td><td><span class="st st-col">Aguardando imóvel</span></td><td>Consulta própria</td><td style="color:var(--yellow);font-weight:500">Vale tentar</td></tr>
+<tr class="ry"><td>4</td><td>Thialey Leite da Silva</td><td class="mono">053.164.979-29</td><td class="sc" style="color:var(--yellow)">402</td><td><span class="badge b-reg">REGULAR</span></td><td>R$2.001-3.000*</td><td><span class="st st-nao">Não enviar</span></td><td>Consulta própria</td><td style="color:var(--txt2)">Borderline</td></tr>
+<tr class="ro"><td>5</td><td>Marcello Rodrigues Lopes</td><td class="mono">266.803.538-40</td><td class="sc" style="color:var(--orange)">389</td><td><span class="badge b-bai">BAIXO</span></td><td>R$2.001-3.000*</td><td><span class="st st-nao">Não enviar</span></td><td>Consulta própria</td><td style="color:var(--txt2)">Arriscado</td></tr>
+<tr class="ro"><td>6</td><td>Adriana de Paula Coimbra</td><td class="mono">—</td><td class="sc" style="color:var(--orange)">350</td><td><span class="badge b-bai">BAIXO</span></td><td>—</td><td><span class="st st-nao">Não enviar</span></td><td>Serasa</td><td style="color:var(--txt2)">Improvável</td></tr>
+<tr class="ro"><td>7</td><td>Andrea da Conceição F. da Cruz</td><td class="mono">289.441.048-40</td><td class="sc" style="color:var(--orange)">350</td><td><span class="badge b-bai">BAIXO</span></td><td>—</td><td><span class="st st-nao">Não enviar</span></td><td>Serasa</td><td style="color:var(--txt2)">Improvável</td></tr>
+<tr class="ro"><td>8</td><td>Rogerio Fernando Bittar Perez</td><td class="mono">—</td><td class="sc" style="color:var(--orange)">350</td><td><span class="badge b-bai">BAIXO</span></td><td>—</td><td><span class="st st-nao">Não enviar</span></td><td>Serasa</td><td style="color:var(--txt2)">Improvável</td></tr>
+<tr class="ro"><td>9</td><td>Jéssica Cristina Jordão</td><td class="mono">420.648.618-23</td><td class="sc" style="color:var(--orange)">343</td><td><span class="badge b-bai">BAIXO</span></td><td>R$1.900</td><td><span class="st st-rec">Recusada</span></td><td>Serasa + Broker</td><td style="color:var(--red)">Recusada Darqs</td></tr>
+<tr class="rr"><td>10</td><td>Bruna Ap. dos Santos Lopes</td><td class="mono">387.102.988-27</td><td class="sc" style="color:var(--red)">272</td><td><span class="badge b-bai">BAIXO</span></td><td>—</td><td><span class="st st-nao">Não enviar</span></td><td>Consulta própria</td><td style="color:var(--txt2)">Muito improvável</td></tr>
+<tr class="rr"><td>11</td><td>Maria Carolina Madazio</td><td class="mono">300.620.428-07</td><td class="sc" style="color:var(--red)">271</td><td><span class="badge b-bai">BAIXO</span></td><td>R$1.401-2.000*</td><td><span class="st st-nao">Não enviar</span></td><td>Consulta própria</td><td style="color:var(--txt2)">Muito improvável</td></tr>
+<tr class="rr"><td>12</td><td>José Martinez Ramos</td><td class="mono">905.312.138-20</td><td class="sc" style="color:var(--red)">232</td><td><span class="badge b-bai">BAIXO</span></td><td>R$1.401-2.000*</td><td><span class="st st-nao">Não enviar</span></td><td>Consulta própria</td><td style="color:var(--txt2)">Muito improvável</td></tr>
+<tr class="rr"><td>13</td><td>Nicola Carone Dias</td><td class="mono">132.071.288-66</td><td class="sc" style="color:var(--red)">194</td><td><span class="badge b-rui">RUIM</span></td><td>R$1.401-2.000*</td><td><span class="st st-nao">Não enviar</span></td><td>Consulta própria</td><td style="color:var(--red)">Sem chance</td></tr>
+<tr class="rx"><td>—</td><td>Kátia Aparecida da Silva</td><td class="mono">133.776.378-00</td><td class="sc" style="color:var(--txt2)">—</td><td><span class="badge b-rec">RECUSADA</span></td><td>R$5.500</td><td><span class="st st-rec">Recusada</span></td><td>Broker (Darqs)</td><td style="color:var(--red)">Apontamentos CPF</td></tr>
+<tr class="rx"><td>—</td><td>Izabel Ap. de Carvalho</td><td class="mono">031.720.268-50</td><td class="sc" style="color:var(--txt2)">—</td><td><span class="badge b-rec">RECUSADA</span></td><td>R$15.000</td><td><span class="st st-rec">Recusada</span></td><td>Broker (Ittu+Darqs)</td><td style="color:var(--red)">Apontamentos CPF</td></tr>
+<tr class="rx"><td>—</td><td>Vando Rocha da Silva</td><td class="mono">103.792.557-23</td><td class="sc" style="color:var(--txt2)">—</td><td><span class="badge b-rec">RECUSADA</span></td><td>R$4.000</td><td><span class="st st-rec">Recusada</span></td><td>Broker (Ittu+Darqs)</td><td style="color:var(--red)">Apontamentos CPF</td></tr>
+<tr class="rx"><td>—</td><td>Josemery Margarida Déa</td><td class="mono">865.176.519-34</td><td class="sc" style="color:var(--txt2)">—</td><td><span class="badge b-rec">RECUSADA</span></td><td>R$4.159</td><td><span class="st st-rec">Recusada</span></td><td>Broker (Ittu+Darqs)</td><td style="color:var(--red)">Apontamentos CPF</td></tr>
+<tr class="rx"><td>—</td><td>Paulo C. Gonçalves de Santana</td><td class="mono">820.233.791-72</td><td class="sc" style="color:var(--txt2)">—</td><td><span class="badge b-rec">RECUSADA</span></td><td>R$5.500</td><td><span class="st st-rec">Recusada</span></td><td>Broker (Darqs)</td><td style="color:var(--red)">Apontamentos CPF</td></tr>
+<tr style="background:rgba(239,68,68,.1)"><td>—</td><td>Fabiana Pereira</td><td class="mono" style="color:#f87171;text-decoration:line-through">032.736.629-07</td><td class="sc" style="color:var(--txt2)">—</td><td><span class="badge b-inv">INVÁLIDO</span></td><td>R$5.000</td><td><span class="st st-inv">CPF Inválido</span></td><td>—</td><td style="color:var(--red)">Descartada</td></tr>
+<tr style="background:rgba(239,68,68,.1)"><td>—</td><td>Bruna Caroline S. Cordeiro</td><td class="mono" style="color:#f87171;text-decoration:line-through">445.337.188-00</td><td class="sc" style="color:var(--txt2)">—</td><td><span class="badge b-inv">INVÁLIDO</span></td><td>—</td><td><span class="st st-inv">CPF Inválido</span></td><td>—</td><td style="color:var(--red)">Descartada</td></tr>
+</tbody></table>
+<p style="font-size:10px;color:var(--txt2);margin-top:8px">* Renda presumida pela consulta de crédito (não declarada pelo lead)</p>
+</div>
+<div id="s-acao" class="sec">
+<div class="stitle">Leads Prioritários — Coleta de Dados Pendente</div>
+<div class="cards">
+<div class="crd crd-gl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Roberto Jesus da Silva</div><div class="crd-sub">CPF 739.976.929-04</div></div><div class="crd-sc"><b style="color:var(--green)">683</b><div class="stars">★★★</div></div></div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px"><span class="badge b-bom">BOM</span><span class="st st-imo">Coletando dados do imóvel</span></div><div class="crd-body"><div class="crd-row"><span class="l">Nascimento:</span><span class="v">13/12/1969</span></div><div class="crd-row"><span class="l">Estado civil:</span><span class="v">Divorciado</span></div><div class="crd-row"><span class="l">Profissão:</span><span class="v">Micro empreendedor</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.000/mês</span></div><div class="crd-row"><span class="l">Email:</span><span class="v">vih345@hotmail.com</span></div><div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 43 9161-2598</span></div><div class="crd-row"><span class="l">Tipo imóvel:</span><span class="v">Apartamento ✓</span></div><div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.100/mês ✓ (ratio 18% — excelente)</span></div><div style="margin-top:10px;padding:8px 10px;background:rgba(239,68,68,.08);border-radius:6px;border:1px solid rgba(239,68,68,.2);font-size:11px;color:#f87171"><b>Falta:</b> Endereço completo · CEP · Condomínio · IPTU · Período contrato · Coberturas</div><div class="crd-note"><b>Próximo passo:</b> Mandar mensagem pedindo dados do imóvel. Último contato: 27/02 (ativo). Assim que completar, enviar imediatamente para Darqs.</div></div></div>
+<div class="crd crd-gl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Horácio Batista Matos</div><div class="crd-sub">CPF 012.754.096-28</div></div><div class="crd-sc"><b style="color:var(--yellow)">475</b><div class="stars">★★</div></div></div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px"><span class="badge b-reg">REGULAR</span><span class="st st-imo">Coletando dados do imóvel</span></div><div class="crd-body"><div class="crd-row"><span class="l">Nascimento:</span><span class="v">25/04/1981</span></div><div class="crd-row"><span class="l">Estado civil:</span><span class="v">Casado</span></div><div class="crd-row"><span class="l">Profissão:</span><span class="v">Contador</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$7.500/mês</span></div><div class="crd-row"><span class="l">Email:</span><span class="v">horacion7@gmail.com</span></div><div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 31 9445-1937</span></div><div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$2.500/mês (ratio 33% — bom)</span></div><div style="margin-top:10px;padding:8px 10px;background:rgba(239,68,68,.08);border-radius:6px;border:1px solid rgba(239,68,68,.2);font-size:11px;color:#f87171"><b>Falta:</b> Endereço completo · CEP · Tipo imóvel · Condomínio · IPTU · Período contrato · Coberturas</div><div class="crd-note"><b>Próximo passo:</b> Follow-up para dados do imóvel. Bot mandou 2 follow-ups (26-27/02) sem resposta. Score borderline mas perfil forte (contador, R$7,5k, casado).</div></div></div>
+<div class="crd crd-gl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Daiane Aparecida Alves dos Santos</div><div class="crd-sub">CPF 081.385.799-60</div></div><div class="crd-sc"><b style="color:var(--yellow)">462</b><div class="stars">★★</div></div></div><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px"><span class="badge b-reg">REGULAR</span><span class="st st-col">Aguardando escolha do imóvel</span></div><div class="crd-body"><div class="crd-row"><span class="l">Nascimento:</span><span class="v">24/10/1991</span></div><div class="crd-row"><span class="l">Estado civil:</span><span class="v">Solteira</span></div><div class="crd-row"><span class="l">Profissão:</span><span class="v">Terapeuta</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.000/mês</span></div><div class="crd-row"><span class="l">Email:</span><span class="v">casadabeleza2006@gmail.com</span></div><div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 47 9780-7930</span></div><div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.500/mês (ratio 25% — bom)</span></div><div style="margin-top:10px;padding:8px 10px;background:rgba(239,68,68,.08);border-radius:6px;border:1px solid rgba(239,68,68,.2);font-size:11px;color:#f87171"><b>Falta:</b> TUDO do imóvel — ainda não escolheu apartamento. Bot informou que pode aprovar até R$1.800/mês.</div><div class="crd-note"><b>Próximo passo:</b> Aguardar ela escolher o imóvel. Último contato 27/02 (ativa). Conversa mais engajada dos 3 (21 mensagens).</div></div></div>
+</div></div>
+<div id="s-enviados" class="sec">
+<div class="stitle">Leads Enviados a Brokers</div>
+<div style="margin-bottom:20px"><div class="stitle" style="color:var(--red);border-left-color:var(--red)">CPFs Inválidos (2)</div>
+<div class="cards">
+<div class="crd crd-rl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Fabiana Pereira</div><div class="crd-sub" style="color:#f87171;text-decoration:line-through">CPF 032.736.629-07</div></div><span class="badge b-inv">CPF INVÁLIDO</span></div><div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Manicure</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$5.000</span></div><div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$2.200</span></div><div class="crd-note" style="border-left-color:var(--red)"><b>Situação:</b> Enviada para Darqs em 27/02, mas CPF é inválido. Lead descartada.</div></div></div>
+<div class="crd crd-rl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Bruna Caroline Santos Cordeiro</div><div class="crd-sub" style="color:#f87171;text-decoration:line-through">CPF 445.337.188-00</div></div><span class="badge b-inv">CPF INVÁLIDO</span></div><div class="crd-body"><div class="crd-note" style="border-left-color:var(--red)"><b>Situação:</b> Nunca enviada a broker. CPF inválido. Descartada.</div></div></div>
+</div></div>
+<div class="coll-h" onclick="var c=this.nextElementSibling;c.classList.toggle('open');this.querySelector('.chv').style.transform=c.classList.contains('open')?'rotate(180deg)':'rotate(0)'"><span class="coll-t">Recusadas pelo Broker</span><div style="display:flex;align-items:center;gap:8px"><span class="coll-c">6</span><span class="chv">▼</span></div></div>
+<div class="coll-b"><div class="cards">
+<div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Kátia Aparecida da Silva</div><div class="crd-sub">CPF 133.776.378-00</div></div><span class="badge b-rec">RECUSADA</span></div><div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Sup. merchandising · R$5.500</span></div><div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ (apontamentos CPF) · Ittu pendente</span></div><div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.350 + R$350 condo + R$249 IPTU</span></div></div></div>
+<div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Jéssica Cristina Jordão</div><div class="crd-sub">CPF 420.648.618-23 · Score 343</div></div><span class="badge b-rec">RECUSADA</span></div><div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Balconista · R$1.900 (+R$1.600 composição)</span></div><div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ · Ittu pendente</span></div><div class="crd-row"><span class="l">Score Serasa:</span><span class="v">343 — 1 dívida Magazine Luiza R$1.205</span></div></div></div>
+<div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Izabel Aparecida de Carvalho</div><div class="crd-sub">CPF 031.720.268-50</div></div><span class="badge b-rec">RECUSADA</span></div><div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Corretora · R$15.000</span></div><div class="crd-row"><span class="l">Broker:</span><span class="v">Ittu ✗ (Pottencial + Porto) · Darqs ✗ · Arcoseg pendente</span></div></div></div>
+<div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Vando Rocha da Silva</div><div class="crd-sub">CPF 103.792.557-23</div></div><span class="badge b-rec">RECUSADA</span></div><div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Professor · R$4.000</span></div><div class="crd-row"><span class="l">Broker:</span><span class="v">Ittu ✗ · Darqs ✗ · Arcoseg pendente</span></div></div></div>
+<div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Josemery Margarida Déa</div><div class="crd-sub">CPF 865.176.519-34</div></div><span class="badge b-rec">RECUSADA</span></div><div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Professora · R$4.159</span></div><div class="crd-row"><span class="l">Broker:</span><span class="v">Ittu ✗ · Darqs ✗ · Arcoseg pendente</span></div></div></div>
+<div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Paulo Cesar Gonçalves de Santana</div><div class="crd-sub">CPF 820.233.791-72</div></div><span class="badge b-rec">RECUSADA</span></div><div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Vendedor externo · R$5.500</span></div><div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ · Ittu aguardando CEP</span></div></div></div>
+</div></div></div>
+<div id="s-baixo" class="sec">
+<div class="stitle">Score Baixo — Não Recomendado Enviar a Broker</div>
+<div class="coll-h" onclick="var c=this.nextElementSibling;c.classList.toggle('open');this.querySelector('.chv').style.transform=c.classList.contains('open')?'rotate(180deg)':'rotate(0)'"><span class="coll-t">Expandir lista</span><div style="display:flex;align-items:center;gap:8px"><span class="coll-c">8</span><span class="chv">▼</span></div></div>
+<div class="coll-b"><div class="cards">
+<div class="crd crd-xl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Thialey Leite da Silva</div><div class="crd-sub">CPF 053.164.979-29</div></div><div class="crd-sc"><b style="color:var(--yellow)">402</b></div></div><span class="badge b-reg" style="margin-top:4px">REGULAR</span><div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$2.001-3.000</span></div><div class="crd-note">Borderline. Poderia tentar se necessário, mas provavelmente será recusado.</div></div></div>
+<div class="crd crd-xl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Marcello Rodrigues Lopes</div><div class="crd-sub">CPF 266.803.538-40</div></div><div class="crd-sc"><b style="color:var(--orange)">389</b></div></div><span class="badge b-bai" style="margin-top:4px">BAIXO</span><div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$2.001-3.000</span></div><div class="crd-note">Dados completos no bot, mas score insuficiente para seguro fiança.</div></div></div>
+<div class="crd crd-xl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Adriana de Paula Coimbra</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div><span class="badge b-bai" style="margin-top:4px">BAIXO</span><div class="crd-body"><div class="crd-note">Serasa: 5 dívidas (R$6.603 total), 2 protestos.</div></div></div>
+<div class="crd crd-xl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Andrea da Conceição F. da Cruz</div><div class="crd-sub">CPF 289.441.048-40</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div><span class="badge b-bai" style="margin-top:4px">BAIXO</span><div class="crd-body"><div class="crd-note">Serasa: 8 dívidas, 1 ação judicial (execução R$32k), 15 consultas.</div></div></div>
+<div class="crd crd-xl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Rogerio Fernando Bittar Perez</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div><span class="badge b-bai" style="margin-top:4px">BAIXO</span><div class="crd-body"><div class="crd-note">Serasa: 2 dívidas, 12 protestos (~R$19k).</div></div></div>
+<div class="crd crd-xl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Bruna Aparecida dos Santos Lopes</div><div class="crd-sub">CPF 387.102.988-27</div></div><div class="crd-sc"><b style="color:var(--red)">272</b></div></div><span class="badge b-bai" style="margin-top:4px">BAIXO</span><div class="crd-body"><div class="crd-row"><span class="l">Nascimento:</span><span class="v">06/05/1989</span></div><div class="crd-note">Risco alto de inadimplência. Não enviar.</div></div></div>
+<div class="crd crd-xl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">Maria Carolina Madazio</div><div class="crd-sub">CPF 300.620.428-07</div></div><div class="crd-sc"><b style="color:var(--red)">271</b></div></div><span class="badge b-bai" style="margin-top:4px">BAIXO</span><div class="crd-body"><div class="crd-row"><span class="l">Nascimento:</span><span class="v">03/10/1981</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div></div></div>
+<div class="crd crd-xl" onclick="this.classList.toggle('open')"><div class="crd-h"><div><div class="crd-n">José Martinez Ramos</div><div class="crd-sub">CPF 905.312.138-20</div></div><div class="crd-sc"><b style="color:var(--red)">232</b></div></div><span class="badge b-bai" style="margin-top:4px">BAIXO</span><div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-note">Dados completos no bot, mas score muito baixo (risco alto).</div></div></div>
+</div></div>
+<div style="margin-top:16px"><div class="crd crd-xl" style="cursor:default;opacity:.7"><div class="crd-h"><div><div class="crd-n">Nicola Carone Dias</div><div class="crd-sub">CPF 132.071.288-66</div></div><div class="crd-sc"><b style="color:var(--red)">194</b></div></div><span class="badge b-rui" style="margin-top:4px">RUIM</span><div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (194). Nascimento: 08/06/1975. Renda presumida R$1.401-2.000. Sem chance de aprovação.</div></div></div>
+</div>
+<footer><p>Lumi Broker CRM — 28/02/2026 (atualizado 16:00)</p><p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p></footer>
+<script>function sw(id,el){document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));document.getElementById('s-'+id).classList.add('on');el.classList.add('on')}</script>
+</div></body></html>
