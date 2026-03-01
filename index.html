@@ -87,25 +87,26 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 28/02/2026 às 23:59</div>
+    <div class="ts">Atualizado: 28/02/2026 — v2 (correções)</div>
   </div>
   <div class="kpis">
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">108</div><div class="kpi-l">Total Leads</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">33</div><div class="kpi-l">CPFs Compartilhados</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">30</div><div class="kpi-l">Crédito Verificado</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">7</div><div class="kpi-l">Enviados a Broker</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--red)">8</div><div class="kpi-l">Recusadas/Inválidas</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">90</div><div class="kpi-l">Total Leads</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">26</div><div class="kpi-l">CPFs Compartilhados</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">23</div><div class="kpi-l">Crédito Verificado</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--orange)">2</div><div class="kpi-l">CPF Errado</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">6</div><div class="kpi-l">Enviados a Broker</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--red)">6</div><div class="kpi-l">Recusadas Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Aprovadas</div></div>
   </div>
   <div class="summ">
-    <b>Resumo:</b> 30 créditos verificados (24 por consulta própria + 6 pelo broker). <b>1 viável</b> (Roberto 683 — BOM). <b>4 regulares</b> (Horácio 475, Daiane 462, Thaiara 462, Thialey 402). <b>2 CPFs inválidos</b> (Fabiana, Bruna Caroline). <b>6 recusadas pelo broker</b>. <b>12 novos créditos verificados</b> nesta atualização (Claudio, Fabricia, Fernanda, Gabriela, Grazielle, Keila, Luan, Marta, Misaelly, Poliana, Rogerio Costa, Thaiara). Os 3 leads prioritários continuam em fase de coleta de dados do imóvel.
+    <b>Resumo:</b> 23 créditos verificados por consulta/Serasa, 6 enviados a broker (todos recusados). <b>2 CPFs errados:</b> Fabiana e Bruna Aparecida — precisam informar CPF correto. Rafael sem CPF disponível. <b>1 viável</b> (Roberto 683 — BOM). <b>4 regulares</b> (Horácio 475, Daiane 462, Thaiara 462, Thialey 402). Correção: "Consulta Rafael.pdf" contém dados da Thaiara (duplicado). Bruna Caroline (387.102.988-27, score 272) corrigida — antes listada como CPF inválido.
   </div>
 </div>
 <div class="tabs">
-  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">30</span></button>
-  <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">3</span></button>
-  <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">8</span></button>
-  <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">19</span></button>
+  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">29</span></button>
+  <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">5</span></button>
+  <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">7</span></button>
+  <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">18</span></button>
 </div>
 <!-- ============ TAB 1: RANKING COMPLETO ============ -->
 <div id="s-todos" class="sec on">
@@ -290,7 +291,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </tr>
 <tr class="rr">
   <td>16</td>
-  <td>Bruna Ap. dos Santos Lopes</td>
+  <td>Bruna Caroline Santos Cordeiro</td>
   <td class="mono">387.102.988-27</td>
   <td class="sc" style="color:var(--red)">272</td>
   <td><span class="badge b-bai">BAIXO</span></td>
@@ -466,24 +467,64 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td>—</td>
   <td style="color:var(--red)">Descartada</td>
 </tr>
-<tr style="background:rgba(239,68,68,.1)">
-  <td>—</td>
-  <td>Bruna Caroline S. Cordeiro</td>
-  <td class="mono" style="color:#f87171;text-decoration:line-through">445.337.188-00</td>
-  <td class="sc" style="color:var(--txt2)">—</td>
-  <td><span class="badge b-inv">INVÁLIDO</span></td>
-  <td>—</td>
-  <td><span class="st st-inv">CPF Inválido</span></td>
-  <td>—</td>
-  <td style="color:var(--red)">Descartada</td>
-</tr>
 </tbody>
 </table>
 <p style="font-size:10px;color:var(--txt2);margin-top:8px">* Renda presumida pela consulta de crédito (não declarada pelo lead)</p>
 </div>
 <!-- ============ TAB 2: AÇÃO NECESSÁRIA ============ -->
 <div id="s-acao" class="sec">
-<div class="stitle">Leads Prioritários — Coleta de Dados Pendente</div>
+<div class="stitle" style="color:var(--orange);border-left-color:var(--orange)">CPFs Incorretos — Precisam Pedir CPF Correto</div>
+<div class="cards">
+<!-- FABIANA -->
+<div class="crd" style="border-left:4px solid var(--orange)" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div>
+      <div class="crd-n">Fabiana Pereira</div>
+      <div class="crd-sub" style="color:#f87171;text-decoration:line-through">CPF 032.736.629-07 (inválido)</div>
+    </div>
+    <span class="badge" style="background:rgba(249,115,22,.18);color:var(--orange);border:1px solid rgba(249,115,22,.4)">CPF ERRADO</span>
+  </div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
+    <span class="st st-imo">aguardando_cotacao</span>
+  </div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 41 9606-1530</span></div>
+    <div class="crd-row"><span class="l">WhatsApp:</span><span class="v">fabyfarias</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Manicure</span></div>
+    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$5.000</span></div>
+    <div class="crd-row"><span class="l">Email:</span><span class="v">fabifarias30@gmail.com</span></div>
+    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$2.200</span></div>
+    <div class="crd-row"><span class="l">CEP:</span><span class="v">80230-010</span></div>
+    <div class="crd-note" style="border-left-color:var(--orange)">
+      <b>Ação:</b> Mandar mensagem pedindo CPF correto. Dados do imóvel quase completos — assim que tiver CPF válido, rodar consulta de crédito e enviar ao broker.
+    </div>
+  </div>
+</div>
+<!-- BRUNA -->
+<div class="crd" style="border-left:4px solid var(--orange)" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div>
+      <div class="crd-n">Bruna Aparecida dos Santos Lopes</div>
+      <div class="crd-sub" style="color:#f87171">CPF informado está incorreto</div>
+    </div>
+    <span class="badge" style="background:rgba(249,115,22,.18);color:var(--orange);border:1px solid rgba(249,115,22,.4)">CPF ERRADO</span>
+  </div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
+    <span class="st st-col">coleta_dados</span>
+  </div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 11 9956-52464</span></div>
+    <div class="crd-row"><span class="l">WhatsApp:</span><span class="v">🙂</span></div>
+    <div class="crd-row"><span class="l">Nascimento:</span><span class="v">06/05/1989</span></div>
+    <div class="crd-row"><span class="l">Email:</span><span class="v">Bruesther2013@gmail.com</span></div>
+    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">~R$2.300</span></div>
+    <div class="crd-note" style="border-left-color:var(--orange)">
+      <b>Nota:</b> Pessoa diferente de Bruna Caroline (CPF 387.102.988-27, score 272). <b>Ação:</b> Pedir CPF correto e rodar consulta de crédito.
+    </div>
+  </div>
+</div>
+</div>
+<div class="stitle" style="margin-top:24px">Leads Prioritários — Coleta de Dados Pendente</div>
 <div class="cards">
 <!-- ROBERTO -->
 <div class="crd crd-gl" onclick="this.classList.toggle('open')">
@@ -580,7 +621,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="stitle">Leads Enviados a Brokers</div>
 <!-- CPFs Inválidos -->
 <div style="margin-bottom:20px">
-<div class="stitle" style="color:var(--red);border-left-color:var(--red)">CPFs Inválidos (2)</div>
+<div class="stitle" style="color:var(--red);border-left-color:var(--red)">CPF Inválido (1)</div>
 <div class="cards">
 <div class="crd crd-rl" onclick="this.classList.toggle('open')">
   <div class="crd-h">
@@ -591,16 +632,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="crd-row"><span class="l">Profissão:</span><span class="v">Manicure</span></div>
     <div class="crd-row"><span class="l">Renda:</span><span class="v">R$5.000</span></div>
     <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$2.200</span></div>
-    <div class="crd-note" style="border-left-color:var(--red)"><b>Situação:</b> Enviada para Darqs em 27/02, mas CPF é inválido. Lead descartada.</div>
-  </div>
-</div>
-<div class="crd crd-rl" onclick="this.classList.toggle('open')">
-  <div class="crd-h">
-    <div><div class="crd-n">Bruna Caroline Santos Cordeiro</div><div class="crd-sub" style="color:#f87171;text-decoration:line-through">CPF 445.337.188-00</div></div>
-    <span class="badge b-inv">CPF INVÁLIDO</span>
-  </div>
-  <div class="crd-body">
-    <div class="crd-note" style="border-left-color:var(--red)"><b>Situação:</b> Nunca enviada a broker. CPF inválido. Descartada.</div>
+    <div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 41 9606-1530</span></div>
+    <div class="crd-note" style="border-left-color:var(--red)"><b>Situação:</b> CPF informado (032.736.629-07) falha na validação. Dados do imóvel quase completos (aguardando_cotacao). <b>Ação:</b> Pedir CPF correto para rodar consulta de crédito.</div>
   </div>
 </div>
 </div>
@@ -664,7 +697,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="stitle">Score Baixo — Não Recomendado Enviar a Broker</div>
 <div class="coll-h" onclick="var c=this.nextElementSibling;c.classList.toggle('open');this.querySelector('.chv').style.transform=c.classList.contains('open')?'rotate(180deg)':'rotate(0)'">
   <span class="coll-t">Expandir lista</span>
-  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">19</span><span class="chv">▼</span></div>
+  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">18</span><span class="chv">▼</span></div>
 </div>
 <div class="coll-b">
 <div class="cards">
@@ -719,9 +752,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <div class="crd-body"><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Bruna Aparecida dos Santos Lopes</div><div class="crd-sub">CPF 387.102.988-27</div></div><div class="crd-sc"><b style="color:var(--red)">272</b></div></div>
+  <div class="crd-h"><div><div class="crd-n">Bruna Caroline Santos Cordeiro</div><div class="crd-sub">CPF 387.102.988-27</div></div><div class="crd-sc"><b style="color:var(--red)">272</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Nascimento:</span><span class="v">06/05/1989</span></div><div class="crd-note">Risco alto de inadimplência. Não enviar.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Nascimento:</span><span class="v">WhatsApp: Áurea</span></div><div class="crd-note">Risco alto de inadimplência. Não enviar.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Maria Carolina Madazio</div><div class="crd-sub">CPF 300.620.428-07</div></div><div class="crd-sc"><b style="color:var(--red)">271</b></div></div>
@@ -775,7 +808,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </div>
 </div>
 <footer>
-  <p>Lumi Broker CRM — 28/02/2026 (atualizado 16:00)</p>
+  <p>Lumi Broker CRM — 28/02/2026 v2 (correções de dados)</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
