@@ -88,10 +88,10 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 01/03/2026 — v4</div>
+    <div class="ts">Atualizado: 01/03/2026 — v5</div>
   </div>
   <div class="kpis">
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">118</div><div class="kpi-l">Total Leads</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">120</div><div class="kpi-l">Total Leads</div></div>
     <div class="kpi"><div class="kpi-v" style="color:#60a5fa">35</div><div class="kpi-l">CPFs Compartilhados</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">28</div><div class="kpi-l">Crédito Verificado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">0</div><div class="kpi-l">CPF Sem Score</div></div>
@@ -101,7 +101,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Ready to Send</div></div>
   </div>
   <div class="summ">
-    <b>Resumo v4:</b> 118 leads totais (+28 novos). 28 créditos verificados. <b>0 Ready to send</b> — nenhum lead tem dados pessoais + dados do imóvel completos + score bom. <b>Melhor candidato:</b> Roberto (683 BOM) — falta dados do imóvel. <b>5 REGULAR</b> (Michel 495, Horácio 475, Daiane 462, Thaiara 462, Thialey 402). <b>Dados atualizados:</b> Marcello (renda R$4.400, endereço), Maria Lucia (renda R$1.800, endereço, aluguel), Nicolas (renda R$10k), Maria Carolina (renda R$5k), Keila (renda R$1.860), Bruna Aparecida (renda R$6k), Fernanda (renda R$2.500), Thaiara (renda R$10k). <b>Ready = dados pessoais + dados imóvel completos + score ≥ 400.</b>
+    <b>Resumo v5:</b> 120 leads totais (+2 desde v4). 28 créditos verificados. <b>3 novos CPFs</b> compartilhados (Wanderson, Ana Paula, Felipe) — aguardando consulta de crédito. <b>0 Ready to send</b> — nenhum lead tem dados pessoais + dados do imóvel completos + score bom. <b>Melhor candidato:</b> Roberto (683 BOM) — falta dados do imóvel. <b>5 REGULAR</b> (Michel 495, Horácio 475, Daiane 462, Thaiara 462, Thialey 402). <b>v5 fix:</b> Rogerio Costa (renda R$6k), Andrea (renda R$6k), Misaelly (renda R$2.200). <b>Ready = dados pessoais + dados imóvel completos + score ≥ 400.</b>
   </div>
 </div>
 <div class="tabs">
@@ -231,8 +231,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="mono">289.441.048-40</td>
   <td class="sc" style="color:var(--orange)">350</td>
   <td><span class="badge b-bai">BAIXO</span></td>
-  <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Renda</td>
+  <td>R$6.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Dados imóvel</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <!-- 11. Rogerio Bittar 350 BAIXO -->
@@ -363,8 +363,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="mono">985.424.866-68</td>
   <td class="sc" style="color:var(--red)">246</td>
   <td><span class="badge b-bai">BAIXO</span></td>
-  <td>R$1.401-2.000*</td>
-  <td style="color:var(--red);font-size:11px">Falta: End. + Renda</td>
+  <td>R$6.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Endereço</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <!-- 23. José Martinez 232 BAIXO -->
@@ -418,8 +418,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="mono">398.106.808-48</td>
   <td class="sc" style="color:var(--red)">138</td>
   <td><span class="badge b-rui">RUIM</span></td>
-  <td>R$1.401-2.000*</td>
-  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
+  <td>R$2.200</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Dados imóvel</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <!-- 28. Luan 101 RUIM -->
@@ -792,7 +792,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Andrea da Conceição F. da Cruz</div><div class="crd-sub">CPF 289.441.048-40</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Renda</span></div><div class="crd-note">Serasa: 8 dívidas, 1 ação judicial (execução R$32k), 15 consultas.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Psicóloga</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.000</span></div><div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.500</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço, CEP, tipo, condo, IPTU, prazo, cob.</span></div><div class="crd-note">Serasa: 8 dívidas, 1 ação judicial (execução R$32k), 15 consultas. Renda boa mas score e dívidas impedem envio.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Rogerio Fernando Bittar Perez</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div>
@@ -847,7 +847,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Rogerio Jose Costa</div><div class="crd-sub">CPF 985.424.866-68</div></div><div class="crd-sc"><b style="color:var(--red)">246</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--red)">Endereço + Renda</span></div><div class="crd-note">Score muito baixo. Não enviar a broker.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Motorista de aplicativo</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.000</span></div><div class="crd-row"><span class="l">Imóvel:</span><span class="v">Casa · Aluguel R$1.200</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço, CEP, condo, IPTU, prazo, cob.</span></div><div class="crd-note">Renda boa mas score 246 muito baixo. Não enviar.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">José Martinez Ramos</div><div class="crd-sub">CPF 905.312.138-20</div></div><div class="crd-sc"><b style="color:var(--red)">232</b></div></div>
@@ -877,7 +877,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="crd crd-xl" style="cursor:default;opacity:.7">
   <div class="crd-h"><div><div class="crd-n">Misaelly Karolaine da Silva Santos</div><div class="crd-sub">CPF 398.106.808-48</div></div><div class="crd-sc"><b style="color:var(--red)">138</b></div></div>
   <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (138). Renda presumida R$1.401-2.000. <span style="color:var(--red)">Sem dados no sistema.</span></div>
+  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (138). Op. de loja, solteira, nasc. 22/06/1994. Renda R$2.200. Casa residencial, aluguel R$900. <span style="color:var(--orange)">Falta: Endereço, CEP, condo, IPTU, prazo, cob.</span></div>
 </div>
 <div class="crd crd-xl" style="cursor:default;opacity:.7">
   <div class="crd-h"><div><div class="crd-n">Luan Peques</div><div class="crd-sub">CPF 143.001.877-11</div></div><div class="crd-sc"><b style="color:var(--red)">101</b></div></div>
@@ -888,7 +888,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </div>
 </div>
 <footer>
-  <p>Lumi Broker CRM — 01/03/2026 v4 (atualização dados spreadsheet: 118 leads, rendas e endereços atualizados)</p>
+  <p>Lumi Broker CRM — 01/03/2026 v5 (3 novos CPFs, fix dados Andrea/Rogerio/Misaelly, 120 leads)</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
