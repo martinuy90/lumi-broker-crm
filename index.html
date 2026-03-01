@@ -55,6 +55,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .st-rec{background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.3)}
 .st-inv{background:rgba(239,68,68,.25);color:#ff6b6b;border:1px solid rgba(239,68,68,.5)}
 .st-nao{background:rgba(107,114,128,.15);color:#9ca3af;border:1px solid rgba(107,114,128,.3)}
+.st-rdy{background:rgba(16,185,129,.25);color:#10b981;border:1px solid rgba(16,185,129,.5);font-weight:700}
 /* Row tints */
 .rg{background:rgba(16,185,129,.06)}.ry{background:rgba(245,158,11,.06)}.ro{background:rgba(249,115,22,.06)}.rr{background:rgba(239,68,68,.06)}.rx{background:rgba(107,114,128,.06)}
 /* Cards */
@@ -87,26 +88,26 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 28/02/2026 — v2 (correções)</div>
+    <div class="ts">Atualizado: 28/02/2026 — v3 (+ Falta / Ready)</div>
   </div>
   <div class="kpis">
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">90</div><div class="kpi-l">Total Leads</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">26</div><div class="kpi-l">CPFs Compartilhados</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">23</div><div class="kpi-l">Crédito Verificado</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">35</div><div class="kpi-l">CPFs Compartilhados</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">28</div><div class="kpi-l">Crédito Verificado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--orange)">2</div><div class="kpi-l">CPF Errado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">6</div><div class="kpi-l">Enviados a Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--red)">6</div><div class="kpi-l">Recusadas Broker</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Aprovadas</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--green)">1</div><div class="kpi-l">Ready to Send</div></div>
   </div>
   <div class="summ">
-    <b>Resumo:</b> 23 créditos verificados por consulta/Serasa, 6 enviados a broker (todos recusados). <b>2 CPFs errados:</b> Fabiana e Bruna Aparecida — precisam informar CPF correto. Rafael sem CPF disponível. <b>1 viável</b> (Roberto 683 — BOM). <b>4 regulares</b> (Horácio 475, Daiane 462, Thaiara 462, Thialey 402). Correção: "Consulta Rafael.pdf" contém dados da Thaiara (duplicado). Bruna Caroline (387.102.988-27, score 272) corrigida — antes listada como CPF inválido.
+    <b>Resumo:</b> 28 créditos verificados (24 consultas próprias + 3 Serasa + 1 Serasa+Broker). <b>1 Ready to send:</b> Roberto (683 BOM, dados completos). <b>5 REGULAR</b> (Michel 495, Horácio 475, Daiane 462, Thaiara 462, Thialey 402) — precisam completar dados para enviar ao broker. <b>2 CPFs errados:</b> Fabiana e Bruna Caroline. Neide: CPF incompleto. Rafael: sem CPF disponível. 6 enviados a broker (todos recusados).
   </div>
 </div>
 <div class="tabs">
-  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">29</span></button>
-  <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">5</span></button>
+  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">35</span></button>
+  <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">6</span></button>
   <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">7</span></button>
-  <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">18</span></button>
+  <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">22</span></button>
 </div>
 <!-- ============ TAB 1: RANKING COMPLETO ============ -->
 <div id="s-todos" class="sec on">
@@ -114,16 +115,16 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <table class="tbl">
 <thead><tr>
   <th style="width:3%">#</th>
-  <th style="width:22%">Nome</th>
-  <th style="width:13%">CPF</th>
-  <th style="width:6%">Score</th>
-  <th style="width:8%">Rating</th>
-  <th style="width:12%">Renda</th>
-  <th style="width:14%">Status</th>
-  <th style="width:10%">Verificado por</th>
-  <th style="width:12%">Viabilidade</th>
+  <th style="width:20%">Nome</th>
+  <th style="width:12%">CPF</th>
+  <th style="width:5%">Score</th>
+  <th style="width:7%">Rating</th>
+  <th style="width:10%">Renda</th>
+  <th style="width:15%">Falta</th>
+  <th style="width:13%">Status</th>
 </tr></thead>
 <tbody>
+<!-- 1. Roberto 683 BOM -->
 <tr class="rg">
   <td style="font-weight:700;color:var(--purpleL)">1</td>
   <td style="font-weight:600">Roberto Jesus da Silva</td>
@@ -131,275 +132,307 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--green)">683</td>
   <td><span class="badge b-bom">BOM</span></td>
   <td>R$6.000/mês</td>
-  <td><span class="st st-imo">Coletando imóvel</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--green);font-weight:600">★ Enviar ao broker</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td><span class="st st-rdy">Ready ✓</span></td>
 </tr>
+<!-- 2. Michel 495 REGULAR (NEW) -->
 <tr class="ry">
   <td style="font-weight:700;color:var(--purpleL)">2</td>
+  <td style="font-weight:600">Michel Gilliardi Alves Adauto</td>
+  <td class="mono">290.945.278-63</td>
+  <td class="sc" style="color:var(--yellow)">495</td>
+  <td><span class="badge b-reg">REGULAR</span></td>
+  <td>R$3.501-4.000*</td>
+  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
+  <td><span class="st st-imo">Coletar dados</span></td>
+</tr>
+<!-- 3. Horácio 475 REGULAR -->
+<tr class="ry">
+  <td style="font-weight:700;color:var(--purpleL)">3</td>
   <td style="font-weight:600">Horácio Batista Matos</td>
   <td class="mono">012.754.096-28</td>
   <td class="sc" style="color:var(--yellow)">475</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$7.500/mês</td>
-  <td><span class="st st-imo">Coletando imóvel</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--yellow);font-weight:500">Vale tentar</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Renda (sistema)</td>
+  <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
+<!-- 4. Daiane 462 REGULAR -->
 <tr class="ry">
-  <td style="font-weight:700;color:var(--purpleL)">3</td>
+  <td style="font-weight:700;color:var(--purpleL)">4</td>
   <td style="font-weight:600">Daiane Ap. Alves dos Santos</td>
   <td class="mono">081.385.799-60</td>
   <td class="sc" style="color:var(--yellow)">462</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$6.000/mês</td>
-  <td><span class="st st-col">Aguardando imóvel</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--yellow);font-weight:500">Vale tentar</td>
+  <td style="color:var(--red);font-size:11px">Falta: End. + Renda</td>
+  <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
+<!-- 5. Thaiara 462 REGULAR -->
 <tr class="ry">
-  <td style="font-weight:700;color:var(--purpleL)">4</td>
+  <td style="font-weight:700;color:var(--purpleL)">5</td>
   <td style="font-weight:600">Thaiara B.A. Chagas Camargos</td>
   <td class="mono">144.986.306-02</td>
   <td class="sc" style="color:var(--yellow)">462</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$1.401-2.000*</td>
+  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
   <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--yellow);font-weight:500">Borderline</td>
 </tr>
+<!-- 6. Thialey 402 REGULAR -->
 <tr class="ry">
-  <td>5</td>
+  <td>6</td>
   <td>Thialey Leite da Silva</td>
   <td class="mono">053.164.979-29</td>
   <td class="sc" style="color:var(--yellow)">402</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$2.001-3.000*</td>
+  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
   <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Borderline</td>
 </tr>
+<!-- 7. Marcello 389 BAIXO -->
 <tr class="ro">
-  <td>6</td>
+  <td>7</td>
   <td>Marcello Rodrigues Lopes</td>
   <td class="mono">266.803.538-40</td>
   <td class="sc" style="color:var(--orange)">389</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$2.001-3.000*</td>
+  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
   <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Arriscado</td>
 </tr>
+<!-- 8. Fernanda 372 BAIXO -->
 <tr class="ro">
-  <td>7</td>
+  <td>8</td>
   <td>Fernanda Almeida de Bragança</td>
   <td class="mono">007.273.730-13</td>
   <td class="sc" style="color:var(--orange)">372</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.401-2.000*</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Endereço</td>
   <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Arriscado</td>
 </tr>
+<!-- 9. Adriana 350 BAIXO -->
 <tr class="ro">
-  <td>8</td>
+  <td>9</td>
   <td>Adriana de Paula Coimbra</td>
   <td class="mono">089.634.317-03</td>
   <td class="sc" style="color:var(--orange)">350</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Serasa</td>
-  <td style="color:var(--txt2)">Improvável</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td><span class="st st-nao">Score baixo</span></td>
 </tr>
+<!-- 10. Andrea 350 BAIXO -->
 <tr class="ro">
-  <td>9</td>
+  <td>10</td>
   <td>Andrea da Conceição F. da Cruz</td>
   <td class="mono">289.441.048-40</td>
   <td class="sc" style="color:var(--orange)">350</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Serasa</td>
-  <td style="color:var(--txt2)">Improvável</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Renda</td>
+  <td><span class="st st-nao">Score baixo</span></td>
 </tr>
+<!-- 11. Rogerio Bittar 350 BAIXO -->
 <tr class="ro">
-  <td>10</td>
+  <td>11</td>
   <td>Rogerio Fernando Bittar Perez</td>
   <td class="mono">165.920.968-45</td>
   <td class="sc" style="color:var(--orange)">350</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Serasa</td>
-  <td style="color:var(--txt2)">Improvável</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td><span class="st st-nao">Score baixo</span></td>
 </tr>
-<tr class="ro">
-  <td>11</td>
-  <td>Gabriela Vitória da Silva Lima</td>
-  <td class="mono">546.545.788-03</td>
-  <td class="sc" style="color:var(--orange)">333</td>
-  <td><span class="badge b-bai">BAIXO</span></td>
-  <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Improvável</td>
-</tr>
+<!-- 12. Jéssica 343 BAIXO (Recusada) -->
 <tr class="ro">
   <td>12</td>
-  <td>Poliana Conovalow Tartaro</td>
-  <td class="mono">357.812.168-12</td>
-  <td class="sc" style="color:var(--orange)">328</td>
-  <td><span class="badge b-bai">BAIXO</span></td>
-  <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Improvável</td>
-</tr>
-<tr class="ro">
-  <td>13</td>
-  <td>Grazielle Carlos dos Santos</td>
-  <td class="mono">418.796.818-03</td>
-  <td class="sc" style="color:var(--orange)">321</td>
-  <td><span class="badge b-bai">BAIXO</span></td>
-  <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Improvável</td>
-</tr>
-<tr class="ro">
-  <td>14</td>
-  <td>Fabricia Pinheiro de Oliveira</td>
-  <td class="mono">000.429.656-75</td>
-  <td class="sc" style="color:var(--orange)">312</td>
-  <td><span class="badge b-bai">BAIXO</span></td>
-  <td>—</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Improvável</td>
-</tr>
-<tr class="ro">
-  <td>15</td>
   <td>Jéssica Cristina Jordão</td>
   <td class="mono">420.648.618-23</td>
   <td class="sc" style="color:var(--orange)">343</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.900</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
   <td><span class="st st-rec">Recusada</span></td>
-  <td>Serasa + Broker</td>
-  <td style="color:var(--red)">Recusada Darqs</td>
 </tr>
-<tr class="rr">
+<!-- 13. Gabriela 333 BAIXO -->
+<tr class="ro">
+  <td>13</td>
+  <td>Gabriela Vitória da Silva Lima</td>
+  <td class="mono">546.545.788-03</td>
+  <td class="sc" style="color:var(--orange)">333</td>
+  <td><span class="badge b-bai">BAIXO</span></td>
+  <td>R$1.401-2.000*</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td><span class="st st-nao">Score baixo</span></td>
+</tr>
+<!-- 14. Maria Lucia 328 BAIXO (NEW) -->
+<tr class="ro">
+  <td>14</td>
+  <td>Maria Lucia Correa</td>
+  <td class="mono">044.141.906-22</td>
+  <td class="sc" style="color:var(--orange)">328</td>
+  <td><span class="badge b-bai">BAIXO</span></td>
+  <td>R$1.401-2.000*</td>
+  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
+  <td><span class="st st-nao">Score baixo</span></td>
+</tr>
+<!-- 15. Poliana 328 BAIXO -->
+<tr class="ro">
+  <td>15</td>
+  <td>Poliana Conovalow Tartaro</td>
+  <td class="mono">357.812.168-12</td>
+  <td class="sc" style="color:var(--orange)">328</td>
+  <td><span class="badge b-bai">BAIXO</span></td>
+  <td>R$1.401-2.000*</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td><span class="st st-nao">Score baixo</span></td>
+</tr>
+<!-- 16. Grazielle 321 BAIXO -->
+<tr class="ro">
   <td>16</td>
-  <td>Bruna Caroline Santos Cordeiro</td>
+  <td>Grazielle Carlos dos Santos</td>
+  <td class="mono">418.796.818-03</td>
+  <td class="sc" style="color:var(--orange)">321</td>
+  <td><span class="badge b-bai">BAIXO</span></td>
+  <td>R$1.401-2.000*</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td><span class="st st-nao">Score baixo</span></td>
+</tr>
+<!-- 17. Fabricia 312 BAIXO -->
+<tr class="ro">
+  <td>17</td>
+  <td>Fabricia Pinheiro de Oliveira</td>
+  <td class="mono">000.429.656-75</td>
+  <td class="sc" style="color:var(--orange)">312</td>
+  <td><span class="badge b-bai">BAIXO</span></td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Endereço</td>
+  <td><span class="st st-nao">Score baixo</span></td>
+</tr>
+<!-- 18. Bruna Aparecida 272 BAIXO -->
+<tr class="rr">
+  <td>18</td>
+  <td>Bruna Aparecida dos Santos Lopes</td>
   <td class="mono">387.102.988-27</td>
   <td class="sc" style="color:var(--red)">272</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Muito improvável</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Endereço</td>
+  <td><span class="st st-nao">Score baixo</span></td>
 </tr>
+<!-- 19. Maria Carolina 271 BAIXO -->
 <tr class="rr">
-  <td>17</td>
+  <td>19</td>
   <td>Maria Carolina Madazio</td>
   <td class="mono">300.620.428-07</td>
   <td class="sc" style="color:var(--red)">271</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Muito improvável</td>
+  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
+  <td><span class="st st-nao">Score baixo</span></td>
 </tr>
+<!-- 20. Keila 265 BAIXO -->
 <tr class="rr">
-  <td>18</td>
+  <td>20</td>
   <td>Keila Maria de Sousa</td>
   <td class="mono">324.627.558-02</td>
   <td class="sc" style="color:var(--red)">265</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Muito improvável</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Renda</td>
+  <td><span class="st st-nao">Score baixo</span></td>
 </tr>
+<!-- 21. Claudio 247 BAIXO -->
 <tr class="rr">
-  <td>19</td>
+  <td>21</td>
   <td>Claudio Ubiratan de Almeida</td>
   <td class="mono">200.811.549-68</td>
   <td class="sc" style="color:var(--red)">247</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$5.001-7.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Muito improvável</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Endereço</td>
+  <td><span class="st st-nao">Score baixo</span></td>
 </tr>
+<!-- 22. Rogerio Costa 246 BAIXO -->
 <tr class="rr">
-  <td>20</td>
+  <td>22</td>
   <td>Rogerio Jose Costa</td>
   <td class="mono">985.424.866-68</td>
   <td class="sc" style="color:var(--red)">246</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Muito improvável</td>
+  <td style="color:var(--red);font-size:11px">Falta: End. + Renda</td>
+  <td><span class="st st-nao">Score baixo</span></td>
 </tr>
+<!-- 23. José Martinez 232 BAIXO -->
 <tr class="rr">
-  <td>21</td>
+  <td>23</td>
   <td>José Martinez Ramos</td>
   <td class="mono">905.312.138-20</td>
   <td class="sc" style="color:var(--red)">232</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--txt2)">Muito improvável</td>
+  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
+  <td><span class="st st-nao">Score baixo</span></td>
 </tr>
+<!-- 24. Nicolas 194 RUIM -->
 <tr class="rr">
-  <td>22</td>
+  <td>24</td>
   <td>Nicola Carone Dias</td>
   <td class="mono">132.071.288-66</td>
   <td class="sc" style="color:var(--red)">194</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--red)">Sem chance</td>
+  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
+  <td><span class="st st-nao">Sem chance</span></td>
 </tr>
+<!-- 25. Joao Guilherme 171 RUIM (NEW) -->
 <tr class="rr">
-  <td>23</td>
+  <td>25</td>
+  <td>João Guilherme Antunes Ramos</td>
+  <td class="mono">037.452.639-79</td>
+  <td class="sc" style="color:var(--red)">171</td>
+  <td><span class="badge b-rui">RUIM</span></td>
+  <td>—</td>
+  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
+  <td><span class="st st-nao">Sem chance</span></td>
+</tr>
+<!-- 26. Marta 165 RUIM -->
+<tr class="rr">
+  <td>26</td>
   <td>Marta Guedes da Silva</td>
   <td class="mono">367.317.208-52</td>
   <td class="sc" style="color:var(--red)">165</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--red)">Sem chance</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Renda</td>
+  <td><span class="st st-nao">Sem chance</span></td>
 </tr>
+<!-- 27. Misaelly 138 RUIM -->
 <tr class="rr">
-  <td>24</td>
+  <td>27</td>
   <td>Misaelly Karolaine da Silva Santos</td>
   <td class="mono">398.106.808-48</td>
   <td class="sc" style="color:var(--red)">138</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--red)">Sem chance</td>
+  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
+  <td><span class="st st-nao">Sem chance</span></td>
 </tr>
+<!-- 28. Luan 101 RUIM -->
 <tr class="rr">
-  <td>25</td>
+  <td>28</td>
   <td>Luan Peques</td>
   <td class="mono">143.001.877-11</td>
   <td class="sc" style="color:var(--red)">101</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$1.401-2.000*</td>
-  <td><span class="st st-nao">Não enviar</span></td>
-  <td>Consulta própria</td>
-  <td style="color:var(--red)">Sem chance</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Renda</td>
+  <td><span class="st st-nao">Sem chance</span></td>
 </tr>
-<!-- Verificados pelo broker (sem score numérico) -->
+<!-- ── Verificados pelo broker (sem score numérico) ── -->
 <tr class="rx">
   <td>—</td>
   <td>Kátia Aparecida da Silva</td>
@@ -407,9 +440,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--txt2)">—</td>
   <td><span class="badge b-rec">RECUSADA</span></td>
   <td>R$5.500</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
   <td><span class="st st-rec">Recusada</span></td>
-  <td>Broker (Darqs)</td>
-  <td style="color:var(--red)">Apontamentos CPF</td>
 </tr>
 <tr class="rx">
   <td>—</td>
@@ -418,9 +450,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--txt2)">—</td>
   <td><span class="badge b-rec">RECUSADA</span></td>
   <td>R$15.000</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
   <td><span class="st st-rec">Recusada</span></td>
-  <td>Broker (Ittu+Darqs)</td>
-  <td style="color:var(--red)">Apontamentos CPF</td>
 </tr>
 <tr class="rx">
   <td>—</td>
@@ -429,9 +460,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--txt2)">—</td>
   <td><span class="badge b-rec">RECUSADA</span></td>
   <td>R$4.000</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
   <td><span class="st st-rec">Recusada</span></td>
-  <td>Broker (Ittu+Darqs)</td>
-  <td style="color:var(--red)">Apontamentos CPF</td>
 </tr>
 <tr class="rx">
   <td>—</td>
@@ -440,9 +470,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--txt2)">—</td>
   <td><span class="badge b-rec">RECUSADA</span></td>
   <td>R$4.159</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Endereço</td>
   <td><span class="st st-rec">Recusada</span></td>
-  <td>Broker (Ittu+Darqs)</td>
-  <td style="color:var(--red)">Apontamentos CPF</td>
 </tr>
 <tr class="rx">
   <td>—</td>
@@ -451,11 +480,10 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--txt2)">—</td>
   <td><span class="badge b-rec">RECUSADA</span></td>
   <td>R$5.500</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
   <td><span class="st st-rec">Recusada</span></td>
-  <td>Broker (Darqs)</td>
-  <td style="color:var(--red)">Apontamentos CPF</td>
 </tr>
-<!-- CPFs Inválidos -->
+<!-- ── CPFs Inválidos ── -->
 <tr style="background:rgba(239,68,68,.1)">
   <td>—</td>
   <td>Fabiana Pereira</td>
@@ -463,13 +491,22 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--txt2)">—</td>
   <td><span class="badge b-inv">INVÁLIDO</span></td>
   <td>R$5.000</td>
-  <td><span class="st st-inv">CPF Inválido</span></td>
+  <td style="color:var(--red);font-size:11px">CPF inválido</td>
+  <td><span class="st st-inv">Pedir CPF</span></td>
+</tr>
+<tr style="background:rgba(239,68,68,.1)">
   <td>—</td>
-  <td style="color:var(--red)">Descartada</td>
+  <td>Bruna Caroline Santos Cordeiro</td>
+  <td class="mono" style="color:#f87171;text-decoration:line-through">445.337.188-00</td>
+  <td class="sc" style="color:var(--txt2)">—</td>
+  <td><span class="badge b-inv">INVÁLIDO</span></td>
+  <td>—</td>
+  <td style="color:var(--red);font-size:11px">CPF inválido</td>
+  <td><span class="st st-inv">Pedir CPF</span></td>
 </tr>
 </tbody>
 </table>
-<p style="font-size:10px;color:var(--txt2);margin-top:8px">* Renda presumida pela consulta de crédito (não declarada pelo lead)</p>
+<p style="font-size:10px;color:var(--txt2);margin-top:8px">* Renda presumida pela consulta de crédito (não declarada pelo lead). "Sem dados no sistema" = lead não completou coleta de dados no bot.</p>
 </div>
 <!-- ============ TAB 2: AÇÃO NECESSÁRIA ============ -->
 <div id="s-acao" class="sec">
@@ -500,12 +537,12 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     </div>
   </div>
 </div>
-<!-- BRUNA -->
+<!-- BRUNA CAROLINE -->
 <div class="crd" style="border-left:4px solid var(--orange)" onclick="this.classList.toggle('open')">
   <div class="crd-h">
     <div>
-      <div class="crd-n">Bruna Aparecida dos Santos Lopes</div>
-      <div class="crd-sub" style="color:#f87171">CPF informado está incorreto</div>
+      <div class="crd-n">Bruna Caroline Santos Cordeiro</div>
+      <div class="crd-sub" style="color:#f87171;text-decoration:line-through">CPF 445.337.188-00 (inválido)</div>
     </div>
     <span class="badge" style="background:rgba(249,115,22,.18);color:var(--orange);border:1px solid rgba(249,115,22,.4)">CPF ERRADO</span>
   </div>
@@ -513,20 +550,17 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <span class="st st-col">coleta_dados</span>
   </div>
   <div class="crd-body">
-    <div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 11 9956-52464</span></div>
-    <div class="crd-row"><span class="l">WhatsApp:</span><span class="v">🙂</span></div>
-    <div class="crd-row"><span class="l">Nascimento:</span><span class="v">06/05/1989</span></div>
-    <div class="crd-row"><span class="l">Email:</span><span class="v">Bruesther2013@gmail.com</span></div>
-    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">~R$2.300</span></div>
+    <div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 19 9741-52537</span></div>
+    <div class="crd-row"><span class="l">WhatsApp:</span><span class="v">Áurea</span></div>
     <div class="crd-note" style="border-left-color:var(--orange)">
-      <b>Nota:</b> Pessoa diferente de Bruna Caroline (CPF 387.102.988-27, score 272). <b>Ação:</b> Pedir CPF correto e rodar consulta de crédito.
+      <b>Nota:</b> Pessoa diferente de Bruna Aparecida (CPF 387.102.988-27, score 272). <b>Ação:</b> Pedir CPF correto e rodar consulta de crédito.
     </div>
   </div>
 </div>
 </div>
-<div class="stitle" style="margin-top:24px">Leads Prioritários — Coleta de Dados Pendente</div>
+<!-- READY TO SEND -->
+<div class="stitle" style="margin-top:24px;color:var(--green);border-left-color:var(--green)">Ready to Send ★</div>
 <div class="cards">
-<!-- ROBERTO -->
 <div class="crd crd-gl" onclick="this.classList.toggle('open')">
   <div class="crd-h">
     <div>
@@ -537,7 +571,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-bom">BOM</span>
-    <span class="st st-imo">Coletando dados do imóvel</span>
+    <span class="st st-rdy">Ready to Send ✓</span>
   </div>
   <div class="crd-body">
     <div class="crd-row"><span class="l">Nascimento:</span><span class="v">13/12/1969</span></div>
@@ -548,11 +582,35 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 43 9161-2598</span></div>
     <div class="crd-row"><span class="l">Tipo imóvel:</span><span class="v">Apartamento ✓</span></div>
     <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.100/mês ✓ (ratio 18% — excelente)</span></div>
+    <div class="crd-note" style="border-left-color:var(--green)">
+      <b>Dados básicos completos.</b> Melhor candidato do funil. Último contato: 27/02 (ativo). Enviar para Darqs assim que possível. Coletar dados restantes do imóvel (condomínio, IPTU, período contrato, coberturas) durante processo com broker.
+    </div>
+  </div>
+</div>
+</div>
+<!-- COLETAR DADOS - PRIORITÁRIOS -->
+<div class="stitle" style="margin-top:24px">Coletar Dados — Score REGULAR (Prioridade)</div>
+<div class="cards">
+<!-- MICHEL -->
+<div class="crd crd-gl" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div>
+      <div class="crd-n">Michel Gilliardi Alves Adauto</div>
+      <div class="crd-sub">CPF 290.945.278-63</div>
+    </div>
+    <div class="crd-sc"><b style="color:var(--yellow)">495</b><div class="stars">★★</div></div>
+  </div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
+    <span class="badge b-reg">REGULAR</span>
+    <span class="st st-imo">Sem dados no sistema</span>
+  </div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Renda (consulta):</span><span class="v">R$3.501-4.000</span></div>
     <div style="margin-top:10px;padding:8px 10px;background:rgba(239,68,68,.08);border-radius:6px;border:1px solid rgba(239,68,68,.2);font-size:11px;color:#f87171">
-      <b>Falta:</b> Endereço completo · CEP · Condomínio · IPTU · Período contrato · Coberturas
+      <b>Falta:</b> TODOS os dados — lead não completou coleta no bot.
     </div>
     <div class="crd-note">
-      <b>Próximo passo:</b> Mandar mensagem pedindo dados do imóvel. Último contato: 27/02 (ativo). Assim que completar, enviar imediatamente para Darqs.
+      <b>Próximo passo:</b> Coletar dados pessoais (nascimento, estado civil, profissão, email) + dados do imóvel. Score 495 REGULAR é viável para broker.
     </div>
   </div>
 </div>
@@ -567,7 +625,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-imo">Coletando dados do imóvel</span>
+    <span class="st st-imo">Falta renda no sistema</span>
   </div>
   <div class="crd-body">
     <div class="crd-row"><span class="l">Nascimento:</span><span class="v">25/04/1981</span></div>
@@ -578,10 +636,10 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 31 9445-1937</span></div>
     <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$2.500/mês (ratio 33% — bom)</span></div>
     <div style="margin-top:10px;padding:8px 10px;background:rgba(239,68,68,.08);border-radius:6px;border:1px solid rgba(239,68,68,.2);font-size:11px;color:#f87171">
-      <b>Falta:</b> Endereço completo · CEP · Tipo imóvel · Condomínio · IPTU · Período contrato · Coberturas
+      <b>Falta no sistema:</b> Renda formal + dados do imóvel (endereço, CEP, condomínio, IPTU, período, coberturas)
     </div>
     <div class="crd-note">
-      <b>Próximo passo:</b> Follow-up para dados do imóvel. Bot mandou 2 follow-ups (26-27/02) sem resposta. Score borderline mas perfil forte (contador, R$7,5k, casado).
+      <b>Próximo passo:</b> Follow-up para completar dados. Bot mandou 2 follow-ups (26-27/02) sem resposta. Score borderline mas perfil forte (contador, R$7,5k, casado).
     </div>
   </div>
 </div>
@@ -596,7 +654,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-col">Aguardando escolha do imóvel</span>
+    <span class="st st-col">Falta endereço + renda</span>
   </div>
   <div class="crd-body">
     <div class="crd-row"><span class="l">Nascimento:</span><span class="v">24/10/1991</span></div>
@@ -607,10 +665,10 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 47 9780-7930</span></div>
     <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.500/mês (ratio 25% — bom)</span></div>
     <div style="margin-top:10px;padding:8px 10px;background:rgba(239,68,68,.08);border-radius:6px;border:1px solid rgba(239,68,68,.2);font-size:11px;color:#f87171">
-      <b>Falta:</b> TUDO do imóvel — ainda não escolheu apartamento. Bot informou que pode aprovar até R$1.800/mês.
+      <b>Falta:</b> Endereço + renda formal no sistema. Ainda não escolheu imóvel.
     </div>
     <div class="crd-note">
-      <b>Próximo passo:</b> Aguardar ela escolher o imóvel. Último contato 27/02 (ativa). Conversa mais engajada dos 3 (21 mensagens).
+      <b>Próximo passo:</b> Aguardar ela escolher o imóvel. Último contato 27/02 (ativa). Score 462 viável para broker.
     </div>
   </div>
 </div>
@@ -651,6 +709,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="crd-row"><span class="l">Profissão:</span><span class="v">Sup. merchandising · R$5.500</span></div>
     <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ (apontamentos CPF) · Ittu pendente</span></div>
     <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.350 + R$350 condo + R$249 IPTU</span></div>
+    <div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div>
   </div>
 </div>
 <div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
@@ -659,6 +718,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="crd-row"><span class="l">Profissão:</span><span class="v">Balconista · R$1.900 (+R$1.600 composição)</span></div>
     <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ · Ittu pendente</span></div>
     <div class="crd-row"><span class="l">Score Serasa:</span><span class="v">343 — 1 dívida Magazine Luiza R$1.205</span></div>
+    <div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div>
   </div>
 </div>
 <div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
@@ -666,6 +726,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <div class="crd-body">
     <div class="crd-row"><span class="l">Profissão:</span><span class="v">Corretora · R$15.000</span></div>
     <div class="crd-row"><span class="l">Broker:</span><span class="v">Ittu ✗ (Pottencial + Porto) · Darqs ✗ · Arcoseg pendente</span></div>
+    <div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div>
   </div>
 </div>
 <div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
@@ -673,6 +734,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <div class="crd-body">
     <div class="crd-row"><span class="l">Profissão:</span><span class="v">Professor · R$4.000</span></div>
     <div class="crd-row"><span class="l">Broker:</span><span class="v">Ittu ✗ · Darqs ✗ · Arcoseg pendente</span></div>
+    <div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div>
   </div>
 </div>
 <div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
@@ -680,6 +742,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <div class="crd-body">
     <div class="crd-row"><span class="l">Profissão:</span><span class="v">Professora · R$4.159</span></div>
     <div class="crd-row"><span class="l">Broker:</span><span class="v">Ittu ✗ · Darqs ✗ · Arcoseg pendente</span></div>
+    <div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Falta: Endereço</span></div>
   </div>
 </div>
 <div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
@@ -687,6 +750,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <div class="crd-body">
     <div class="crd-row"><span class="l">Profissão:</span><span class="v">Vendedor externo · R$5.500</span></div>
     <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ · Ittu aguardando CEP</span></div>
+    <div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div>
   </div>
 </div>
 </div>
@@ -696,119 +760,131 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div id="s-baixo" class="sec">
 <div class="stitle">Score Baixo — Não Recomendado Enviar a Broker</div>
 <div class="coll-h" onclick="var c=this.nextElementSibling;c.classList.toggle('open');this.querySelector('.chv').style.transform=c.classList.contains('open')?'rotate(180deg)':'rotate(0)'">
-  <span class="coll-t">Expandir lista</span>
-  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">18</span><span class="chv">▼</span></div>
+  <span class="coll-t">Expandir lista (BAIXO)</span>
+  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">17</span><span class="chv">▼</span></div>
 </div>
 <div class="coll-b">
 <div class="cards">
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Thialey Leite da Silva</div><div class="crd-sub">CPF 053.164.979-29</div></div><div class="crd-sc"><b style="color:var(--yellow)">402</b></div></div>
   <span class="badge b-reg" style="margin-top:4px">REGULAR</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$2.001-3.000</span></div><div class="crd-note">Borderline. Poderia tentar se necessário, mas provavelmente será recusado.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$2.001-3.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--red)">Sem dados no sistema</span></div><div class="crd-note">Borderline. Poderia tentar se necessário, mas provavelmente será recusado.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Marcello Rodrigues Lopes</div><div class="crd-sub">CPF 266.803.538-40</div></div><div class="crd-sc"><b style="color:var(--orange)">389</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$2.001-3.000</span></div><div class="crd-note">Dados completos no bot, mas score insuficiente para seguro fiança.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$2.001-3.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--red)">Sem dados no sistema</span></div><div class="crd-note">Score insuficiente para seguro fiança.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Fernanda Almeida de Bragança</div><div class="crd-sub">CPF 007.273.730-13</div></div><div class="crd-sc"><b style="color:var(--orange)">372</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Adriana de Paula Coimbra</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-note">Serasa: 5 dívidas (R$6.603 total), 2 protestos.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note">Serasa: 5 dívidas (R$6.603 total), 2 protestos.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Andrea da Conceição F. da Cruz</div><div class="crd-sub">CPF 289.441.048-40</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-note">Serasa: 8 dívidas, 1 ação judicial (execução R$32k), 15 consultas.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Renda</span></div><div class="crd-note">Serasa: 8 dívidas, 1 ação judicial (execução R$32k), 15 consultas.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Rogerio Fernando Bittar Perez</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-note">Serasa: 2 dívidas, 12 protestos (~R$19k).</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note">Serasa: 2 dívidas, 12 protestos (~R$19k).</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Gabriela Vitória da Silva Lima</div><div class="crd-sub">CPF 546.545.788-03</div></div><div class="crd-sc"><b style="color:var(--orange)">333</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
+</div>
+<div class="crd crd-xl" onclick="this.classList.toggle('open')">
+  <div class="crd-h"><div><div class="crd-n">Maria Lucia Correa</div><div class="crd-sub">CPF 044.141.906-22</div></div><div class="crd-sc"><b style="color:var(--orange)">328</b></div></div>
+  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--red)">Sem dados no sistema</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Poliana Conovalow Tartaro</div><div class="crd-sub">CPF 357.812.168-12</div></div><div class="crd-sc"><b style="color:var(--orange)">328</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Grazielle Carlos dos Santos</div><div class="crd-sub">CPF 418.796.818-03</div></div><div class="crd-sc"><b style="color:var(--orange)">321</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Fabricia Pinheiro de Oliveira</div><div class="crd-sub">CPF 000.429.656-75</div></div><div class="crd-sc"><b style="color:var(--orange)">312</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Bruna Caroline Santos Cordeiro</div><div class="crd-sub">CPF 387.102.988-27</div></div><div class="crd-sc"><b style="color:var(--red)">272</b></div></div>
+  <div class="crd-h"><div><div class="crd-n">Bruna Aparecida dos Santos Lopes</div><div class="crd-sub">CPF 387.102.988-27</div></div><div class="crd-sc"><b style="color:var(--red)">272</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Nascimento:</span><span class="v">WhatsApp: Áurea</span></div><div class="crd-note">Risco alto de inadimplência. Não enviar.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 11 9956-52464 (WhatsApp: 🙂)</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço</span></div><div class="crd-note">Risco alto de inadimplência. Não enviar.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Maria Carolina Madazio</div><div class="crd-sub">CPF 300.620.428-07</div></div><div class="crd-sc"><b style="color:var(--red)">271</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Nascimento:</span><span class="v">03/10/1981</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Nascimento:</span><span class="v">03/10/1981</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--red)">Sem dados no sistema</span></div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Keila Maria de Sousa</div><div class="crd-sub">CPF 324.627.558-02</div></div><div class="crd-sc"><b style="color:var(--red)">265</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-note">Risco alto de inadimplência. Não enviar.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Renda</span></div><div class="crd-note">Risco alto de inadimplência. Não enviar.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Claudio Ubiratan de Almeida</div><div class="crd-sub">CPF 200.811.549-68</div></div><div class="crd-sc"><b style="color:var(--red)">247</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$5.001-7.000</span></div><div class="crd-note">Renda boa mas score muito baixo. Não enviar.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$5.001-7.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço</span></div><div class="crd-note">Renda boa mas score muito baixo. Não enviar.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Rogerio Jose Costa</div><div class="crd-sub">CPF 985.424.866-68</div></div><div class="crd-sc"><b style="color:var(--red)">246</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-note">Score muito baixo. Não enviar a broker.</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--red)">Endereço + Renda</span></div><div class="crd-note">Score muito baixo. Não enviar a broker.</div></div>
 </div>
 <div class="crd crd-xl" onclick="this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">José Martinez Ramos</div><div class="crd-sub">CPF 905.312.138-20</div></div><div class="crd-sc"><b style="color:var(--red)">232</b></div></div>
   <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-note">Dados completos no bot, mas score muito baixo (risco alto).</div></div>
+  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--red)">Sem dados no sistema</span></div><div class="crd-note">Dados completos no bot(?), mas score muito baixo (risco alto).</div></div>
 </div>
 </div>
 </div>
+<!-- RUIM section -->
 <div style="margin-top:16px">
+<div class="stitle" style="color:var(--red);border-left-color:var(--red);margin-top:16px">Score RUIM — Sem Chance de Aprovação (5)</div>
 <div class="crd crd-xl" style="cursor:default;opacity:.7">
   <div class="crd-h"><div><div class="crd-n">Nicola Carone Dias</div><div class="crd-sub">CPF 132.071.288-66</div></div><div class="crd-sc"><b style="color:var(--red)">194</b></div></div>
   <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (194). Nascimento: 08/06/1975. Renda presumida R$1.401-2.000. Sem chance de aprovação.</div>
+  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (194). Nascimento: 08/06/1975. Renda presumida R$1.401-2.000. <span style="color:var(--red)">Sem dados no sistema.</span></div>
+</div>
+<div class="crd crd-xl" style="cursor:default;opacity:.7">
+  <div class="crd-h"><div><div class="crd-n">João Guilherme Antunes Ramos</div><div class="crd-sub">CPF 037.452.639-79</div></div><div class="crd-sc"><b style="color:var(--red)">171</b></div></div>
+  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
+  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (171). <span style="color:var(--red)">Sem dados no sistema.</span></div>
 </div>
 <div class="crd crd-xl" style="cursor:default;opacity:.7">
   <div class="crd-h"><div><div class="crd-n">Marta Guedes da Silva</div><div class="crd-sub">CPF 367.317.208-52</div></div><div class="crd-sc"><b style="color:var(--red)">165</b></div></div>
   <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (165). Renda presumida R$1.401-2.000. Sem chance de aprovação.</div>
+  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (165). Renda presumida R$1.401-2.000. <span style="color:var(--orange)">Falta: Renda.</span></div>
 </div>
 <div class="crd crd-xl" style="cursor:default;opacity:.7">
   <div class="crd-h"><div><div class="crd-n">Misaelly Karolaine da Silva Santos</div><div class="crd-sub">CPF 398.106.808-48</div></div><div class="crd-sc"><b style="color:var(--red)">138</b></div></div>
   <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (138). Renda presumida R$1.401-2.000. Sem chance de aprovação.</div>
+  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (138). Renda presumida R$1.401-2.000. <span style="color:var(--red)">Sem dados no sistema.</span></div>
 </div>
 <div class="crd crd-xl" style="cursor:default;opacity:.7">
   <div class="crd-h"><div><div class="crd-n">Luan Peques</div><div class="crd-sub">CPF 143.001.877-11</div></div><div class="crd-sc"><b style="color:var(--red)">101</b></div></div>
   <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (101). Renda presumida R$1.401-2.000. Sem chance de aprovação.</div>
+  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (101). Renda presumida R$1.401-2.000. <span style="color:var(--orange)">Falta: Renda.</span></div>
 </div>
 </div>
 </div>
 </div>
 <footer>
-  <p>Lumi Broker CRM — 28/02/2026 v2 (correções de dados)</p>
+  <p>Lumi Broker CRM — 28/02/2026 v3 (+ coluna Falta, Ready status, 3 novos scores)</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
