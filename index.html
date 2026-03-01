@@ -98,10 +98,10 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="kpi"><div class="kpi-v" style="color:var(--orange)">2</div><div class="kpi-l">CPF Errado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">6</div><div class="kpi-l">Enviados a Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--red)">6</div><div class="kpi-l">Recusadas Broker</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--green)">1</div><div class="kpi-l">Ready to Send</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Ready to Send</div></div>
   </div>
   <div class="summ">
-    <b>Resumo:</b> 28 créditos verificados (24 consultas próprias + 3 Serasa + 1 Serasa+Broker). <b>1 Ready to send:</b> Roberto (683 BOM, dados completos). <b>5 REGULAR</b> (Michel 495, Horácio 475, Daiane 462, Thaiara 462, Thialey 402) — precisam completar dados para enviar ao broker. <b>2 CPFs errados:</b> Fabiana e Bruna Caroline. Neide: CPF incompleto. Rafael: sem CPF disponível. 6 enviados a broker (todos recusados).
+    <b>Resumo:</b> 28 créditos verificados (24 consultas próprias + 3 Serasa + 1 Serasa+Broker). <b>0 Ready to send</b> — nenhum lead tem dados pessoais + dados do imóvel completos + score bom. <b>Melhor candidato:</b> Roberto (683 BOM) — falta dados do imóvel. <b>5 REGULAR</b> (Michel 495, Horácio 475, Daiane 462, Thaiara 462, Thialey 402) — precisam completar dados. <b>2 CPFs errados:</b> Fabiana e Bruna Caroline. Neide: CPF incompleto. Rafael: sem CPF. 6 enviados a broker (todos recusados). <b>Ready = dados pessoais + dados imóvel completos + score ≥ 400.</b>
   </div>
 </div>
 <div class="tabs">
@@ -133,8 +133,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--green)">683</td>
   <td><span class="badge b-bom">BOM</span></td>
   <td>R$6.000/mês</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
-  <td><span class="st st-rdy">Ready ✓</span></td>
+  <td style="color:var(--orange);font-size:11px">Falta: Dados imóvel</td>
+  <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <!-- 2. Michel 495 REGULAR (NEW) -->
 <tr class="ry">
@@ -559,8 +559,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
 </div>
 </div>
-<!-- READY TO SEND -->
-<div class="stitle" style="margin-top:24px;color:var(--green);border-left-color:var(--green)">Ready to Send ★</div>
+<!-- MELHOR CANDIDATO — FALTA DADOS IMÓVEL -->
+<div class="stitle" style="margin-top:24px;color:var(--green);border-left-color:var(--green)">Melhor Candidato ★ — Falta Dados do Imóvel</div>
 <div class="cards">
 <div class="crd crd-gl" onclick="this.classList.toggle('open')">
   <div class="crd-h">
@@ -572,19 +572,22 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-bom">BOM</span>
-    <span class="st st-rdy">Ready to Send ✓</span>
+    <span class="st st-imo">Falta dados imóvel</span>
   </div>
   <div class="crd-body">
-    <div class="crd-row"><span class="l">Nascimento:</span><span class="v">13/12/1969</span></div>
-    <div class="crd-row"><span class="l">Estado civil:</span><span class="v">Divorciado</span></div>
-    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Micro empreendedor</span></div>
-    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.000/mês</span></div>
-    <div class="crd-row"><span class="l">Email:</span><span class="v">vih345@hotmail.com</span></div>
-    <div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 43 9161-2598</span></div>
+    <div class="crd-row"><span class="l">Nascimento:</span><span class="v">13/12/1969 ✓</span></div>
+    <div class="crd-row"><span class="l">Estado civil:</span><span class="v">Divorciado ✓</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Microempreendedor ✓</span></div>
+    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.000/mês ✓</span></div>
+    <div class="crd-row"><span class="l">Email:</span><span class="v">vih345@hotmail.com ✓</span></div>
+    <div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 43 9161-2598 ✓</span></div>
     <div class="crd-row"><span class="l">Tipo imóvel:</span><span class="v">Apartamento ✓</span></div>
-    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.100/mês ✓ (ratio 18% — excelente)</span></div>
+    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.100/mês ✓ (ratio 18%)</span></div>
+    <div style="margin-top:10px;padding:8px 10px;background:rgba(239,68,68,.08);border-radius:6px;border:1px solid rgba(239,68,68,.2);font-size:11px;color:#f87171">
+      <b>Falta para enviar ao broker:</b> Endereço completo · CEP · Condomínio · IPTU · Prazo contrato · Coberturas (multa, pintura ext/int, danos)
+    </div>
     <div class="crd-note" style="border-left-color:var(--green)">
-      <b>Dados básicos completos.</b> Melhor candidato do funil. Último contato: 27/02 (ativo). Enviar para Darqs assim que possível. Coletar dados restantes do imóvel (condomínio, IPTU, período contrato, coberturas) durante processo com broker.
+      <b>Melhor candidato do funil.</b> Dados pessoais completos, score 683 BOM. Último contato: 27/02 (ativo). <b>Próximo passo:</b> coletar dados do imóvel e enviar para broker.
     </div>
   </div>
 </div>
