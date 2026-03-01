@@ -88,24 +88,24 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 01/03/2026 — v6.1</div>
+    <div class="ts">Atualizado: 01/03/2026 — v6.2</div>
   </div>
   <div class="kpis">
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">123</div><div class="kpi-l">Total Leads</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">38</div><div class="kpi-l">CPFs Compartilhados</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">143</div><div class="kpi-l">Total Leads</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">45</div><div class="kpi-l">CPFs Compartilhados</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">31</div><div class="kpi-l">Crédito Verificado</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">0</div><div class="kpi-l">CPF Sem Score</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">7</div><div class="kpi-l">CPF Sem Score</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--orange)">2</div><div class="kpi-l">CPF Errado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">6</div><div class="kpi-l">Enviados a Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--red)">6</div><div class="kpi-l">Recusadas Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Ready to Send</div></div>
   </div>
   <div class="summ">
-    <b>Resumo v6.1:</b> <b>123 leads totais</b> (+3 novos: Cecília, Francy, Bruno — todos em fase inicial, sem CPF). 31 créditos verificados. <b>0 Ready to send</b> — nenhum lead com dados completos + score ≥ 400. <b>Melhor candidato:</b> Roberto (683 BOM) — falta dados do imóvel. <b>5 REGULAR</b> (Michel 495, Horácio 475, Daiane 462, Thaiara 462, Thialey 402). Bruno informou aluguel R$2.000 (simulação). <b>Ready = dados pessoais + dados imóvel completos + score ≥ 400.</b>
+    <b>Resumo v6.2:</b> <b>143 leads totais</b> (+20 novos). <b>7 novos CPFs</b> encontrados no historico (Marcos Vinicius, Francy, Ana Cristina, Janaína, Cecília, Rosangela + 1 sem nome). 31 créditos verificados. <b>0 Ready to send</b> — nenhum lead com dados completos + score ≥ 400. <b>Melhor candidato:</b> Roberto (683 BOM) — falta dados do imóvel. <b>5 REGULAR</b> (Michel 495, Horácio 475, Daiane 462, Thaiara 462, Thialey 402). <b>Ready = dados pessoais + dados imóvel completos + score ≥ 400.</b>
   </div>
 </div>
 <div class="tabs">
-  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">38</span></button>
+  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">45</span></button>
   <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">6</span></button>
   <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">7</span></button>
   <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">25</span></button>
@@ -465,6 +465,84 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td>R$1.401-2.000*</td>
   <td style="color:var(--orange);font-size:11px">Falta: Renda</td>
   <td><span class="st st-nao">Sem chance</span></td>
+</tr>
+<!-- ── CPFs Sem Score (aguardando consulta) ── -->
+<!-- 32. Marcos Vinicius - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Marcos Vinicius de Mesquita</td>
+  <td class="mono">144.746.276-95</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$3.484</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- 33. Francy - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Francy Kelly Francetto de Lima</td>
+  <td class="mono">323.719.918-48</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$15.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score + imóvel</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- 34. Ana Cristina - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Ana Cristina do Couto</td>
+  <td class="mono">609.710.371-91</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$1.700</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score + profissão</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- 35. Janaína - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Janaína Tinoco Ribeiro</td>
+  <td class="mono">042.945.737-59</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$6.500</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- 36. Cecília - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Cecília Regina Lombardi</td>
+  <td class="mono">184.612.608-80</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$6.600</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score + imóvel</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- 37. "." person - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>(5516981751827)</td>
+  <td class="mono">429.816.928-60</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$3.630</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score + nome</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- 38. Rosangela - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Rosangela Aparecida de Oliveira</td>
+  <td class="mono">322.141.888-43</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$7.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score + renda</td>
+  <td><span class="st st-col">Consultar</span></td>
 </tr>
 <!-- ── Verificados pelo broker (sem score numérico) ── -->
 <tr class="rx">
@@ -936,7 +1014,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </div>
 </div>
 <footer>
-  <p>Lumi Broker CRM — 01/03/2026 v6.1 (+3 novos leads: Cecília, Francy, Bruno — fase inicial, 123 leads totais)</p>
+  <p>Lumi Broker CRM — 01/03/2026 v6.2 (+20 novos leads, +7 CPFs do historico, 143 leads totais)</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
