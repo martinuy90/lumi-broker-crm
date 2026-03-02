@@ -88,24 +88,24 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 01/03/2026 — v6.3</div>
+    <div class="ts">Atualizado: 01/03/2026 — v6.4</div>
   </div>
   <div class="kpis">
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">145</div><div class="kpi-l">Total Leads</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">45</div><div class="kpi-l">CPFs Compartilhados</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">166</div><div class="kpi-l">Total Leads</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">50</div><div class="kpi-l">CPFs Compartilhados</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">38</div><div class="kpi-l">Crédito Verificado</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">0</div><div class="kpi-l">CPF Sem Score</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">5</div><div class="kpi-l">CPF Sem Score</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--orange)">2</div><div class="kpi-l">CPF Errado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">6</div><div class="kpi-l">Enviados a Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--red)">6</div><div class="kpi-l">Recusadas Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Ready to Send</div></div>
   </div>
   <div class="summ">
-    <b>Resumo v6.3:</b> <b>145 leads totais</b> (+2 novos). <b>7 scores obtidos</b> das consultas de crédito — todos BAIXO/RUIM, nenhum qualifica. 38 créditos verificados, <b>0 sem score</b>. <b>0 Ready to send</b> — nenhum lead com dados completos + score ≥ 400. <b>Melhor candidato:</b> Roberto (683 BOM) — falta dados do imóvel. <b>Cecília (389)</b> é a melhor dos novos scores mas ainda BAIXO. <b>Ready = dados pessoais + dados imóvel completos + score ≥ 400.</b>
+    <b>Resumo v6.4:</b> <b>166 leads totais</b> (+21 novos). <b>5 novos CPFs</b> encontrados no historico (Franciele, Onivaldo, Everton, Adriana, Vagner) — todos pendente consulta de crédito. 38 créditos verificados. <b>0 Ready to send</b> — nenhum lead com dados completos + score ≥ 400. <b>Melhor candidato:</b> Roberto (683 BOM) — falta dados do imóvel. <b>Ready = dados pessoais + dados imóvel completos + score ≥ 400.</b>
   </div>
 </div>
 <div class="tabs">
-  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">45</span></button>
+  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">50</span></button>
   <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">6</span></button>
   <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">7</span></button>
   <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">32</span></button>
@@ -542,6 +542,62 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td>R$3.630</td>
   <td style="color:var(--orange);font-size:11px">Falta: Conferir dados</td>
   <td><span class="st st-nao">Sem chance</span></td>
+</tr>
+<!-- ── CPFs Sem Score (aguardando consulta) ── -->
+<!-- 39. Franciele - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Franciele Aparecida Silva Moschiar</td>
+  <td class="mono">363.361.018-94</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$20.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- 40. Onivaldo - Sem Score (via Juliana) -->
+<tr class="rx">
+  <td>—</td>
+  <td>Onivaldo Menegario Sobrinho</td>
+  <td class="mono">742.194.648-91</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score + dados</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- 41. Everton Sudré - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Everton Sudré Ferreira</td>
+  <td class="mono">830.863.071-53</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score + renda</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- 42. Adriana - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Adriana Ribeiro de Souza</td>
+  <td class="mono">859.607.216-00</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$2.900</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score + imóvel</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- 43. Vagner - Sem Score (via Alan Jordão) -->
+<tr class="rx">
+  <td>—</td>
+  <td>Vagner Aparecido de Souza</td>
+  <td class="mono">346.496.748-40</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score + dados</td>
+  <td><span class="st st-col">Consultar</span></td>
 </tr>
 <!-- ── Verificados pelo broker (sem score numérico) ── -->
 <tr class="rx">
@@ -1048,7 +1104,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </div>
 </div>
 <footer>
-  <p>Lumi Broker CRM — 01/03/2026 v6.3 (+2 novos leads, 7 scores obtidos, 145 leads totais, 38 verificados)</p>
+  <p>Lumi Broker CRM — 01/03/2026 v6.4 (+21 novos leads, +5 CPFs, 166 leads totais, 50 CPFs)</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
