@@ -88,24 +88,24 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 02/03/2026 — v6.7</div>
+    <div class="ts">Atualizado: 02/03/2026 — v6.8</div>
   </div>
   <div class="kpis">
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">186</div><div class="kpi-l">Total Leads</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">54</div><div class="kpi-l">CPFs Compartilhados</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">206</div><div class="kpi-l">Total Leads</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">67</div><div class="kpi-l">CPFs Compartilhados</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">41</div><div class="kpi-l">Crédito Verificado</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">6</div><div class="kpi-l">CPF Sem Score</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">19</div><div class="kpi-l">CPF Sem Score</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--orange)">2</div><div class="kpi-l">CPF Errado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">6</div><div class="kpi-l">Enviados a Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--red)">6</div><div class="kpi-l">Recusadas Broker</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Ready to Send</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--green)">1</div><div class="kpi-l">Ready to Send</div></div>
   </div>
   <div class="summ">
-    <b>Resumo v6.7:</b> <b>186 leads totais</b>. Consulta Rafael: <b>197 RUIM</b> — dados completos mas score muito baixo. 41 créditos verificados, 6 sem score. <b>0 Ready to send.</b> <b>Melhor candidato:</b> Roberto (683 BOM) — falta dados do imóvel.
+    <b>Resumo v6.8:</b> <b>206 leads totais</b> (+20 novos). <span style="color:var(--green);font-weight:700">🎉 PRIMEIRO LEAD READY: Thialey Leite da Silva (402 REGULAR) — dados completos!</span> 13 novos CPFs coletados. 41 créditos verificados, 19 sem score. Destaques: Oldemar (R$15k), Simone (R$12k), Ed Carlos (R$9k).
   </div>
 </div>
 <div class="tabs">
-  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">54</span></button>
+  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">67</span></button>
   <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">6</span></button>
   <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">7</span></button>
   <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">35</span></button>
@@ -180,16 +180,16 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: Dados imóvel</td>
   <td><span class="st st-nao">Não enviar</span></td>
 </tr>
-<!-- 6. Thialey 402 REGULAR -->
-<tr class="ry">
-  <td>6</td>
-  <td>Thialey Leite da Silva</td>
+<!-- 6. Thialey 402 REGULAR — READY TO SEND! -->
+<tr class="ry" style="border-left:3px solid var(--green)">
+  <td style="font-weight:700;color:var(--green)">6</td>
+  <td style="font-weight:600">Thialey Leite da Silva</td>
   <td class="mono">053.164.979-29</td>
   <td class="sc" style="color:var(--yellow)">402</td>
   <td><span class="badge b-reg">REGULAR</span></td>
-  <td>R$2.001-3.000*</td>
-  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
-  <td><span class="st st-nao">Não enviar</span></td>
+  <td>R$1.700</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td><span class="st" style="background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.3)">Ready ✓</span></td>
 </tr>
 <!-- 7. Onivaldo 399 BAIXO -->
 <tr class="ro">
@@ -617,8 +617,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="mono">830.863.071-53</td>
   <td class="sc" style="color:var(--txt2)">?</td>
   <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
-  <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Score + renda</td>
+  <td>R$4.500</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
   <td><span class="st st-col">Consultar</span></td>
 </tr>
 <!-- 45. Adriana - Sem Score -->
@@ -641,6 +641,150 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
   <td>—</td>
   <td style="color:var(--orange);font-size:11px">Falta: Score + dados</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- ── Novos CPFs v6.8 ── -->
+<!-- Oldemar - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Oldemar Fernandes Magesky</td>
+  <td class="mono">040.790.878-10</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$15.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Simone - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Simone Manfrin</td>
+  <td class="mono">015.026.664-21</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$12.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Ed Carlos - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Ed Carlos Feliceto dos Anjos</td>
+  <td class="mono">249.891.808-60</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$9.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Maria Bernadete - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Maria Bernadete S.V. Strauch</td>
+  <td class="mono">063.918.425-15</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$8.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Rafael de Andrade - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Rafael de Andrade Mendes</td>
+  <td class="mono">402.349.028-84</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$7.219</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Estela Mariana - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Estela Mariana Gomes</td>
+  <td class="mono">343.390.408-19</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$7.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Lavinia - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Lavinia Sampaio Caliman</td>
+  <td class="mono">515.461.368-60</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$6.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Adriana Stephanie - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Adriana Stephanie O. Rodrigues</td>
+  <td class="mono">354.190.018-02</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$4.500</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Luiz Fernando - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Luiz Fernando Pereira</td>
+  <td class="mono">305.955.028-06</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$4.200</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Igaro Samuel - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Igaro Samuel Moraes Ortelli</td>
+  <td class="mono">609.800.030-79</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$4.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Willian Ricardo - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Willian Ricardo da Silva Ferreira</td>
+  <td class="mono">416.816.408-05</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$3.700</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Marcos V. O. Marinheiro - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Marcos V. de O. Marinheiro</td>
+  <td class="mono">230.042.308-10</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$3.500</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<!-- Bruno Balbinotti - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Bruno da Costa Balbinotti</td>
+  <td class="mono">078.370.529-86</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$2.670</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
   <td><span class="st st-col">Consultar</span></td>
 </tr>
 <!-- ── Verificados pelo broker (sem score numérico) ── -->
@@ -1163,7 +1307,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </div>
 </div>
 <footer>
-  <p>Lumi Broker CRM — 02/03/2026 v6.7 (Consulta Rafael 197 RUIM. 186 leads, 54 CPFs, 41 verificados, 6 sem score)</p>
+  <p>Lumi Broker CRM — v6.8 — 🎉 PRIMEIRO READY: Thialey (402). +20 leads, +13 CPFs. 206 leads, 67 CPFs, 41 verificados, 19 sem score, 1 Ready</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
