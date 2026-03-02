@@ -88,27 +88,27 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 02/03/2026 — v6.6</div>
+    <div class="ts">Atualizado: 02/03/2026 — v6.7</div>
   </div>
   <div class="kpis">
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">186</div><div class="kpi-l">Total Leads</div></div>
     <div class="kpi"><div class="kpi-v" style="color:#60a5fa">54</div><div class="kpi-l">CPFs Compartilhados</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">40</div><div class="kpi-l">Crédito Verificado</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">7</div><div class="kpi-l">CPF Sem Score</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">41</div><div class="kpi-l">Crédito Verificado</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">6</div><div class="kpi-l">CPF Sem Score</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--orange)">2</div><div class="kpi-l">CPF Errado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">6</div><div class="kpi-l">Enviados a Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--red)">6</div><div class="kpi-l">Recusadas Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Ready to Send</div></div>
   </div>
   <div class="summ">
-    <b>Resumo v6.6:</b> <b>186 leads totais</b> (+20 novos). <b>4 novos CPFs</b> encontrados (Rafael, Alessandra, Felipe, Lucas) — todos pendente consulta. 40 créditos verificados, 7 sem score. <b>0 Ready to send.</b> <b>Destaque:</b> Rafael Pereira tem TODOS os dados completos (pessoais + imóvel) — se score ≥ 400, vai direto ao broker! <b>Melhor candidato verificado:</b> Roberto (683 BOM) — falta dados do imóvel.
+    <b>Resumo v6.7:</b> <b>186 leads totais</b>. Consulta Rafael: <b>197 RUIM</b> — dados completos mas score muito baixo. 41 créditos verificados, 6 sem score. <b>0 Ready to send.</b> <b>Melhor candidato:</b> Roberto (683 BOM) — falta dados do imóvel.
   </div>
 </div>
 <div class="tabs">
   <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">54</span></button>
   <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">6</span></button>
   <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">7</span></button>
-  <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">34</span></button>
+  <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">35</span></button>
 </div>
 <!-- ============ TAB 1: RANKING COMPLETO ============ -->
 <div id="s-todos" class="sec on">
@@ -477,9 +477,20 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: Conferir dados</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
-<!-- 33. Nicolas 194 RUIM -->
+<!-- 33. Rafael 197 RUIM -->
 <tr class="rr">
   <td>33</td>
+  <td>Rafael Pereira dos Santos</td>
+  <td class="mono">465.174.778-70</td>
+  <td class="sc" style="color:var(--red)">197</td>
+  <td><span class="badge b-rui">RUIM</span></td>
+  <td>R$4.000</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td><span class="st st-nao">Sem chance</span></td>
+</tr>
+<!-- 34. Nicolas 194 RUIM -->
+<tr class="rr">
+  <td>34</td>
   <td>Nicola Carone Dias</td>
   <td class="mono">132.071.288-66</td>
   <td class="sc" style="color:var(--red)">194</td>
@@ -490,7 +501,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </tr>
 <!-- Francy 193 RUIM -->
 <tr class="rr">
-  <td>34</td>
+  <td>35</td>
   <td>Francy Kelly Francetto de Lima</td>
   <td class="mono">323.719.918-48</td>
   <td class="sc" style="color:var(--red)">193</td>
@@ -499,9 +510,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: Dados imóvel</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
-<!-- 35. Joao Guilherme 171 RUIM -->
+<!-- 36. Joao Guilherme 171 RUIM -->
 <tr class="rr">
-  <td>35</td>
+  <td>36</td>
   <td>João Guilherme Antunes Ramos</td>
   <td class="mono">037.452.639-79</td>
   <td class="sc" style="color:var(--red)">171</td>
@@ -510,9 +521,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
-<!-- 36. Marta 165 RUIM -->
+<!-- 37. Marta 165 RUIM -->
 <tr class="rr">
-  <td>36</td>
+  <td>37</td>
   <td>Marta Guedes da Silva</td>
   <td class="mono">367.317.208-52</td>
   <td class="sc" style="color:var(--red)">165</td>
@@ -521,9 +532,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: Renda</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
-<!-- 37. Misaelly 138 RUIM -->
+<!-- 38. Misaelly 138 RUIM -->
 <tr class="rr">
-  <td>37</td>
+  <td>38</td>
   <td>Misaelly Karolaine da Silva Santos</td>
   <td class="mono">398.106.808-48</td>
   <td class="sc" style="color:var(--red)">138</td>
@@ -534,7 +545,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </tr>
 <!-- Janaína 136 RUIM -->
 <tr class="rr">
-  <td>38</td>
+  <td>39</td>
   <td>Janaína Tinoco Ribeiro</td>
   <td class="mono">042.945.737-59</td>
   <td class="sc" style="color:var(--red)">136</td>
@@ -543,9 +554,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: Conferir dados</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
-<!-- 39. Luan 101 RUIM -->
+<!-- 40. Luan 101 RUIM -->
 <tr class="rr">
-  <td>39</td>
+  <td>40</td>
   <td>Luan Peques</td>
   <td class="mono">143.001.877-11</td>
   <td class="sc" style="color:var(--red)">101</td>
@@ -556,7 +567,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </tr>
 <!-- Adilson 26 RUIM -->
 <tr class="rr">
-  <td>40</td>
+  <td>41</td>
   <td>Adilson Modesto Simoes Junior</td>
   <td class="mono">429.816.928-60</td>
   <td class="sc" style="color:var(--red)">26</td>
@@ -566,18 +577,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <!-- ── CPFs Sem Score (aguardando consulta) ── -->
-<!-- 41. Rafael Pereira - Sem Score (DADOS COMPLETOS!) -->
-<tr class="rx">
-  <td>—</td>
-  <td style="font-weight:600">Rafael Pereira dos Santos</td>
-  <td class="mono">465.174.778-70</td>
-  <td class="sc" style="color:var(--txt2)">?</td>
-  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
-  <td>R$4.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos!</td>
-  <td><span class="st st-col">Consultar</span></td>
-</tr>
-<!-- 42. Alessandra - Sem Score -->
+<!-- 41. Alessandra - Sem Score -->
 <tr class="rx">
   <td>—</td>
   <td>Alessandra de A. Soares Ferraz</td>
@@ -588,7 +588,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: Score + condo/IPTU</td>
   <td><span class="st st-col">Consultar</span></td>
 </tr>
-<!-- 43. Felipe Lima - Sem Score -->
+<!-- 42. Felipe Lima - Sem Score -->
 <tr class="rx">
   <td>—</td>
   <td>Felipe Lima Franca</td>
@@ -599,7 +599,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: Score + IPTU/prazo</td>
   <td><span class="st st-col">Consultar</span></td>
 </tr>
-<!-- 44. Lucas Aleixo - Sem Score (nome sujo) -->
+<!-- 43. Lucas Aleixo - Sem Score (nome sujo) -->
 <tr class="rx">
   <td>—</td>
   <td>Lucas Almeida Aleixo</td>
@@ -610,7 +610,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--red);font-size:11px">Nome sujo + Falta: Score</td>
   <td><span class="st st-col">Consultar</span></td>
 </tr>
-<!-- 45. Everton Sudré - Sem Score -->
+<!-- 44. Everton Sudré - Sem Score -->
 <tr class="rx">
   <td>—</td>
   <td>Everton Sudré Ferreira</td>
@@ -621,7 +621,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: Score + renda</td>
   <td><span class="st st-col">Consultar</span></td>
 </tr>
-<!-- 46. Adriana - Sem Score -->
+<!-- 45. Adriana - Sem Score -->
 <tr class="rx">
   <td>—</td>
   <td>Adriana Ribeiro de Souza</td>
@@ -632,7 +632,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: Score + imóvel</td>
   <td><span class="st st-col">Consultar</span></td>
 </tr>
-<!-- 47. Vagner - Sem Score (via Alan Jordão) -->
+<!-- 46. Vagner - Sem Score (via Alan Jordão) -->
 <tr class="rx">
   <td>—</td>
   <td>Vagner Aparecido de Souza</td>
@@ -1113,7 +1113,12 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </div>
 <!-- RUIM section -->
 <div style="margin-top:16px">
-<div class="stitle" style="color:var(--red);border-left-color:var(--red);margin-top:16px">Score RUIM — Sem Chance de Aprovação (8)</div>
+<div class="stitle" style="color:var(--red);border-left-color:var(--red);margin-top:16px">Score RUIM — Sem Chance de Aprovação (9)</div>
+<div class="crd crd-xl" style="cursor:default;opacity:.7">
+  <div class="crd-h"><div><div class="crd-n">Rafael Pereira dos Santos</div><div class="crd-sub">CPF 465.174.778-70</div></div><div class="crd-sc"><b style="color:var(--red)">197</b></div></div>
+  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
+  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (197). Mecânico de caminhão, solteiro, nasc. 22/09/1998. Renda R$4.000 (presumida R$1.401-2.000). Apt R$1.500 + Condo R$285 + IPTU R$50, Americana-SP. <span style="color:var(--green)">✓ Dados completos</span> mas score impede envio.</div>
+</div>
 <div class="crd crd-xl" style="cursor:default;opacity:.7">
   <div class="crd-h"><div><div class="crd-n">Nicola Carone Dias</div><div class="crd-sub">CPF 132.071.288-66</div></div><div class="crd-sc"><b style="color:var(--red)">194</b></div></div>
   <span class="badge b-rui" style="margin-top:4px">RUIM</span>
@@ -1158,7 +1163,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </div>
 </div>
 <footer>
-  <p>Lumi Broker CRM — 02/03/2026 v6.6 (+20 leads, +4 CPFs. 186 leads, 54 CPFs, 40 verificados, 7 sem score)</p>
+  <p>Lumi Broker CRM — 02/03/2026 v6.7 (Consulta Rafael 197 RUIM. 186 leads, 54 CPFs, 41 verificados, 6 sem score)</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
