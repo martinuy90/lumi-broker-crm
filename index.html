@@ -88,27 +88,27 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 03/03/2026 — v6.9.2</div>
+    <div class="ts">Atualizado: 03/03/2026 — v6.9.3</div>
   </div>
   <div class="kpis">
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">230</div><div class="kpi-l">Total Leads</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">76</div><div class="kpi-l">CPFs Compartilhados</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">248</div><div class="kpi-l">Total Leads</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">77</div><div class="kpi-l">CPFs Compartilhados</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">46</div><div class="kpi-l">Crédito Verificado</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">23</div><div class="kpi-l">CPF Sem Score</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">24</div><div class="kpi-l">CPF Sem Score</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--orange)">2</div><div class="kpi-l">CPF Errado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">7</div><div class="kpi-l">Enviados a Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--red)">6</div><div class="kpi-l">Recusadas Broker</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--green)">1</div><div class="kpi-l">Ready to Send</div></div>
   </div>
   <div class="summ">
-    <b>Resumo v6.9.2:</b> 2 novos scores: <b>Thaiara 451 REGULAR</b> (atualizado de 462), <b>Veronica Soares 321 BAIXO</b> (dados completos mas score bloqueia). <b>230 leads totais</b>, 46 créditos verificados, 23 sem score. <span style="color:var(--green);font-weight:700">🎉 Onivaldo APROVADO Porto Seguro via Darqs!</span> Thialey Ready to Send.
+    <b>Resumo v6.9.3:</b> <b>248 leads totais</b> (+18 novos). 1 novo CPF: <b>Edna Alves dos Santos</b> (babá, R$3.800, dados quase completos). Michel (495) agora tem dados no sistema (casado, R$3.200, casa, aluguel R$1.512). 46 verificados, 24 sem score. <span style="color:var(--green);font-weight:700">🎉 Onivaldo APROVADO Porto Seguro via Darqs!</span>
   </div>
 </div>
 <div class="tabs">
-  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">76</span></button>
+  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">77</span></button>
   <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">6</span></button>
   <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">8</span></button>
-  <button class="tab" onclick="sw('baixo',this)">Sem Score<span class="cnt">23</span></button>
+  <button class="tab" onclick="sw('baixo',this)">Sem Score<span class="cnt">24</span></button>
 </div>
 <!-- ============ TAB 1: RANKING COMPLETO ============ -->
 <div id="s-todos" class="sec on">
@@ -143,8 +143,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="mono">290.945.278-63</td>
   <td class="sc" style="color:var(--yellow)">495</td>
   <td><span class="badge b-reg">REGULAR</span></td>
-  <td>R$3.501-4.000*</td>
-  <td style="color:var(--red);font-size:11px">Sem dados no sistema</td>
+  <td>R$3.200</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Prof + imóvel</td>
   <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <!-- 3. Horácio 475 REGULAR -->
@@ -889,6 +889,17 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: Score + dados</td>
   <td><span class="st st-col">Consultar</span></td>
 </tr>
+<!-- Edna - Sem Score -->
+<tr class="rx">
+  <td>—</td>
+  <td>Edna Alves dos Santos</td>
+  <td class="mono">096.474.664-63</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>R$3.800</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados quase completos</td>
+  <td><span class="st st-col">Consultar ★</span></td>
+</tr>
 <!-- ── Verificados pelo broker (sem score numérico) ── -->
 <tr class="rx">
   <td>—</td>
@@ -1062,15 +1073,21 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-imo">Sem dados no sistema</span>
+    <span class="st st-imo">Falta profissão + imóvel</span>
   </div>
   <div class="crd-body">
-    <div class="crd-row"><span class="l">Renda (consulta):</span><span class="v">R$3.501-4.000</span></div>
+    <div class="crd-row"><span class="l">Nascimento:</span><span class="v">27/07/1981 ✓</span></div>
+    <div class="crd-row"><span class="l">Estado civil:</span><span class="v">Casado ✓</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v" style="color:var(--red)">Falta</span></div>
+    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$3.200/mês (presumida R$3.501-4.000)</span></div>
+    <div class="crd-row"><span class="l">Email:</span><span class="v">michel.fenix.0103@gmail.com ✓</span></div>
+    <div class="crd-row"><span class="l">Tipo imóvel:</span><span class="v">Casa ✓</span></div>
+    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.512/mês ✓</span></div>
     <div style="margin-top:10px;padding:8px 10px;background:rgba(239,68,68,.08);border-radius:6px;border:1px solid rgba(239,68,68,.2);font-size:11px;color:#f87171">
-      <b>Falta:</b> TODOS os dados — lead não completou coleta no bot.
+      <b>Falta para enviar ao broker:</b> Profissão · Endereço completo · CEP · Condomínio · IPTU · Prazo contrato · Coberturas
     </div>
     <div class="crd-note">
-      <b>Próximo passo:</b> Coletar dados pessoais (nascimento, estado civil, profissão, email) + dados do imóvel. Score 495 REGULAR é viável para broker.
+      <b>Progresso!</b> Lead agora tem dados pessoais parciais + tipo imóvel e aluguel. Score 495 REGULAR é forte. <b>Próximo passo:</b> Coletar profissão, endereço do imóvel e dados restantes.
     </div>
   </div>
 </div>
@@ -1375,9 +1392,20 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--red);font-size:11px">⚠ NOME SUJO · Falta: dados imóvel</td>
   <td><span class="st st-nao">Baixa</span></td>
 </tr>
-<!-- 12. Willian - R$3.7k -->
+<!-- 12. Edna - R$3.8k — DADOS QUASE COMPLETOS -->
+<tr class="rx" style="border-left:3px solid var(--green)">
+  <td style="font-weight:700;color:var(--green)">12</td>
+  <td style="font-weight:600">Edna Alves dos Santos</td>
+  <td style="font-size:11px">Babá</td>
+  <td class="mono">096.474.664-63</td>
+  <td>R$3.800</td>
+  <td>R$1.200</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados quase completos (CEP estimado)</td>
+  <td><span class="st" style="background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.3);font-weight:700">★ TOP</span></td>
+</tr>
+<!-- 13. Willian - R$3.7k -->
 <tr class="rx">
-  <td>12</td>
+  <td>13</td>
   <td>Willian Ricardo da Silva Ferreira</td>
   <td style="font-size:11px;color:var(--txt2)">—</td>
   <td class="mono">416.816.408-05</td>
@@ -1386,9 +1414,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
   <td><span class="st st-col">Média</span></td>
 </tr>
-<!-- 13. Felipe Lima - R$3.6k -->
+<!-- 14. Felipe Lima - R$3.6k -->
 <tr class="rx">
-  <td>13</td>
+  <td>14</td>
   <td>Felipe Lima Franca</td>
   <td style="font-size:11px">Aux. administrativo</td>
   <td class="mono">427.885.248-70</td>
@@ -1397,9 +1425,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: IPTU, prazo contrato</td>
   <td><span class="st st-col">Média</span></td>
 </tr>
-<!-- 14. Jessica - R$3.5k -->
+<!-- 15. Jessica - R$3.5k -->
 <tr class="rx">
-  <td>14</td>
+  <td>15</td>
   <td>Jessica Jordao</td>
   <td style="font-size:11px;color:var(--txt2)">—</td>
   <td class="mono">438.015.278-24</td>
@@ -1408,9 +1436,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: profissão, dados imóvel</td>
   <td><span class="st st-col">Média</span></td>
 </tr>
-<!-- 15. Marcos Marinheiro - R$3.5k -->
+<!-- 16. Marcos Marinheiro - R$3.5k -->
 <tr class="rx">
-  <td>15</td>
+  <td>16</td>
   <td>Marcos V. de O. Marinheiro</td>
   <td style="font-size:11px;color:var(--txt2)">—</td>
   <td class="mono">230.042.308-10</td>
@@ -1419,9 +1447,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
   <td><span class="st st-col">Média</span></td>
 </tr>
-<!-- 16. Veronica Miranda - R$3k -->
+<!-- 17. Veronica Miranda - R$3k -->
 <tr class="rx">
-  <td>16</td>
+  <td>17</td>
   <td>Veronica Goncalves Miranda</td>
   <td style="font-size:11px;color:var(--txt2)">—</td>
   <td class="mono">063.999.786-45</td>
@@ -1430,9 +1458,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: dados imóvel (buscando)</td>
   <td><span class="st st-col">Média</span></td>
 </tr>
-<!-- 17. Adriana Ribeiro - R$2.9k -->
+<!-- 18. Adriana Ribeiro - R$2.9k -->
 <tr class="rx">
-  <td>17</td>
+  <td>18</td>
   <td>Adriana Ribeiro de Souza</td>
   <td style="font-size:11px;color:var(--txt2)">—</td>
   <td class="mono">859.607.216-00</td>
@@ -1441,9 +1469,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: dados imóvel</td>
   <td><span class="st st-col">Média</span></td>
 </tr>
-<!-- 18. Bruno - R$2.67k -->
+<!-- 19. Bruno - R$2.67k -->
 <tr class="rx">
-  <td>18</td>
+  <td>19</td>
   <td>Bruno da Costa Balbinotti</td>
   <td style="font-size:11px;color:var(--txt2)">—</td>
   <td class="mono">078.370.529-86</td>
@@ -1452,9 +1480,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
   <td><span class="st st-nao">Baixa</span></td>
 </tr>
-<!-- 19. Tatiane - R$2.5k -->
+<!-- 20. Tatiane - R$2.5k -->
 <tr class="rx">
-  <td>19</td>
+  <td>20</td>
   <td>Tatiane Hegele de Oliveira</td>
   <td style="font-size:11px;color:var(--txt2)">—</td>
   <td class="mono">375.014.488-50</td>
@@ -1463,9 +1491,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: dados imóvel</td>
   <td><span class="st st-col">Média</span></td>
 </tr>
-<!-- 20. Luciene - ? -->
+<!-- 21. Luciene - ? -->
 <tr class="rx">
-  <td>20</td>
+  <td>21</td>
   <td>Luciene Silveira Hack</td>
   <td style="font-size:11px;color:var(--txt2)">—</td>
   <td class="mono">020.302.100-21</td>
@@ -1474,9 +1502,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: renda, dados pessoais + imóvel</td>
   <td><span class="st st-nao">Baixa</span></td>
 </tr>
-<!-- 21. Alessandra - R$1.9k -->
+<!-- 22. Alessandra - R$1.9k -->
 <tr class="rx">
-  <td>21</td>
+  <td>22</td>
   <td>Alessandra de A. Soares Ferraz</td>
   <td style="font-size:11px">Op. caixa</td>
   <td class="mono">095.692.177-00</td>
@@ -1485,9 +1513,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: condo, IPTU, prazo contrato</td>
   <td><span class="st st-nao">Baixa</span></td>
 </tr>
-<!-- 22. Fabe - ? -->
+<!-- 23. Fabe - ? -->
 <tr class="rx">
-  <td>22</td>
+  <td>23</td>
   <td>Fabe</td>
   <td style="font-size:11px;color:var(--txt2)">—</td>
   <td class="mono">033.938.129-98</td>
@@ -1496,9 +1524,9 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: nome completo, dados pessoais + imóvel</td>
   <td><span class="st st-nao">Baixa</span></td>
 </tr>
-<!-- 23. Vagner - ? -->
+<!-- 24. Vagner - ? -->
 <tr class="rx">
-  <td>23</td>
+  <td>24</td>
   <td>Vagner Aparecido de Souza</td>
   <td style="font-size:11px;color:var(--txt2)">—</td>
   <td class="mono">346.496.748-40</td>
@@ -1512,7 +1540,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <p style="font-size:10px;color:var(--txt2);margin-top:8px">★ TOP = dados completos, se score ≥ 400 será Ready imediatamente. Alta = renda alta ou profissão estável. Média = aguardando mais dados. Baixa = renda baixa ou dados insuficientes.</p>
 </div>
 <footer>
-  <p>Lumi Broker CRM — v6.9.2 — +2 scores (Thaiara 451, Veronica 321). 230 leads, 76 CPFs, 46 verificados, 23 sem score, 7 enviados, 1 Ready</p>
+  <p>Lumi Broker CRM — v6.9.3 — +18 leads, +1 CPF (Edna). Michel dados atualizados. 248 leads, 77 CPFs, 46 verificados, 24 sem score, 7 enviados, 1 Ready</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
