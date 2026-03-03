@@ -88,7 +88,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 03/03/2026 — v6.9</div>
+    <div class="ts">Atualizado: 03/03/2026 — v6.9.1</div>
   </div>
   <div class="kpis">
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">230</div><div class="kpi-l">Total Leads</div></div>
@@ -108,7 +108,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">77</span></button>
   <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">6</span></button>
   <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">8</span></button>
-  <button class="tab" onclick="sw('baixo',this)">Score Baixo<span class="cnt">39</span></button>
+  <button class="tab" onclick="sw('baixo',this)">Sem Score<span class="cnt">25</span></button>
 </div>
 <!-- ============ TAB 1: RANKING COMPLETO ============ -->
 <div id="s-todos" class="sec on">
@@ -1160,6 +1160,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <div class="crd-body">
     <div class="crd-row"><span class="l">Profissão:</span><span class="v">Aposentado</span></div>
     <div class="crd-row"><span class="l">Renda:</span><span class="v">R$7.000 (presumida R$5.001-7.000)</span></div>
+    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$2.900</span></div>
     <div class="crd-row"><span class="l">Broker:</span><span class="v" style="color:var(--green)">Darqs ✓ — Porto Seguro APROVADO</span></div>
     <div class="crd-row"><span class="l">Valor:</span><span class="v">R$8.648,50 à vista ou 10x R$864,85</span></div>
     <div class="crd-row"><span class="l">Vigência:</span><span class="v">10/03/2026 – 10/09/2028</span></div>
@@ -1248,220 +1249,277 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </div>
 </div>
 </div>
-<!-- ============ TAB 4: SCORE BAIXO ============ -->
+<!-- ============ TAB 4: SEM SCORE ============ -->
 <div id="s-baixo" class="sec">
-<div class="stitle">Score Baixo — Não Recomendado Enviar a Broker</div>
-<div class="coll-h" onclick="var c=this.nextElementSibling;c.classList.toggle('open');this.querySelector('.chv').style.transform=c.classList.contains('open')?'rotate(180deg)':'rotate(0)'">
-  <span class="coll-t">Expandir lista (BAIXO)</span>
-  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">30</span><span class="chv">▼</span></div>
-</div>
-<div class="coll-b">
-<div class="cards">
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Thialey Leite da Silva</div><div class="crd-sub">CPF 053.164.979-29</div></div><div class="crd-sc"><b style="color:var(--yellow)">402</b></div></div>
-  <span class="badge b-reg" style="margin-top:4px">REGULAR</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Estado civil:</span><span class="v">Informado via bot</span></div><div class="crd-row"><span class="l">CEP:</span><span class="v">87140-000</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$2.001-3.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note"><b style="color:var(--green)">✅ READY TO SEND!</b> Dados completos (pessoais + imóvel). Zeladora, R$1.700, solteira. Imóvel: Rua Jose Dorigao 446, CEP 87140-000.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Onivaldo Menegario Sobrinho</div><div class="crd-sub">CPF 742.194.648-91</div></div><div class="crd-sc"><b style="color:var(--orange)">399</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Aposentado</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$7.000 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$5.001-7.000 (Serasa)</span></div><div class="crd-row"><span class="l">Risco:</span><span class="v">Médio</span></div><div class="crd-row"><span class="l">Dados:</span><span class="v" style="color:var(--green)">✓ Completos (pessoais + imóvel)</span></div><div class="crd-note">Score 399 — <b style="color:var(--green)">✅ APROVADO Porto Seguro via Darqs!</b> R$8.648,50 à vista ou 10x R$864,85. Vigência 10/03/2026–10/09/2028. Primeiro lead aprovado do funil!</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Marcello Rodrigues Lopes</div><div class="crd-sub">CPF 266.803.538-40</div></div><div class="crd-sc"><b style="color:var(--orange)">389</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda:</span><span class="v">R$4.400</span></div><div class="crd-row"><span class="l">Endereço:</span><span class="v">José Menino, Santos · CEP 11065</span></div><div class="crd-row"><span class="l">Imóvel:</span><span class="v">Apartamento residencial · Aluguel R$1.500 · 30 meses</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Condomínio, IPTU, coberturas</span></div><div class="crd-note">Score 389 borderline. Dados quase completos.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Cecília Regina Lombardi</div><div class="crd-sub">CPF 184.612.608-80</div></div><div class="crd-sc"><b style="color:var(--orange)">389</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Aposentada</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.600 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">Acima de R$12.000 (Serasa)</span></div><div class="crd-row"><span class="l">Risco:</span><span class="v">Médio</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Dados imóvel</span></div><div class="crd-note">Score 389 borderline BAIXO. Renda presumida alta (>R$12k) mas score impede envio.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Wanderson Gama Marques</div><div class="crd-sub">CPF 146.059.137-26</div></div><div class="crd-sc"><b style="color:var(--orange)">374</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Pedreiro</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$10.000 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000 (Serasa)</span></div><div class="crd-row"><span class="l">Risco:</span><span class="v">Médio</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Conferir dados pessoais + imóvel</span></div><div class="crd-note"><b>Composição:</b> Iriane Bastos Ribeiro (CPF 154.490.557-22) — Score <b style="color:var(--yellow)">468 REGULAR</b>, renda presumida R$1.401-2.000. Companheira com score melhor que titular.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Fernanda Almeida de Bragança</div><div class="crd-sub">CPF 007.273.730-13</div></div><div class="crd-sc"><b style="color:var(--orange)">372</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda:</span><span class="v">R$2.500 (Op. de caixa)</span></div><div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.500</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Dados imóvel (endereço, CEP, tipo, etc.)</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Adriana de Paula Coimbra</div><div class="crd-sub">CPF 089.634.317-03</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note">Serasa: 5 dívidas (R$6.603 total), 2 protestos.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Andrea da Conceição F. da Cruz</div><div class="crd-sub">CPF 289.441.048-40</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Psicóloga</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.000</span></div><div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.500</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço, CEP, tipo, condo, IPTU, prazo, cob.</span></div><div class="crd-note">Serasa: 8 dívidas, 1 ação judicial (execução R$32k), 15 consultas. Renda boa mas score e dívidas impedem envio.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Rogerio Fernando Bittar Perez</div><div class="crd-sub">CPF 165.920.968-45</div></div><div class="crd-sc"><b style="color:var(--orange)">350</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note">Serasa: 2 dívidas, 12 protestos (~R$19k).</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Gabriela Vitória da Silva Lima</div><div class="crd-sub">CPF 546.545.788-03</div></div><div class="crd-sc"><b style="color:var(--orange)">333</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Maria Lucia Correa</div><div class="crd-sub">CPF 044.141.906-22</div></div><div class="crd-sc"><b style="color:var(--orange)">328</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda:</span><span class="v">R$1.800</span></div><div class="crd-row"><span class="l">Endereço:</span><span class="v">Informado via bot · CEP informado</span></div><div class="crd-row"><span class="l">Imóvel:</span><span class="v">Aluguel R$900 · IPTU R$100 · 30 meses</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Condomínio, coberturas</span></div><div class="crd-note">Score baixo. Dados quase completos mas score impede envio a broker.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Poliana Conovalow Tartaro</div><div class="crd-sub">CPF 357.812.168-12</div></div><div class="crd-sc"><b style="color:var(--orange)">328</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Grazielle Carlos dos Santos</div><div class="crd-sub">CPF 418.796.818-03</div></div><div class="crd-sc"><b style="color:var(--orange)">321</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--green)">✓ Dados completos</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Franciele Aparecida Silva Moschiar</div><div class="crd-sub">CPF 363.361.018-94</div></div><div class="crd-sc"><b style="color:var(--orange)">321</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda:</span><span class="v">R$20.000 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$3.001-3.500 (Serasa)</span></div><div class="crd-row"><span class="l">Risco:</span><span class="v">Médio</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Dados pessoais incompletos</span></div><div class="crd-note">Renda alta (R$20k) mas score 321 BAIXO impede envio. Renda presumida muito abaixo da declarada. Não enviar.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Fabricia Pinheiro de Oliveira</div><div class="crd-sub">CPF 000.429.656-75</div></div><div class="crd-sc"><b style="color:var(--orange)">312</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço</span></div><div class="crd-note">Score baixo. Não enviar a broker.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Estela Mariana Gomes</div><div class="crd-sub">CPF 343.390.408-19</div></div><div class="crd-sc"><b style="color:var(--orange)">308</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Funcionária pública</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$7.000 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$7.001-9.000 (Serasa)</span></div><div class="crd-row"><span class="l">Nascimento:</span><span class="v">12/06/1988</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Dados imóvel</span></div><div class="crd-note">Score 308 BAIXO. Renda presumida alta (R$7-9k) e compatível com declarada. Funcionária pública = renda estável.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Marcos Vinicius de Mesquita</div><div class="crd-sub">CPF 144.746.276-95</div></div><div class="crd-sc"><b style="color:var(--orange)">306</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda:</span><span class="v">R$3.484 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000 (Serasa)</span></div><div class="crd-row"><span class="l">Risco:</span><span class="v">Médio</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Conferir dados</span></div><div class="crd-note">Score 306 BAIXO. Não enviar a broker.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Ana Cristina do Couto</div><div class="crd-sub">CPF 609.710.371-91</div></div><div class="crd-sc"><b style="color:var(--orange)">301</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda:</span><span class="v">R$1.700 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000 (Serasa)</span></div><div class="crd-row"><span class="l">Risco:</span><span class="v">Médio</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Conferir dados</span></div><div class="crd-note">Score 301 BAIXO. Não enviar a broker.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Ana Paula Martendal</div><div class="crd-sub">CPF 047.392.319-05</div></div><div class="crd-sc"><b style="color:var(--red)">277</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Analista sênior</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$12.000 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$2.001-3.000 (Serasa)</span></div><div class="crd-row"><span class="l">Risco:</span><span class="v" style="color:var(--red)">Alto</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Conferir dados pessoais + imóvel</span></div><div class="crd-note">Renda alta (R$12k) mas score 277 e risco alto impedem envio a broker.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Ed Carlos Feliceto dos Anjos</div><div class="crd-sub">CPF 249.891.808-60</div></div><div class="crd-sc"><b style="color:var(--red)">273</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda:</span><span class="v">R$9.000 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$3.501-4.000 (Serasa)</span></div><div class="crd-row"><span class="l">Nascimento:</span><span class="v">04/07/1976</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Dados imóvel</span></div><div class="crd-note">Score 273 BAIXO. Renda declarada alta (R$9k) mas presumida muito menor. Não enviar.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Bruna Aparecida dos Santos Lopes</div><div class="crd-sub">CPF 387.102.988-27</div></div><div class="crd-sc"><b style="color:var(--red)">272</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Motorista particular</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.000</span></div><div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$2.300</span></div><div class="crd-row"><span class="l">Telefone:</span><span class="v">+55 11 9956-52464 (WhatsApp: 🙂)</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço, CEP, tipo, condo, IPTU, prazo, cob.</span></div><div class="crd-note">Renda boa (R$6k) mas score 272 impede envio. Risco alto.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Maria Carolina Madazio</div><div class="crd-sub">CPF 300.620.428-07</div></div><div class="crd-sc"><b style="color:var(--red)">271</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Vendedora</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$5.000</span></div><div class="crd-row"><span class="l">Imóvel:</span><span class="v">Casa · Aluguel R$1.700</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço, CEP, condo, IPTU, prazo, cob.</span></div><div class="crd-note">Renda boa mas score 271 muito baixo. Não enviar.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Keila Maria de Sousa</div><div class="crd-sub">CPF 324.627.558-02</div></div><div class="crd-sc"><b style="color:var(--red)">265</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda:</span><span class="v">R$1.860</span></div><div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$950</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço, CEP, tipo, condo, IPTU, prazo, cob.</span></div><div class="crd-note">Score 265 muito baixo. Não enviar.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Simone Manfrin</div><div class="crd-sub">CPF 015.026.664-21</div></div><div class="crd-sc"><b style="color:var(--red)">264</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda:</span><span class="v">R$12.000 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000 (Serasa)</span></div><div class="crd-row"><span class="l">Nascimento:</span><span class="v">12/09/1973</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Dados imóvel</span></div><div class="crd-note">Score 264 BAIXO. Renda declarada alta (R$12k) mas presumida muito abaixo. Não enviar.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Oldemar Fernandes Magesky</div><div class="crd-sub">CPF 040.790.878-10</div></div><div class="crd-sc"><b style="color:var(--red)">261</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda:</span><span class="v">R$15.000 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000 (Serasa)</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Dados imóvel</span></div><div class="crd-note">Score 261 BAIXO. Renda declarada muito alta (R$15k) mas presumida mínima. Não enviar.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Claudio Ubiratan de Almeida</div><div class="crd-sub">CPF 200.811.549-68</div></div><div class="crd-sc"><b style="color:var(--red)">247</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$5.001-7.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço</span></div><div class="crd-note">Renda boa mas score muito baixo. Não enviar.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Rogerio Jose Costa</div><div class="crd-sub">CPF 985.424.866-68</div></div><div class="crd-sc"><b style="color:var(--red)">246</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Motorista de aplicativo</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.000</span></div><div class="crd-row"><span class="l">Imóvel:</span><span class="v">Casa · Aluguel R$1.200</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Endereço, CEP, condo, IPTU, prazo, cob.</span></div><div class="crd-note">Renda boa mas score 246 muito baixo. Não enviar.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Alan Felipe de Pina Lopes</div><div class="crd-sub">CPF 300.384.118-14</div></div><div class="crd-sc"><b style="color:var(--red)">239</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Agente funerário</span></div><div class="crd-row"><span class="l">Nascimento:</span><span class="v">12/10/1982</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$1.800</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000 (Serasa)</span></div><div class="crd-row"><span class="l">Risco:</span><span class="v" style="color:var(--red)">Alto</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Conferir dados pessoais + imóvel</span></div><div class="crd-note">Score 239 muito baixo + risco alto. Não enviar.</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">José Martinez Ramos</div><div class="crd-sub">CPF 905.312.138-20</div></div><div class="crd-sc"><b style="color:var(--red)">232</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--red)">Sem dados no sistema</span></div><div class="crd-note">Dados completos no bot(?), mas score muito baixo (risco alto).</div></div>
-</div>
-<div class="crd crd-xl" onclick="this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Rosangela Aparecida de Oliveira</div><div class="crd-sub">CPF 322.141.888-43</div></div><div class="crd-sc"><b style="color:var(--red)">222</b></div></div>
-  <span class="badge b-bai" style="margin-top:4px">BAIXO</span>
-  <div class="crd-body"><div class="crd-row"><span class="l">Profissão:</span><span class="v">Babá</span></div><div class="crd-row"><span class="l">Renda:</span><span class="v">R$7.000 (declarada)</span></div><div class="crd-row"><span class="l">Renda presumida:</span><span class="v">R$1.401-2.000 (Serasa)</span></div><div class="crd-row"><span class="l">Risco:</span><span class="v" style="color:var(--red)">Alto</span></div><div class="crd-row"><span class="l">Falta:</span><span class="v" style="color:var(--orange)">Conferir dados</span></div><div class="crd-note">Renda boa (R$7k) mas score 222 muito baixo. Não enviar.</div></div>
-</div>
-</div>
-</div>
-<!-- RUIM section -->
-<div style="margin-top:16px">
-<div class="stitle" style="color:var(--red);border-left-color:var(--red);margin-top:16px">Score RUIM — Sem Chance de Aprovação (9)</div>
-<div class="crd crd-xl" style="cursor:default;opacity:.7">
-  <div class="crd-h"><div><div class="crd-n">Rafael Pereira dos Santos</div><div class="crd-sub">CPF 465.174.778-70</div></div><div class="crd-sc"><b style="color:var(--red)">197</b></div></div>
-  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (197). Mecânico de caminhão, solteiro, nasc. 22/09/1998. Renda R$4.000 (presumida R$1.401-2.000). Apt R$1.500 + Condo R$285 + IPTU R$50, Americana-SP. <span style="color:var(--green)">✓ Dados completos</span> mas score impede envio.</div>
-</div>
-<div class="crd crd-xl" style="cursor:default;opacity:.7">
-  <div class="crd-h"><div><div class="crd-n">Nicola Carone Dias</div><div class="crd-sub">CPF 132.071.288-66</div></div><div class="crd-sc"><b style="color:var(--red)">194</b></div></div>
-  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (194). Nascimento: 08/06/1975. Casado. Renda R$10.000. Aluguel R$3.000 + Condo R$500. <span style="color:var(--orange)">Falta: Dados imóvel (end, CEP, tipo, IPTU, prazo, cob).</span></div>
-</div>
-<div class="crd crd-xl" style="cursor:default;opacity:.7">
-  <div class="crd-h"><div><div class="crd-n">João Guilherme Antunes Ramos</div><div class="crd-sub">CPF 037.452.639-79</div></div><div class="crd-sc"><b style="color:var(--red)">171</b></div></div>
-  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (171). <span style="color:var(--red)">Sem dados no sistema.</span></div>
-</div>
-<div class="crd crd-xl" style="cursor:default;opacity:.7">
-  <div class="crd-h"><div><div class="crd-n">Marta Guedes da Silva</div><div class="crd-sub">CPF 367.317.208-52</div></div><div class="crd-sc"><b style="color:var(--red)">165</b></div></div>
-  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (165). Renda presumida R$1.401-2.000. <span style="color:var(--orange)">Falta: Renda.</span></div>
-</div>
-<div class="crd crd-xl" style="cursor:default;opacity:.7">
-  <div class="crd-h"><div><div class="crd-n">Misaelly Karolaine da Silva Santos</div><div class="crd-sub">CPF 398.106.808-48</div></div><div class="crd-sc"><b style="color:var(--red)">138</b></div></div>
-  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (138). Op. de loja, solteira, nasc. 22/06/1994. Renda R$2.200. Casa residencial, aluguel R$900. <span style="color:var(--orange)">Falta: Endereço, CEP, condo, IPTU, prazo, cob.</span></div>
-</div>
-<div class="crd crd-xl" style="cursor:default;opacity:.7">
-  <div class="crd-h"><div><div class="crd-n">Luan Peques</div><div class="crd-sub">CPF 143.001.877-11</div></div><div class="crd-sc"><b style="color:var(--red)">101</b></div></div>
-  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (101). Renda presumida R$1.401-2.000. <span style="color:var(--orange)">Falta: Renda.</span></div>
-</div>
-<div class="crd crd-xl" style="cursor:default;opacity:.7">
-  <div class="crd-h"><div><div class="crd-n">Francy Kelly Francetto de Lima</div><div class="crd-sub">CPF 323.719.918-48</div></div><div class="crd-sc"><b style="color:var(--red)">193</b></div></div>
-  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (193). Empresária, renda R$15.000. Renda presumida R$9.001-12.000. Nasc. 12/03/1984. <span style="color:var(--orange)">Falta: Dados imóvel.</span></div>
-</div>
-<div class="crd crd-xl" style="cursor:default;opacity:.7">
-  <div class="crd-h"><div><div class="crd-n">Janaína Tinoco Ribeiro</div><div class="crd-sub">CPF 042.945.737-59</div></div><div class="crd-sc"><b style="color:var(--red)">136</b></div></div>
-  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (136). Comerciante, renda R$6.500. Renda presumida R$1.401-2.000. <span style="color:var(--orange)">Falta: Conferir dados.</span></div>
-</div>
-<div class="crd crd-xl" style="cursor:default;opacity:.7">
-  <div class="crd-h"><div><div class="crd-n">Adilson Modesto Simoes Junior</div><div class="crd-sub">CPF 429.816.928-60</div></div><div class="crd-sc"><b style="color:var(--red)">26</b></div></div>
-  <span class="badge b-rui" style="margin-top:4px">RUIM</span>
-  <div style="margin-top:8px;font-size:11px;color:var(--txt2)">Score crítico (26). Renda R$3.630. Renda presumida R$1.401-2.000. Nasc. 07/09/1997. <span style="color:var(--orange)">Falta: Conferir dados.</span></div>
-</div>
-</div>
-</div>
+<div class="stitle">CPFs Aguardando Consulta de Crédito</div>
+<p style="font-size:12px;color:var(--txt2);margin-bottom:16px">Leads que compartilharam CPF mas ainda não tiveram consulta de crédito. Ordenados por renda (maior → menor).</p>
+<table class="tbl">
+<thead><tr>
+  <th style="width:3%">#</th>
+  <th style="width:20%">Nome</th>
+  <th style="width:12%">CPF</th>
+  <th style="width:10%">Renda</th>
+  <th style="width:10%">Aluguel</th>
+  <th style="width:30%">Documentação</th>
+  <th style="width:10%">Prioridade</th>
+</tr></thead>
+<tbody>
+<!-- 1. Tahnara - R$10k -->
+<tr class="rx">
+  <td>1</td>
+  <td>Tahnara B.A.C. Camargos</td>
+  <td class="mono">144.986.306-02</td>
+  <td>R$10.000</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: email, dados imóvel</td>
+  <td><span class="st st-imo">Alta</span></td>
+</tr>
+<!-- 2. Stephanie - R$8k -->
+<tr class="rx">
+  <td>2</td>
+  <td>Stephanie Diniz de Almeida</td>
+  <td class="mono">400.741.078-01</td>
+  <td>R$8.000</td>
+  <td>R$2.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados imóvel (buscando)</td>
+  <td><span class="st st-imo">Alta</span></td>
+</tr>
+<!-- 3. Maria Bernadete - R$8k -->
+<tr class="rx">
+  <td>3</td>
+  <td>Maria Bernadete S.V. Strauch</td>
+  <td class="mono">063.918.425-15</td>
+  <td>R$8.000</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
+  <td><span class="st st-imo">Alta</span></td>
+</tr>
+<!-- 4. Rafael de Andrade - R$7.2k -->
+<tr class="rx">
+  <td>4</td>
+  <td>Rafael de Andrade Mendes</td>
+  <td class="mono">402.349.028-84</td>
+  <td>R$7.219</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
+  <td><span class="st st-imo">Alta</span></td>
+</tr>
+<!-- 5. Adriano - R$6k -->
+<tr class="rx">
+  <td>5</td>
+  <td>Adriano Moreira</td>
+  <td class="mono">087.381.466-57</td>
+  <td>R$6.000</td>
+  <td>R$1.500</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados imóvel</td>
+  <td><span class="st st-imo">Alta</span></td>
+</tr>
+<!-- 6. Lavinia - R$6k -->
+<tr class="rx">
+  <td>6</td>
+  <td>Lavinia Sampaio Caliman</td>
+  <td class="mono">515.461.368-60</td>
+  <td>R$6.000</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 7. Richard - R$5k -->
+<tr class="rx">
+  <td>7</td>
+  <td>Richard Yohan Perez de la Rosa</td>
+  <td class="mono">230.141.088-98</td>
+  <td>R$5.000</td>
+  <td>R$2.300</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados imóvel</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 8. Everton - R$4.5k (servidor público) -->
+<tr class="rx">
+  <td>8</td>
+  <td>Everton Sudré Ferreira</td>
+  <td class="mono">830.863.071-53</td>
+  <td>R$4.500</td>
+  <td>R$1.300</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados imóvel</td>
+  <td><span class="st st-imo">Alta ★</span></td>
+</tr>
+<!-- 9. Adriana Stephanie - R$4.5k -->
+<tr class="rx">
+  <td>9</td>
+  <td>Adriana Stephanie O. Rodrigues</td>
+  <td class="mono">354.190.018-02</td>
+  <td>R$4.500</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 10. Luiz Fernando - R$4.2k -->
+<tr class="rx">
+  <td>10</td>
+  <td>Luiz Fernando Pereira</td>
+  <td class="mono">305.955.028-06</td>
+  <td>R$4.200</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 11. Igaro - R$4k -->
+<tr class="rx">
+  <td>11</td>
+  <td>Igaro Samuel Moraes Ortelli</td>
+  <td class="mono">609.800.030-79</td>
+  <td>R$4.000</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 12. Lucas - R$4k (NOME SUJO) -->
+<tr class="rx">
+  <td>12</td>
+  <td>Lucas Almeida Aleixo</td>
+  <td class="mono">082.987.586-76</td>
+  <td>R$4.000</td>
+  <td>R$1.300</td>
+  <td style="color:var(--red);font-size:11px">⚠ NOME SUJO · Falta: dados imóvel</td>
+  <td><span class="st st-nao">Baixa</span></td>
+</tr>
+<!-- 13. Willian - R$3.7k -->
+<tr class="rx">
+  <td>13</td>
+  <td>Willian Ricardo da Silva Ferreira</td>
+  <td class="mono">416.816.408-05</td>
+  <td>R$3.700</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 14. Felipe Lima - R$3.6k -->
+<tr class="rx">
+  <td>14</td>
+  <td>Felipe Lima Franca</td>
+  <td class="mono">427.885.248-70</td>
+  <td>R$3.600</td>
+  <td>R$2.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: IPTU, prazo contrato</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 15. Jessica - R$3.5k -->
+<tr class="rx">
+  <td>15</td>
+  <td>Jessica Jordao</td>
+  <td class="mono">438.015.278-24</td>
+  <td>R$3.500</td>
+  <td>R$1.150</td>
+  <td style="color:var(--orange);font-size:11px">Falta: profissão, dados imóvel</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 16. Marcos Marinheiro - R$3.5k -->
+<tr class="rx">
+  <td>16</td>
+  <td>Marcos V. de O. Marinheiro</td>
+  <td class="mono">230.042.308-10</td>
+  <td>R$3.500</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 17. Veronica Miranda - R$3k -->
+<tr class="rx">
+  <td>17</td>
+  <td>Veronica Goncalves Miranda</td>
+  <td class="mono">063.999.786-45</td>
+  <td>R$3.000</td>
+  <td>até R$1.200</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados imóvel (buscando)</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 18. Adriana Ribeiro - R$2.9k -->
+<tr class="rx">
+  <td>18</td>
+  <td>Adriana Ribeiro de Souza</td>
+  <td class="mono">859.607.216-00</td>
+  <td>R$2.900</td>
+  <td>R$1.300</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados imóvel</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 19. Bruno - R$2.67k -->
+<tr class="rx">
+  <td>19</td>
+  <td>Bruno da Costa Balbinotti</td>
+  <td class="mono">078.370.529-86</td>
+  <td>R$2.670</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados pessoais + imóvel</td>
+  <td><span class="st st-nao">Baixa</span></td>
+</tr>
+<!-- 20. Veronica Soares - R$2.5k — DADOS COMPLETOS -->
+<tr class="rx" style="border-left:3px solid var(--green)">
+  <td style="font-weight:700;color:var(--green)">20</td>
+  <td style="font-weight:600">Veronica Luciana O. Soares</td>
+  <td class="mono">167.303.456-08</td>
+  <td>R$2.500</td>
+  <td>R$1.500</td>
+  <td style="color:var(--green);font-size:11px">✓ Dados completos (pessoais + imóvel)</td>
+  <td><span class="st" style="background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.3);font-weight:700">★ TOP</span></td>
+</tr>
+<!-- 21. Tatiane - R$2.5k -->
+<tr class="rx">
+  <td>21</td>
+  <td>Tatiane Hegele de Oliveira</td>
+  <td class="mono">375.014.488-50</td>
+  <td>R$2.500</td>
+  <td>R$1.450</td>
+  <td style="color:var(--orange);font-size:11px">Falta: dados imóvel</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<!-- 22. Luciene - ? -->
+<tr class="rx">
+  <td>22</td>
+  <td>Luciene Silveira Hack</td>
+  <td class="mono">020.302.100-21</td>
+  <td>—</td>
+  <td>R$2.500</td>
+  <td style="color:var(--orange);font-size:11px">Falta: renda, dados pessoais + imóvel</td>
+  <td><span class="st st-nao">Baixa</span></td>
+</tr>
+<!-- 23. Alessandra - R$1.9k -->
+<tr class="rx">
+  <td>23</td>
+  <td>Alessandra de A. Soares Ferraz</td>
+  <td class="mono">095.692.177-00</td>
+  <td>R$1.900</td>
+  <td>R$1.450</td>
+  <td style="color:var(--orange);font-size:11px">Falta: condo, IPTU, prazo contrato</td>
+  <td><span class="st st-nao">Baixa</span></td>
+</tr>
+<!-- 24. Fabe - ? -->
+<tr class="rx">
+  <td>24</td>
+  <td>Fabe</td>
+  <td class="mono">033.938.129-98</td>
+  <td>—</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: nome completo, dados pessoais + imóvel</td>
+  <td><span class="st st-nao">Baixa</span></td>
+</tr>
+<!-- 25. Vagner - ? -->
+<tr class="rx">
+  <td>25</td>
+  <td>Vagner Aparecido de Souza</td>
+  <td class="mono">346.496.748-40</td>
+  <td>—</td>
+  <td>até R$2.000</td>
+  <td style="color:var(--orange);font-size:11px">Falta: renda, dados pessoais + imóvel</td>
+  <td><span class="st st-nao">Baixa</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-size:10px;color:var(--txt2);margin-top:8px">★ TOP = dados completos, se score ≥ 400 será Ready imediatamente. Alta = renda alta ou profissão estável. Média = aguardando mais dados. Baixa = renda baixa ou dados insuficientes.</p>
 </div>
 <footer>
-  <p>Lumi Broker CRM — v6.9 — 🎉 Onivaldo APROVADO Porto Seguro! +4 scores, +10 CPFs, +24 leads. 230 leads, 77 CPFs, 45 verificados, 25 sem score, 7 enviados, 1 Ready</p>
+  <p>Lumi Broker CRM — v6.9.1 — Sem Score tab redesigned. 230 leads, 77 CPFs, 45 verificados, 25 sem score, 7 enviados, 1 Ready</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
