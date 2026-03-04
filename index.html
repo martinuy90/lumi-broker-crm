@@ -77,27 +77,29 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 04/03/2026 — v7.8</div>
+    <div class="ts">Atualizado: 04/03/2026 — v7.9</div>
   </div>
   <div class="kpis">
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">279</div><div class="kpi-l">Total Leads</div></div>
     <div class="kpi"><div class="kpi-v" style="color:#60a5fa">68</div><div class="kpi-l">CPFs Compartilhados</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#34d399">5</div><div class="kpi-l">Dados Completos</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#34d399">4</div><div class="kpi-l">Dados Completos</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">68</div><div class="kpi-l">Crédito Verificado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">0</div><div class="kpi-l">CPF Sem Score</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--orange)">0</div><div class="kpi-l">CPF Errado</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">9</div><div class="kpi-l">Enviados a Broker</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--red)">8</div><div class="kpi-l">Recusadas Broker</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--orange)">4</div><div class="kpi-l">CPF Errado</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">4</div><div class="kpi-l">Enviados ao Broker</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--green)">1</div><div class="kpi-l">Cotação Enviada</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--red)">7</div><div class="kpi-l">Recusadas Broker</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">2</div><div class="kpi-l">Capitalização</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Ready to Send</div></div>
   </div>
   <div class="summ">
-    v7.8: Capitalização section + Bruno/Marcello rejections
+    v7.9: KPI boxes (Enviados ao Broker + Cotacao Enviada) + Pending broker section + Capitalizacao
   </div>
 </div>
 <div class="tabs">
   <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">77</span></button>
   <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">15</span></button>
-  <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">13</span></button>
+  <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">16</span></button>
   <button class="tab" onclick="sw('baixo',this)">Sem Score<span class="cnt">0</span></button>
 </div>
 <!-- ============ TAB 1: RANKING COMPLETO ============ -->
@@ -122,7 +124,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--green)">683</td>
   <td><span class="badge b-bom">BOM</span></td>
   <td>R$6.000/mês</td>
-  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
+  <td style="color:var(--orange);font-size:11px">Enviado a Darqs</td>
   <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
@@ -212,7 +214,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--yellow)">403</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$4.000</td>
-  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
+  <td style="color:var(--orange);font-size:11px">Enviado a Darqs</td>
   <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
@@ -302,7 +304,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">357</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$3.500</td>
-  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
+  <td style="color:var(--orange);font-size:11px">Enviado a Darqs</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -342,7 +344,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">343</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.900</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Enviado a Darqs (composição)</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -967,7 +969,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-bom">BOM</span>
-    <span class="st st-imo">Falta: verificar detalhes</span>
+    <span class="st st-imo">Enviado a Darqs</span>
   </div>
   <div class="crd-body">
   </div>
@@ -1123,7 +1125,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-imo">Falta: verificar detalhes</span>
+    <span class="st st-imo">Enviado a Darqs</span>
   </div>
   <div class="crd-body">
   </div>
@@ -1151,7 +1153,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div id="s-enviados" class="sec">
 <div class="stitle">Leads Enviados a Brokers</div>
 <div style="margin-bottom:20px">
-<div class="stitle" style="color:var(--green);border-left-color:var(--green)">Aprovado ★ (1)</div>
+<div class="stitle" style="color:var(--green);border-left-color:var(--green)">Aprovado — Cotação Enviada ao Cliente (1)</div>
 <div class="cards">
 <div class="crd crd-gl" onclick="this.classList.toggle('open')">
   <div class="crd-h">
@@ -1160,14 +1162,79 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div class="crd-body">
     <div class="crd-row"><span class="l">Broker:</span><span class="v" style="color:var(--green)">Darqs APROVADO</span></div>
+    <div class="crd-row"><span class="l">Seguradora:</span><span class="v">Porto Seguro</span></div>
     <div class="crd-row"><span class="l">Valor:</span><span class="v">R$8.648,50 à vista ou 10x R$864,85</span></div>
     <div class="crd-row"><span class="l">Vigência:</span><span class="v">10/03/2026 – 10/09/2028</span></div>
+    <div class="crd-row"><span class="l">Status:</span><span class="v" style="color:var(--green);font-weight:700">Cotação enviada ao cliente</span></div>
   </div>
 </div>
 </div>
 </div>
 <div style="margin-bottom:20px">
-<div class="stitle" style="color:var(--yellow);border-left-color:var(--yellow)">Capitalização — Recusados com Dados Completos (3)</div>
+<div class="stitle" style="color:#60a5fa;border-left-color:#60a5fa">Enviados ao Broker — Aguardando Resposta (4)</div>
+<div class="cards">
+<div class="crd" style="border-left:4px solid #60a5fa" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div><div class="crd-n">Roberto Jesus da Silva</div><div class="crd-sub">CPF 739.976.929-04 · Score 683 · Enviado 2026-03-04</div></div>
+    <span class="badge" style="background:rgba(96,165,250,.18);color:#60a5fa;border:1px solid rgba(96,165,250,.4);font-weight:700">AGUARDANDO</span>
+  </div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Score:</span><span class="v">683 BOM</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Microempreendedor</span></div>
+    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$6.000</span></div>
+    <div class="crd-row"><span class="l">Imóvel:</span><span class="v">Rua Clementina Basseto 300, Maringá/PR</span></div>
+    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.100</span></div>
+    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs — aguardando resposta</span></div>
+  </div>
+</div>
+<div class="crd" style="border-left:4px solid #60a5fa" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div><div class="crd-n">Jéssica Cristina Jordão + Ludmila de Moura Lima</div><div class="crd-sub">CPF 420.648.618-23 · Score 343 · Enviado 2026-03-04</div></div>
+    <span class="badge" style="background:rgba(96,165,250,.18);color:#60a5fa;border:1px solid rgba(96,165,250,.4);font-weight:700">AGUARDANDO</span>
+  </div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Score:</span><span class="v">343 BAIXO (Jéssica) + 366 BAIXO (Ludmila)</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Balconista + Aux. limpeza</span></div>
+    <div class="crd-row"><span class="l">Renda composição:</span><span class="v">R$3.500</span></div>
+    <div class="crd-row"><span class="l">Imóvel:</span><span class="v">Rua Tito Bonagamba 350, CEP 14061-660</span></div>
+    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.150</span></div>
+    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs — aguardando resposta</span></div>
+  </div>
+</div>
+<div class="crd" style="border-left:4px solid #60a5fa" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div><div class="crd-n">Lucas Almeida Aleixo</div><div class="crd-sub">CPF 082.987.586-76 · Score 403 · Enviado 2026-03-04</div></div>
+    <span class="badge" style="background:rgba(96,165,250,.18);color:#60a5fa;border:1px solid rgba(96,165,250,.4);font-weight:700">AGUARDANDO</span>
+  </div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Score:</span><span class="v">403 REGULAR</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Administrador</span></div>
+    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$4.000</span></div>
+    <div class="crd-row"><span class="l">Obs:</span><span class="v">Nome sujo (restrição por desemprego anterior)</span></div>
+    <div class="crd-row"><span class="l">Imóvel:</span><span class="v">Rua João Donata 338, Belo Horizonte/MG</span></div>
+    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.500</span></div>
+    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs — aguardando resposta</span></div>
+  </div>
+</div>
+<div class="crd" style="border-left:4px solid #60a5fa" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div><div class="crd-n">Marcos Vinicius de Oliveira Marinheiro</div><div class="crd-sub">CPF 230.042.308-10 · Score 357 · Enviado 2026-03-04</div></div>
+    <span class="badge" style="background:rgba(96,165,250,.18);color:#60a5fa;border:1px solid rgba(96,165,250,.4);font-weight:700">AGUARDANDO</span>
+  </div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Score:</span><span class="v">357 BAIXO</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Enfermeiro</span></div>
+    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$3.500</span></div>
+    <div class="crd-row"><span class="l">Imóvel:</span><span class="v">Rua Edson Gomes de Faria 1-31, Bauru/SP</span></div>
+    <div class="crd-row"><span class="l">Aluguel:</span><span class="v">R$1.750</span></div>
+    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs — aguardando resposta</span></div>
+    <div class="crd-row"><span class="l">Obs:</span><span class="v">URGENTE — imobiliária segurando imóvel</span></div>
+  </div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:20px">
+<div class="stitle" style="color:var(--yellow);border-left-color:var(--yellow)">Capitalização — Recusados com Dados Completos (2)</div>
 <p style="font-size:12px;color:var(--txt2);margin-bottom:12px;padding-left:13px">Leads recusados no seguro fiança que possuem dados completos. Candidatos para oferta de seguro de capitalização como alternativa.</p>
 <div class="cards">
 <div class="crd" style="border-left:4px solid var(--yellow)" onclick="this.classList.toggle('open')">
@@ -1196,22 +1263,6 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="crd-row"><span class="l">Renda comprovada:</span><span class="v">R$4.400</span></div>
     <div class="crd-row"><span class="l">Obs:</span><span class="v">Restrição de cartão por desemprego, já empregado novamente</span></div>
     <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗</span></div>
-    <div class="crd-note" style="border-left-color:var(--yellow)">
-      Recusado no seguro fiança. Dados completos — candidato para seguro de capitalização.
-    </div>
-  </div>
-</div>
-<div class="crd" style="border-left:4px solid var(--yellow)" onclick="this.classList.toggle('open')">
-  <div class="crd-h">
-    <div><div class="crd-n">Jéssica Cristina Jordão</div><div class="crd-sub">CPF 420.648.618-23 · Score 343</div></div>
-    <span class="badge" style="background:rgba(245,158,11,.18);color:var(--yellow);border:1px solid rgba(245,158,11,.4);font-weight:700">CAPITALIZAÇÃO</span>
-  </div>
-  <div class="crd-body">
-    <div class="crd-row"><span class="l">Score:</span><span class="v">343 BAIXO</span></div>
-    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Balconista</span></div>
-    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$1.900</span></div>
-    <div class="crd-row"><span class="l">Composição:</span><span class="v">Ludmila de Moura Lima (aux. limpeza, R$1.600)</span></div>
-    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ · Ittu pendente</span></div>
     <div class="crd-note" style="border-left-color:var(--yellow)">
       Recusado no seguro fiança. Dados completos — candidato para seguro de capitalização.
     </div>
@@ -1272,7 +1323,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </div>
 <div class="coll-h" onclick="var c=this.nextElementSibling;c.classList.toggle('open');this.querySelector('.chv').style.transform=c.classList.contains('open')?'rotate(180deg)':'rotate(0)'">
   <span class="coll-t">Todas as Recusadas pelo Broker</span>
-  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">8</span><span class="chv">▼</span></div>
+  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">7</span><span class="chv">▼</span></div>
 </div>
 <div class="coll-b">
 <div class="cards">
@@ -1293,16 +1344,6 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="crd-row"><span class="l">Renda comprovada:</span><span class="v">R$4.400</span></div>
     <div class="crd-row"><span class="l">Obs:</span><span class="v">Restrição de cartão por desemprego, já empregado novamente</span></div>
     <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗</span></div>
-  </div>
-</div>
-<div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Jéssica Cristina Jordão</div><div class="crd-sub">CPF 420.648.618-23 · Score 343</div></div><span class="badge b-rec">RECUSADA</span></div>
-  <div class="crd-body">
-    <div class="crd-row"><span class="l">Score:</span><span class="v">343 BAIXO</span></div>
-    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Balconista</span></div>
-    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$1.900</span></div>
-    <div class="crd-row"><span class="l">Composição:</span><span class="v">Ludmila de Moura Lima (aux. limpeza, R$1.600)</span></div>
-    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ · Ittu pendente</span></div>
   </div>
 </div>
 <div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
@@ -1364,7 +1405,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <p style="font-size:10px;color:var(--txt2);margin-top:8px">★ TOP = dados completos, se score ≥ 400 será Ready imediatamente. Alta = renda alta ou profissão estável. Média = aguardando mais dados. Baixa = renda baixa ou dados insuficientes.</p>
 </div>
 <footer>
-  <p>Lumi Broker CRM — v7.8 — 279 leads, 68 CPFs, 68 verificados, 0 sem score, 9 enviados, 0 Ready</p>
+  <p>Lumi Broker CRM — v7.9 — 279 leads, 68 CPFs, 68 verificados, 0 sem score, 0 enviados, 0 Ready</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>

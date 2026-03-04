@@ -5,18 +5,100 @@
       "cpf": "742.194.648-91",
       "score": 399,
       "broker": "Darqs",
-      "insurer": "",
+      "insurer": "Porto Seguro",
       "valor": "R$8.648,50 à vista ou 10x R$864,85",
       "vigencia": "10/03/2026 – 10/09/2028",
+      "cotacao_enviada": true,
       "details": {
         "Broker": {
           "text": "Darqs APROVADO",
           "style": "color:var(--green)"
         },
+        "Seguradora": "Porto Seguro",
         "Valor": "R$8.648,50 à vista ou 10x R$864,85",
-        "Vigência": "10/03/2026 – 10/09/2028"
+        "Vigência": "10/03/2026 – 10/09/2028",
+        "Status": {
+          "text": "Cotação enviada ao cliente",
+          "style": "color:var(--green);font-weight:700"
+        }
       },
       "nome": "Onivaldo Menegario Sobrinho"
+    }
+  ],
+  "pending_broker": [
+    {
+      "name": "Roberto Jesus da Silva",
+      "cpf": "739.976.929-04",
+      "score": 683,
+      "profissao": "Microempreendedor",
+      "renda": "R$6.000",
+      "broker": "Darqs",
+      "date_sent": "2026-03-04",
+      "details": {
+        "Score": "683 BOM",
+        "Profissão": "Microempreendedor",
+        "Renda": "R$6.000",
+        "Imóvel": "Rua Clementina Basseto 300, Maringá/PR",
+        "Aluguel": "R$1.100",
+        "Broker": "Darqs — aguardando resposta"
+      },
+      "nome": "Roberto Jesus da Silva"
+    },
+    {
+      "name": "Jéssica Cristina Jordão + Ludmila de Moura Lima",
+      "cpf": "420.648.618-23",
+      "score": 343,
+      "profissao": "Balconista + Aux. limpeza",
+      "renda": "R$3.500 (composição)",
+      "broker": "Darqs",
+      "date_sent": "2026-03-04",
+      "details": {
+        "Score": "343 BAIXO (Jéssica) + 366 BAIXO (Ludmila)",
+        "Profissão": "Balconista + Aux. limpeza",
+        "Renda composição": "R$3.500",
+        "Imóvel": "Rua Tito Bonagamba 350, CEP 14061-660",
+        "Aluguel": "R$1.150",
+        "Broker": "Darqs — aguardando resposta"
+      },
+      "nome": "Jéssica Cristina Jordão + Ludmila de Moura Lima"
+    },
+    {
+      "name": "Lucas Almeida Aleixo",
+      "cpf": "082.987.586-76",
+      "score": 403,
+      "profissao": "Administrador",
+      "renda": "R$4.000",
+      "broker": "Darqs",
+      "date_sent": "2026-03-04",
+      "details": {
+        "Score": "403 REGULAR",
+        "Profissão": "Administrador",
+        "Renda": "R$4.000",
+        "Obs": "Nome sujo (restrição por desemprego anterior)",
+        "Imóvel": "Rua João Donata 338, Belo Horizonte/MG",
+        "Aluguel": "R$1.500",
+        "Broker": "Darqs — aguardando resposta"
+      },
+      "nome": "Lucas Almeida Aleixo"
+    },
+    {
+      "name": "Marcos Vinicius de Oliveira Marinheiro",
+      "cpf": "230.042.308-10",
+      "score": 357,
+      "profissao": "Enfermeiro",
+      "renda": "R$3.500",
+      "broker": "Darqs",
+      "date_sent": "2026-03-04",
+      "details": {
+        "Score": "357 BAIXO",
+        "Profissão": "Enfermeiro",
+        "Renda": "R$3.500",
+        "Imóvel": "Rua Edson Gomes de Faria 1-31, Bauru/SP",
+        "Aluguel": "R$1.750",
+        "Broker": "Darqs — aguardando resposta",
+        "Obs": "URGENTE — imobiliária segurando imóvel"
+      },
+      "nome": "Marcos Vinicius de Oliveira Marinheiro"
     }
   ],
   "rejected": [
@@ -52,23 +134,6 @@
         "Broker": "Darqs ✗"
       },
       "nome": "Marcello Rodrigues Lopes"
-    },
-    {
-      "name": "Jéssica Cristina Jordão",
-      "cpf": "420.648.618-23",
-      "profissao": "Balconista",
-      "renda": "R$1.900",
-      "score": 343,
-      "broker_notes": "Darqs ✗ · Ittu pendente",
-      "dados_completos": true,
-      "details": {
-        "Score": "343 BAIXO",
-        "Profissão": "Balconista",
-        "Renda": "R$1.900",
-        "Composição": "Ludmila de Moura Lima (aux. limpeza, R$1.600)",
-        "Broker": "Darqs ✗ · Ittu pendente"
-      },
-      "nome": "Jéssica Cristina Jordão"
     },
     {
       "name": "Kátia Aparecida da Silva",

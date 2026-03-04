@@ -93,8 +93,14 @@ def _normalize_brokers(raw, scores=None):
             if 'nota' not in e:
                 e['nota'] = 'CPF inv\u00e1lido.'
 
+    # Handle pending_broker
+    if 'pending_broker' in raw:
+        result['pending_broker'] = raw['pending_broker']
+    if 'pending_broker' not in result:
+        result['pending_broker'] = []
+
     # Normalize name → nome in all entry lists
-    for key in ['aprovados', 'recusadas', 'invalid_cpfs', 'invalid_cpfs_enviados', 'broker_only']:
+    for key in ['aprovados', 'recusadas', 'invalid_cpfs', 'invalid_cpfs_enviados', 'broker_only', 'pending_broker']:
         _add_nome(result.get(key, []))
 
     # Set default broker_names
@@ -253,8 +259,10 @@ def generate_header(kpis, version, summary_text):
         ('verificado', 'var(--yellow)', 'Cr\u00e9dito Verificado'),
         ('sem_score', 'var(--yellow)', 'CPF Sem Score'),
         ('cpf_errado', 'var(--orange)', 'CPF Errado'),
-        ('enviados', 'var(--purpleL)', 'Enviados a Broker'),
+        ('pending_broker', '#60a5fa', 'Enviados ao Broker'),
+        ('cotacao_enviada', 'var(--green)', 'Cota\u00e7\u00e3o Enviada'),
         ('recusadas', 'var(--red)', 'Recusadas Broker'),
+        ('capitalizacao', 'var(--yellow)', 'Capitaliza\u00e7\u00e3o'),
         ('ready', 'var(--green)', 'Ready to Send'),
     ]
     lines = []
@@ -650,6 +658,33 @@ def generate_enviados_card_recusada(entry):
     return '\n'.join(L)
 
 
+def generate_pending_broker_card(entry):
+    """Generate a card for a lead sent to broker, waiting for response."""
+    nome = entry.get('nome', '')
+    cpf = entry.get('cpf', '')
+    score = entry.get('score', 0)
+    broker = entry.get('broker', '')
+    date_sent = entry.get('date_sent', '')
+    details = entry.get('details', {})
+    sub_parts = [f'CPF {cpf}']
+    if score:
+        sub_parts.append(f'Score {score}')
+    if date_sent:
+        sub_parts.append(f'Enviado {date_sent}')
+    sub_text = ' \u00b7 '.join(sub_parts)
+    L = []
+    L.append(f'<div class="crd" style="border-left:4px solid #60a5fa" onclick="this.classList.toggle(\'open\')">')
+    L.append('  <div class="crd-h">')
+    L.append(f'    <div><div class="crd-n">{_e(nome)}</div><div class="crd-sub">{_e(sub_text)}</div></div>')
+    L.append(f'    <span class="badge" style="background:rgba(96,165,250,.18);color:#60a5fa;border:1px solid rgba(96,165,250,.4);font-weight:700">AGUARDANDO</span>')
+    L.append('  </div>')
+    L.append('  <div class="crd-body">')
+    L.extend(_render_details(details))
+    L.append('  </div>')
+    L.append('</div>')
+    return '\n'.join(L)
+
+
 def generate_capitalizacao_card(entry):
     """Generate a card for a capitalização candidate (rejected lead with complete data)."""
     nome = entry.get('nome', '')
@@ -678,6 +713,7 @@ def generate_capitalizacao_card(entry):
 def generate_enviados_tab(brokers):
     """Generate Tab 3: Enviados/Recusados."""
     aprovados = brokers.get('aprovados', [])
+    pending_broker = brokers.get('pending_broker', [])
     invalid_enviados = brokers.get('invalid_cpfs_enviados', [])
     recusadas = brokers.get('recusadas', [])
     # Filter rejected leads with complete data for capitalização section
@@ -689,10 +725,18 @@ def generate_enviados_tab(brokers):
     L.append('<div class="stitle">Leads Enviados a Brokers</div>')
     if aprovados:
         L.append('<div style="margin-bottom:20px">')
-        L.append(f'<div class="stitle" style="color:var(--green);border-left-color:var(--green)">Aprovado \u2605 ({len(aprovados)})</div>')
+        L.append(f'<div class="stitle" style="color:var(--green);border-left-color:var(--green)">Aprovado \u2014 Cota\u00e7\u00e3o Enviada ao Cliente ({len(aprovados)})</div>')
         L.append('<div class="cards">')
         for e in aprovados:
             L.append(generate_enviados_card_aprovado(e))
+        L.append('</div>')
+        L.append('</div>')
+    if pending_broker:
+        L.append('<div style="margin-bottom:20px">')
+        L.append(f'<div class="stitle" style="color:#60a5fa;border-left-color:#60a5fa">Enviados ao Broker \u2014 Aguardando Resposta ({len(pending_broker)})</div>')
+        L.append('<div class="cards">')
+        for e in pending_broker:
+            L.append(generate_pending_broker_card(e))
         L.append('</div>')
         L.append('</div>')
     if capitalizacao:
@@ -841,7 +885,7 @@ def generate_html(scores, pendente, brokers, config, kpis, version, summary_text
         if s >= 400 and st == 'Coletar dados':
             acao_leads.append(entry)
     acao_count = len(brokers.get('invalid_cpfs', [])) + len(acao_leads)
-    enviados_count = len(brokers.get('aprovados', [])) + len(brokers.get('invalid_cpfs_enviados', [])) + len(brokers.get('recusadas', []))
+    enviados_count = len(brokers.get('aprovados', [])) + len(brokers.get('pending_broker', [])) + len(brokers.get('invalid_cpfs_enviados', [])) + len(brokers.get('recusadas', []))
     tab_counts = {'todos': ranking_count, 'acao': acao_count, 'enviados': enviados_count, 'baixo': len(pendente)}
     footer_summary = config.get('footer_summary', f'{kpis.get("total_leads", 0)} leads, {kpis.get("cpfs", 0)} CPFs, {kpis.get("verificado", 0)} verificados, {kpis.get("sem_score", 0)} sem score, {kpis.get("enviados", 0)} enviados, {kpis.get("ready", 0)} Ready')
     broker_names = brokers.get('broker_names', 'Arcoseg (Alice) \u00b7 Ittu (Itallo) \u00b7 Darqs (Graziele)')
