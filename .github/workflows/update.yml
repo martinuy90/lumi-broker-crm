@@ -1,0 +1,51 @@
+name: Update Lumi CRM
+
+on:
+  schedule:
+    # Run every hour at minute 30
+    - cron: '30 * * * *'
+  workflow_dispatch:
+    # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install PyPDF2 playwright
+          python -m playwright install chromium
+          python -m playwright install-deps
+
+      - name: Run CRM update
+        env:
+          CONSULTA_USER: ${{ secrets.CONSULTA_USER }}
+          CONSULTA_PASS: ${{ secrets.CONSULTA_PASS }}
+        run: python update_crm.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "Lumi CRM Bot"
+          git config user.email "bot@lumi.ai"
+          git add -A
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            VERSION=$(python -c "import json; print(json.load(open('data/config.json'))['version'])")
+            git commit -m "v${VERSION}: Auto-update $(date -u +'%d/%m/%Y %H:%M UTC')"
+            git push
+          fi
