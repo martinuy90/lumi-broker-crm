@@ -5,10 +5,11 @@
     "score": 683,
     "rating": "BOM",
     "renda": "R$6.000/mês",
-    "falta": "Falta: Dados imóvel",
-    "status": "Coletar dados",
+    "falta": "✓ Dados completos",
+    "status": "Ready ✓",
     "row_class": "rg",
-    "nome": "Roberto Jesus da Silva"
+    "nome": "Roberto Jesus da Silva",
+    "phone": "554391612598"
   },
   {
     "name": "Rafael de Andrade Mendes",
@@ -16,10 +17,12 @@
     "score": 595,
     "rating": "REGULAR",
     "renda": "R$7.219",
-    "falta": "Falta: End. + dados imóvel",
+    "falta": "Falta: renda, endereco",
     "status": "Coletar dados",
     "row_class": "ry",
-    "nome": "Rafael de Andrade Mendes"
+    "nome": "Rafael de Andrade Mendes",
+    "phone": "5519993122084",
+    "profissao": "Garçom embarcado"
   },
   {
     "name": "Michel Gilliardi Alves Adauto",
@@ -27,32 +30,37 @@
     "score": 495,
     "rating": "REGULAR",
     "renda": "R$3.200",
-    "falta": "Falta: Prof + imóvel",
+    "falta": "Falta: endereco",
     "status": "Coletar dados",
     "row_class": "ry",
-    "nome": "Michel Gilliardi Alves Adauto"
+    "nome": "Michel Gilliardi Alves Adauto",
+    "phone": "5516996443942"
   },
   {
     "name": "Horácio Batista Matos",
     "cpf": "012.754.096-28",
     "score": 475,
     "rating": "REGULAR",
-    "renda": "R$7.500/mês",
-    "falta": "Falta: Renda (sistema)",
+    "renda": "R$7.500",
+    "falta": "Falta: renda",
     "status": "Coletar dados",
     "row_class": "ry",
-    "nome": "Horácio Batista Matos"
+    "nome": "Horácio Batista Matos",
+    "phone": "553194451937",
+    "profissao": "Contador"
   },
   {
     "name": "Daiane Ap. Alves dos Santos",
     "cpf": "081.385.799-60",
     "score": 462,
     "rating": "REGULAR",
-    "renda": "R$6.000/mês",
-    "falta": "Falta: End. + Renda",
+    "renda": "R$6.000",
+    "falta": "Falta: renda, endereco",
     "status": "Coletar dados",
     "row_class": "ry",
-    "nome": "Daiane Ap. Alves dos Santos"
+    "nome": "Daiane Ap. Alves dos Santos",
+    "phone": "554797807930",
+    "profissao": "terapeuta"
   },
   {
     "name": "Thaiara B.A. Chagas Camargos",
@@ -60,10 +68,12 @@
     "score": 451,
     "rating": "REGULAR",
     "renda": "R$10.000",
-    "falta": "Falta: Dados imóvel",
+    "falta": "Falta: endereco, aluguel",
     "status": "Coletar dados",
     "row_class": "ry",
-    "nome": "Thaiara B.A. Chagas Camargos"
+    "nome": "Thaiara B.A. Chagas Camargos",
+    "phone": "553183595166",
+    "profissao": "empresária"
   },
   {
     "name": "LAVINIA SAMPAIO CALIMAN",
@@ -73,12 +83,13 @@
     "rating": "REGULAR",
     "renda": "R$6.000",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco",
     "status": "Coletar dados",
     "row_class": "ry",
     "nome_mae": "ANA CLAUDIA SAMPAIO CALIMAN",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
+    "phone": "5515991809607"
   },
   {
     "name": "BRUNO DA COSTA BALBINOTTI",
@@ -88,12 +99,13 @@
     "rating": "REGULAR",
     "renda": "R$2.670",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
-    "status": "Coletar dados",
-    "row_class": "ry",
+    "falta": "✓ Dados completos",
+    "status": "Ready ✓",
+    "row_class": "rg",
     "nome_mae": "PATRICIA DA COSTA",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
+    "phone": "555496311454"
   },
   {
     "name": "RICHARD YOHAN PEREZ DE LA ROSA",
@@ -103,12 +115,13 @@
     "rating": "REGULAR",
     "renda": "R$5.000",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Coletar dados",
     "row_class": "ry",
     "nome_mae": "OTILIA DE LA ROSA CELIS",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 3.001 ate R$ 3.500"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 3.001 ate R$ 3.500",
+    "phone": "5512981251967"
   },
   {
     "name": "LUCAS ALMEIDA ALEIXO",
@@ -118,12 +131,13 @@
     "rating": "REGULAR",
     "renda": "R$4.000",
     "profissao": "Administrador",
-    "falta": "Falta: Dados pessoais + imóvel",
-    "status": "Coletar dados",
-    "row_class": "ry",
+    "falta": "✓ Dados completos",
+    "status": "Ready ✓",
+    "row_class": "rg",
     "nome_mae": "SIMONE ALMEIDA ALEIXO",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000",
+    "phone": "553184973277"
   },
   {
     "name": "Thialey Leite da Silva",
@@ -155,12 +169,13 @@
     "rating": "BAIXO",
     "renda": "R$4.500",
     "profissao": "Servidor público",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: endereco",
     "status": "Score baixo",
     "row_class": "ro",
     "nome_mae": "CRISTINA SUDRE FERREIRA",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: Acima de R$ 12.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: Acima de R$ 12.000",
+    "phone": "556185506980"
   },
   {
     "name": "Marcello Rodrigues Lopes",
@@ -168,10 +183,12 @@
     "score": 389,
     "rating": "BAIXO",
     "renda": "R$4.400",
-    "falta": "Falta: Condo, IPTU, cob.",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Marcello Rodrigues Lopes"
+    "nome": "Marcello Rodrigues Lopes",
+    "phone": "5513974032470",
+    "profissao": "vigia noturno, motorista de app e MEI"
   },
   {
     "name": "Cecília Regina Lombardi",
@@ -179,10 +196,11 @@
     "score": 389,
     "rating": "BAIXO",
     "renda": "R$6.600",
-    "falta": "Falta: Dados imóvel",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Cecília Regina Lombardi"
+    "nome": "Cecília Regina Lombardi",
+    "phone": "5511972472713"
   },
   {
     "name": "Wanderson Gama Marques",
@@ -190,10 +208,11 @@
     "score": 374,
     "rating": "BAIXO",
     "renda": "R$10.000",
-    "falta": "Conferir dados",
+    "falta": "Falta: endereco",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Wanderson Gama Marques"
+    "nome": "Wanderson Gama Marques",
+    "phone": "5528999067301"
   },
   {
     "name": "Fernanda Almeida de Bragança",
@@ -201,10 +220,11 @@
     "score": 372,
     "rating": "BAIXO",
     "renda": "R$2.500",
-    "falta": "Falta: Dados imóvel",
+    "falta": "Falta: endereco",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Fernanda Almeida de Bragança"
+    "nome": "Fernanda Almeida de Bragança",
+    "phone": "554792491517"
   },
   {
     "name": "LUDMILA DE MOURA LIMA",
@@ -212,14 +232,15 @@
     "cpf": "438.015.278-24",
     "score": 366,
     "rating": "BAIXO",
-    "renda": "R$3.500",
+    "renda": "R$1.900",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
     "nome_mae": "CRISTIANE DE MOURA LIMA",
     "nascimento": "09/11/1992",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
+    "phone": "5516997962616"
   },
   {
     "name": "MARCOS VINICIUS DE OLIVEIRA MARINHEIRO",
@@ -229,23 +250,25 @@
     "rating": "BAIXO",
     "renda": "R$3.500",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
     "nome_mae": "MARA CRISTINA O MARINHEIRO",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
+    "phone": "5514996465886"
   },
   {
     "name": "Adriana de Paula Coimbra",
     "cpf": "089.634.317-03",
     "score": 350,
     "rating": "BAIXO",
-    "renda": "—",
+    "renda": "R$1.800",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Adriana de Paula Coimbra"
+    "nome": "Adriana de Paula Coimbra",
+    "phone": "5521966303717"
   },
   {
     "name": "Andrea da Conceição F. da Cruz",
@@ -253,10 +276,11 @@
     "score": 350,
     "rating": "BAIXO",
     "renda": "R$6.000",
-    "falta": "Falta: Dados imóvel",
+    "falta": "Falta: renda",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Andrea da Conceição F. da Cruz"
+    "nome": "Andrea da Conceição F. da Cruz",
+    "phone": "5511963978816"
   },
   {
     "name": "Rogerio Fernando Bittar Perez",
@@ -267,7 +291,8 @@
     "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Rogerio Fernando Bittar Perez"
+    "nome": "Rogerio Fernando Bittar Perez",
+    "phone": "5511987448505"
   },
   {
     "name": "Jéssica Cristina Jordão",
@@ -288,23 +313,26 @@
     "rating": "BAIXO",
     "renda": "R$2.900",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
     "nome_mae": "ANTONIA MARIA R DE SOUZA",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 7.001 ate R$ 9.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 7.001 ate R$ 9.000",
+    "phone": "553584111387"
   },
   {
     "name": "Gabriela Vitória da Silva Lima",
     "cpf": "546.545.788-03",
     "score": 333,
     "rating": "BAIXO",
-    "renda": "R$1.401-2.000*",
+    "renda": "R$5.000",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Gabriela Vitória da Silva Lima"
+    "nome": "Gabriela Vitória da Silva Lima",
+    "phone": "5511970636638",
+    "profissao": "Autônoma (área da beleza)"
   },
   {
     "name": "Maria Lucia Correa",
@@ -312,32 +340,37 @@
     "score": 328,
     "rating": "BAIXO",
     "renda": "R$1.800",
-    "falta": "Falta: Condo, coberturas",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Maria Lucia Correa"
+    "nome": "Maria Lucia Correa",
+    "phone": "5511963248606",
+    "profissao": "doméstica"
   },
   {
     "name": "Poliana Conovalow Tartaro",
     "cpf": "357.812.168-12",
     "score": 328,
     "rating": "BAIXO",
-    "renda": "R$1.401-2.000*",
+    "renda": "R$2.100",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Poliana Conovalow Tartaro"
+    "nome": "Poliana Conovalow Tartaro",
+    "phone": "5511952473628",
+    "profissao": "Vendedora"
   },
   {
     "name": "Grazielle Carlos dos Santos",
     "cpf": "418.796.818-03",
     "score": 321,
     "rating": "BAIXO",
-    "renda": "R$1.401-2.000*",
+    "renda": "R$3.000",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Grazielle Carlos dos Santos"
+    "nome": "Grazielle Carlos dos Santos",
+    "phone": "5511974610644"
   },
   {
     "name": "Franciele Aparecida Silva Moschiar",
@@ -345,10 +378,11 @@
     "score": 321,
     "rating": "BAIXO",
     "renda": "R$20.000",
-    "falta": "Falta: Dados pessoais",
+    "falta": "Falta: renda",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Franciele Aparecida Silva Moschiar"
+    "nome": "Franciele Aparecida Silva Moschiar",
+    "phone": "5517991855582"
   },
   {
     "name": "Veronica Luciana O. Soares",
@@ -359,18 +393,21 @@
     "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Veronica Luciana O. Soares"
+    "nome": "Veronica Luciana O. Soares",
+    "phone": "553499528551"
   },
   {
     "name": "Fabricia Pinheiro de Oliveira",
     "cpf": "000.429.656-75",
     "score": 312,
     "rating": "BAIXO",
-    "renda": "—",
-    "falta": "Falta: Endereço",
+    "renda": "R$3.860",
+    "falta": "Falta: endereco",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Fabricia Pinheiro de Oliveira"
+    "nome": "Fabricia Pinheiro de Oliveira",
+    "phone": "5524974024614",
+    "profissao": "Gerente de vendas"
   },
   {
     "name": "Estela Mariana Gomes",
@@ -378,10 +415,11 @@
     "score": 308,
     "rating": "BAIXO",
     "renda": "R$7.000",
-    "falta": "Falta: Dados imóvel",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Estela Mariana Gomes"
+    "nome": "Estela Mariana Gomes",
+    "phone": "5516992807776"
   },
   {
     "name": "Marcos Vinicius de Mesquita",
@@ -389,10 +427,11 @@
     "score": 306,
     "rating": "BAIXO",
     "renda": "R$3.484",
-    "falta": "Falta: Conferir dados",
+    "falta": "Falta: renda",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Marcos Vinicius de Mesquita"
+    "nome": "Marcos Vinicius de Mesquita",
+    "phone": "553191354198"
   },
   {
     "name": "Ana Cristina do Couto",
@@ -400,10 +439,11 @@
     "score": 301,
     "rating": "BAIXO",
     "renda": "R$1.700",
-    "falta": "Falta: Conferir dados",
+    "falta": "Falta: endereco",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Ana Cristina do Couto"
+    "nome": "Ana Cristina do Couto",
+    "phone": "556792609765"
   },
   {
     "name": "EDNA ALVES DOS SANTOS",
@@ -412,13 +452,14 @@
     "score": 280,
     "rating": "BAIXO",
     "renda": "R$3.800",
-    "profissao": "Babá",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "profissao": "baba",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
     "nome_mae": "ELIENE ALVES DOS SANTOS",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
+    "phone": "558299729809"
   },
   {
     "name": "Ana Paula Martendal",
@@ -426,10 +467,11 @@
     "score": 277,
     "rating": "BAIXO",
     "renda": "R$12.000",
-    "falta": "Conferir dados",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
-    "nome": "Ana Paula Martendal"
+    "nome": "Ana Paula Martendal",
+    "phone": "5511942199040"
   },
   {
     "name": "Ed Carlos Feliceto dos Anjos",
@@ -437,10 +479,11 @@
     "score": 273,
     "rating": "BAIXO",
     "renda": "R$9.000",
-    "falta": "Falta: Dados imóvel",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Ed Carlos Feliceto dos Anjos"
+    "nome": "Ed Carlos Feliceto dos Anjos",
+    "phone": "5519983254246"
   },
   {
     "name": "Bruna Aparecida dos Santos Lopes",
@@ -448,10 +491,12 @@
     "score": 272,
     "rating": "BAIXO",
     "renda": "R$6.000",
-    "falta": "Falta: Endereço",
+    "falta": "Falta: endereco",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Bruna Aparecida dos Santos Lopes"
+    "nome": "Bruna Aparecida dos Santos Lopes",
+    "phone": "5511995652464",
+    "profissao": "Motorista particular"
   },
   {
     "name": "Maria Carolina Madazio",
@@ -459,10 +504,12 @@
     "score": 271,
     "rating": "BAIXO",
     "renda": "R$5.000",
-    "falta": "Falta: Dados imóvel",
+    "falta": "Falta: endereco, CEP, condominio, IPTU, prazo contrato",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Maria Carolina Madazio"
+    "nome": "Maria Carolina Madazio",
+    "phone": "5519998270145",
+    "profissao": "Vendedora"
   },
   {
     "name": "Keila Maria de Sousa",
@@ -470,10 +517,11 @@
     "score": 265,
     "rating": "BAIXO",
     "renda": "R$1.860",
-    "falta": "Falta: Dados imóvel",
+    "falta": "Falta: renda",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Keila Maria de Sousa"
+    "nome": "Keila Maria de Sousa",
+    "phone": "553584017046"
   },
   {
     "name": "Simone Manfrin",
@@ -481,10 +529,11 @@
     "score": 264,
     "rating": "BAIXO",
     "renda": "R$12.000",
-    "falta": "Falta: Dados imóvel",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Simone Manfrin"
+    "nome": "Simone Manfrin",
+    "phone": "5521986144495"
   },
   {
     "name": "Maria Bernadete S.V. Strauch",
@@ -492,10 +541,11 @@
     "score": 264,
     "rating": "BAIXO",
     "renda": "R$8.000",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: email, nascimento, estado civil, profissao, renda, endereco, CEP, tipo imovel, uso imovel, aluguel, condominio, IPTU, prazo contrato",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Maria Bernadete S.V. Strauch"
+    "nome": "Maria Bernadete S.V. Strauch",
+    "phone": "557197005691"
   },
   {
     "name": "Oldemar Fernandes Magesky",
@@ -503,10 +553,11 @@
     "score": 261,
     "rating": "BAIXO",
     "renda": "R$15.000",
-    "falta": "Falta: Dados imóvel",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Oldemar Fernandes Magesky"
+    "nome": "Oldemar Fernandes Magesky",
+    "phone": "5511982199133"
   },
   {
     "name": "LUCIENE SILVEIRA HACK",
@@ -516,12 +567,13 @@
     "rating": "BAIXO",
     "renda": "—",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
-    "row_class": "ro",
+    "row_class": "rr",
     "nome_mae": "JOCELAINE APARECIDA HACK",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
+    "phone": "554788067076"
   },
   {
     "name": "VERONICA GONCALVES MIRANDA",
@@ -533,10 +585,11 @@
     "profissao": "",
     "falta": "Falta: Dados pessoais + imóvel",
     "status": "Score baixo",
-    "row_class": "ro",
+    "row_class": "rr",
     "nome_mae": "RITA DE CASSIA GONCALVES MIRANDA",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
+    "phone": "553799840638"
   },
   {
     "name": "Claudio Ubiratan de Almeida",
@@ -544,10 +597,11 @@
     "score": 247,
     "rating": "BAIXO",
     "renda": "R$5.001-7.000*",
-    "falta": "Falta: Endereço",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Claudio Ubiratan de Almeida"
+    "nome": "Claudio Ubiratan de Almeida",
+    "phone": "554199028322"
   },
   {
     "name": "Rogerio Jose Costa",
@@ -555,10 +609,12 @@
     "score": 246,
     "rating": "BAIXO",
     "renda": "R$6.000",
-    "falta": "Falta: Endereço",
+    "falta": "Falta: renda, endereco",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Rogerio Jose Costa"
+    "nome": "Rogerio Jose Costa",
+    "phone": "5517996572112",
+    "profissao": "Motorista de aplicativo"
   },
   {
     "name": "LUIZ FERNANDO PEREIRA",
@@ -568,12 +624,13 @@
     "rating": "BAIXO",
     "renda": "R$4.200",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
-    "row_class": "ro",
+    "row_class": "rr",
     "nome_mae": "ANTONIA BENEDITA VIZICATO PEREIRA",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000",
+    "phone": "5517992172384"
   },
   {
     "name": "Alan Felipe de Pina Lopes",
@@ -581,10 +638,11 @@
     "score": 239,
     "rating": "BAIXO",
     "renda": "R$1.800",
-    "falta": "Conferir dados",
+    "falta": "Falta: endereco",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Alan Felipe de Pina Lopes"
+    "nome": "Alan Felipe de Pina Lopes",
+    "phone": "5511973445539"
   },
   {
     "name": "FELIPE LIMA FRANCA",
@@ -594,12 +652,13 @@
     "rating": "BAIXO",
     "renda": "R$3.600",
     "profissao": "Aux. administrativo",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda",
     "status": "Score baixo",
-    "row_class": "ro",
+    "row_class": "rr",
     "nome_mae": "CARMELUCIA SIQUEIRA LIMA",
     "nascimento": "09/04/1993",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000",
+    "phone": "5511976829817"
   },
   {
     "name": "José Martinez Ramos",
@@ -607,10 +666,11 @@
     "score": 232,
     "rating": "BAIXO",
     "renda": "R$1.401-2.000*",
-    "falta": "Sem dados no sistema",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "José Martinez Ramos"
+    "nome": "José Martinez Ramos",
+    "phone": "5511986722660"
   },
   {
     "name": "Rosangela Aparecida de Oliveira",
@@ -618,10 +678,11 @@
     "score": 222,
     "rating": "BAIXO",
     "renda": "R$7.000",
-    "falta": "Falta: Conferir dados",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "rr",
-    "nome": "Rosangela Aparecida de Oliveira"
+    "nome": "Rosangela Aparecida de Oliveira",
+    "phone": "5511962226396"
   },
   {
     "name": "ADRIANO MOREIRA",
@@ -633,10 +694,11 @@
     "profissao": "",
     "falta": "Falta: Dados pessoais + imóvel",
     "status": "Score baixo",
-    "row_class": "ro",
+    "row_class": "rr",
     "nome_mae": "LELI MOREIRA DE ANDRADE",
     "nascimento": "03/06/1983",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000",
+    "phone": "5527992794698"
   },
   {
     "name": "Rafael Pereira dos Santos",
@@ -647,7 +709,9 @@
     "falta": "✓ Dados completos",
     "status": "Sem chance",
     "row_class": "rr",
-    "nome": "Rafael Pereira dos Santos"
+    "nome": "Rafael Pereira dos Santos",
+    "phone": "5519982020007",
+    "profissao": "Mecânico de caminhão"
   },
   {
     "name": "Nicola Carone Dias",
@@ -655,10 +719,12 @@
     "score": 194,
     "rating": "RUIM",
     "renda": "R$10.000",
-    "falta": "Falta: Dados imóvel",
+    "falta": "Falta: endereco",
     "status": "Sem chance",
     "row_class": "rr",
-    "nome": "Nicola Carone Dias"
+    "nome": "Nicola Carone Dias",
+    "phone": "5518996491528",
+    "profissao": "Motorista de aplicativo e vendedor"
   },
   {
     "name": "Francy Kelly Francetto de Lima",
@@ -666,10 +732,11 @@
     "score": 193,
     "rating": "RUIM",
     "renda": "R$15.000",
-    "falta": "Falta: Dados imóvel",
+    "falta": "✓ Dados completos",
     "status": "Sem chance",
     "row_class": "rr",
-    "nome": "Francy Kelly Francetto de Lima"
+    "nome": "Francy Kelly Francetto de Lima",
+    "phone": "5511930281238"
   },
   {
     "name": "FABIANA MARIANO RODRIGUES",
@@ -684,7 +751,8 @@
     "row_class": "rr",
     "nome_mae": "HILDA MARIANO RODRIGUES",
     "nascimento": "01/08/1978",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000",
+    "phone": "554791743939"
   },
   {
     "name": "TATIANE HEGELE DE OLIVEIRA",
@@ -694,12 +762,13 @@
     "rating": "RUIM",
     "renda": "R$2.500",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Sem chance",
     "row_class": "rr",
     "nome_mae": "ELZA HEGELE",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
+    "phone": "554584010939"
   },
   {
     "name": "VAGNER APARECIDO DE SOUZA",
@@ -709,12 +778,13 @@
     "rating": "RUIM",
     "renda": "—",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: endereco",
     "status": "Sem chance",
     "row_class": "rr",
     "nome_mae": "MARIA REGINA F SILVA SOUZA",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 5.001 ate R$ 7.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 5.001 ate R$ 7.000",
+    "phone": "5518996923153"
   },
   {
     "name": "Stephanie Diniz de Almeida",
@@ -722,10 +792,11 @@
     "score": 182,
     "rating": "RUIM",
     "renda": "R$8.000",
-    "falta": "Falta: Dados imóvel",
+    "falta": "✓ Dados completos",
     "status": "Sem chance",
     "row_class": "rr",
-    "nome": "Stephanie Diniz de Almeida"
+    "nome": "Stephanie Diniz de Almeida",
+    "phone": "5511951976827"
   },
   {
     "name": "João Guilherme Antunes Ramos",
@@ -733,21 +804,23 @@
     "score": 171,
     "rating": "RUIM",
     "renda": "—",
-    "falta": "Sem dados no sistema",
+    "falta": "Falta: renda",
     "status": "Sem chance",
     "row_class": "rr",
-    "nome": "João Guilherme Antunes Ramos"
+    "nome": "João Guilherme Antunes Ramos",
+    "phone": "554499484047"
   },
   {
     "name": "Marta Guedes da Silva",
     "cpf": "367.317.208-52",
     "score": 165,
     "rating": "RUIM",
-    "renda": "R$1.401-2.000*",
-    "falta": "Falta: Renda",
+    "renda": "R$2.000",
+    "falta": "Falta: renda",
     "status": "Sem chance",
     "row_class": "rr",
-    "nome": "Marta Guedes da Silva"
+    "nome": "Marta Guedes da Silva",
+    "phone": "5514997610438"
   },
   {
     "name": "WILLIAN RICARDO DA SILVA FERREIRA",
@@ -757,12 +830,13 @@
     "rating": "RUIM",
     "renda": "R$3.700",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "✓ Dados completos",
     "status": "Sem chance",
     "row_class": "rr",
     "nome_mae": "MARIA NATALICIA VEIGA",
     "nascimento": "",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 4.001 ate R$ 5.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 4.001 ate R$ 5.000",
+    "phone": "5511964728739"
   },
   {
     "name": "Misaelly Karolaine da Silva Santos",
@@ -770,10 +844,11 @@
     "score": 138,
     "rating": "RUIM",
     "renda": "R$2.200",
-    "falta": "Falta: Dados imóvel",
+    "falta": "✓ Dados completos",
     "status": "Sem chance",
     "row_class": "rr",
-    "nome": "Misaelly Karolaine da Silva Santos"
+    "nome": "Misaelly Karolaine da Silva Santos",
+    "phone": "5512996292429"
   },
   {
     "name": "Janaína Tinoco Ribeiro",
@@ -781,21 +856,24 @@
     "score": 136,
     "rating": "RUIM",
     "renda": "R$6.500",
-    "falta": "Falta: Conferir dados",
+    "falta": "Falta: renda",
     "status": "Sem chance",
     "row_class": "rr",
-    "nome": "Janaína Tinoco Ribeiro"
+    "nome": "Janaína Tinoco Ribeiro",
+    "phone": "5521988653694"
   },
   {
     "name": "Luan Peques",
     "cpf": "143.001.877-11",
     "score": 101,
     "rating": "RUIM",
-    "renda": "R$1.401-2.000*",
-    "falta": "Falta: Renda",
+    "renda": "R$2.783",
+    "falta": "Falta: renda",
     "status": "Sem chance",
     "row_class": "rr",
-    "nome": "Luan Peques"
+    "nome": "Luan Peques",
+    "phone": "553291588684",
+    "profissao": "Autônomo"
   },
   {
     "name": "ADRIANA STEPHANIE OLIVEIRA RODRIGUES",
@@ -805,12 +883,13 @@
     "rating": "RUIM",
     "renda": "R$4.500",
     "profissao": "",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "✓ Dados completos",
     "status": "Sem chance",
     "row_class": "rr",
     "nome_mae": "ELOISA LEITE OLIVEIRA BICUDO",
     "nascimento": "07/05/1987",
-    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000"
+    "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
+    "phone": "5512991371951"
   },
   {
     "name": "Adilson Modesto Simoes Junior",
@@ -818,9 +897,10 @@
     "score": 26,
     "rating": "RUIM",
     "renda": "R$3.630",
-    "falta": "Falta: Conferir dados",
+    "falta": "✓ Dados completos",
     "status": "Sem chance",
     "row_class": "rr",
-    "nome": "Adilson Modesto Simoes Junior"
+    "nome": "Adilson Modesto Simoes Junior",
+    "phone": "5516981751827"
   }
 ]

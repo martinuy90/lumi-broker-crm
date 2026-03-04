@@ -238,6 +238,314 @@ def detect_data_changes(leads_rows, known_data):
     return changes
 
 
+def _is_filled(value):
+    """Check if a field value is meaningfully filled (not empty/null)."""
+    if value is None:
+        return False
+    s = str(value).strip().lower()
+    return s not in ('', 'nan', 'none', '—', '-', '[]', '0')
+
+
+def _compute_falta(lead_data, dashboard_flags=None):
+    """Compute the 'falta' string from actual field data.
+
+    Strategy:
+    1. dashboard_dados flags are the PRIMARY authority (the bot tracks data accurately)
+    2. leads CSV fields provide GRANULAR detail when available
+    3. If dashboard_dados says all SIM → trust it as "Dados completos"
+
+    lead_data: dict from leads CSV (or empty dict if no match)
+    dashboard_flags: dict with tem_cpf/tem_endereco/tem_aluguel/tem_renda (or None)
+
+    Returns (falta_string, is_complete) tuple.
+    """
+    # ── Check dashboard_dados flags first (primary authority) ──
+    if dashboard_flags:
+        has_cpf = dashboard_flags.get('tem_cpf', '') == 'SIM'
+        has_endereco = dashboard_flags.get('tem_endereco', '') == 'SIM'
+        has_aluguel = dashboard_flags.get('tem_aluguel', '') == 'SIM'
+        has_renda = dashboard_flags.get('tem_renda', '') == 'SIM'
+
+        # If ALL flags are SIM → dados completos (trust the bot)
+        if has_cpf and has_endereco and has_aluguel and has_renda:
+            return ('\u2713 Dados completos', True)
+
+        # If some flags are NAO → determine what's missing
+        missing = []
+        if not has_renda:
+            missing.append('renda')
+        if not has_endereco:
+            missing.append('endereco')
+        if not has_aluguel:
+            missing.append('aluguel')
+
+        # If we also have leads CSV data, try to be more specific
+        if lead_data and has_aluguel and has_endereco and has_renda:
+            # Flags say data is there, but check CSV for specific missing fields
+            specific_missing = _check_fields_from_csv(lead_data)
+            if specific_missing:
+                return ('Falta: ' + ', '.join(specific_missing), False)
+
+        if missing:
+            return ('Falta: ' + ', '.join(missing), False)
+        else:
+            # All flags SIM but somehow we got here
+            return ('\u2713 Dados completos', True)
+
+    # ── Fallback: use leads CSV fields directly ──
+    if lead_data:
+        specific_missing = _check_fields_from_csv(lead_data)
+        if not specific_missing:
+            return ('\u2713 Dados completos', True)
+
+        if len(specific_missing) >= 10:
+            return ('Falta: Dados pessoais + imóvel', False)
+        elif all(m in ('endereco', 'CEP', 'tipo imovel', 'uso imovel', 'aluguel',
+                       'condominio', 'IPTU', 'prazo contrato') for m in specific_missing):
+            if len(specific_missing) >= 6:
+                return ('Falta: Dados imóvel', False)
+        return ('Falta: ' + ', '.join(specific_missing), False)
+
+    # ── No match at all — can't determine, leave unchanged ──
+    return (None, False)
+
+
+def _check_fields_from_csv(lead_data):
+    """Check which specific fields are missing from leads CSV data.
+    Returns list of missing field labels."""
+    personal_fields = {
+        'email': 'email',
+        'birth_date': 'nascimento',
+        'estado_civil': 'estado civil',
+        'profissao': 'profissao',
+        'renda': 'renda',
+    }
+    property_fields = {
+        'endereco_imovel': 'endereco',
+        'cep_imovel': 'CEP',
+        'tipo_imovel': 'tipo imovel',
+        'uso_imovel': 'uso imovel',
+        'aluguel': 'aluguel',
+        'condominio': 'condominio',
+        'iptu': 'IPTU',
+        'periodo_contrato': 'prazo contrato',
+    }
+    alt_keys = {
+        'profissao': ['profissão', 'Profissão'],
+        'birth_date': ['nascimento', 'data_nascimento'],
+        'estado_civil': ['Estado Civil'],
+        'endereco_imovel': ['endereco', 'endereço'],
+        'cep_imovel': ['cep', 'CEP'],
+        'periodo_contrato': ['prazo', 'prazo_contrato'],
+    }
+
+    missing = []
+    for fields in [personal_fields, property_fields]:
+        for csv_key, label in fields.items():
+            val = lead_data.get(csv_key, '')
+            if not _is_filled(val):
+                for alt in alt_keys.get(csv_key, []):
+                    val = lead_data.get(alt, '')
+                    if _is_filled(val):
+                        break
+            if not _is_filled(val):
+                missing.append(label)
+
+    # Special case: condominio/IPTU can be "incluso" (included in rent package)
+    condo_val = str(lead_data.get('condominio', '')).lower()
+    iptu_val = str(lead_data.get('iptu', '')).lower()
+    if 'inclus' in condo_val or 'pacote' in condo_val:
+        missing = [m for m in missing if m != 'condominio']
+    if 'inclus' in iptu_val or 'pacote' in iptu_val:
+        missing = [m for m in missing if m != 'IPTU']
+
+    return missing
+
+
+def _compute_status(score, falta_str, is_complete, broker_status=None, composicao=None, nao_enviar=False):
+    """Compute status from score + falta. Returns (status_text, row_class)."""
+    if broker_status in ('aprovado', 'enviado'):
+        return ('Enviado \u2713', 'ry')
+    if broker_status == 'recusada':
+        return ('Recusada', 'ro')
+    if composicao:
+        return ('Composição', 'ry')
+    if nao_enviar:
+        return ('Não enviar', 'rr')
+    if is_complete and score >= 400:
+        return ('Ready \u2713', 'rg')
+    if score >= 400:
+        return ('Coletar dados', 'ry')
+    if score >= 200:
+        return ('Score baixo', 'ro' if score >= 277 else 'rr')
+    if score > 0:
+        return ('Sem chance', 'rr')
+    return ('Consultar', 'ry')
+
+
+def sync_scores_with_sheets(scores, leads_rows, dashboard_dados_rows=None, historico_rows=None, brokers=None):
+    """Sync scores.json entries with fresh Google Sheet data.
+
+    For each scored lead:
+    1. Match to leads CSV by phone, CPF, or name
+    2. Compute what fields are actually filled vs missing
+    3. Update falta, status, renda, phone
+
+    Modifies scores list in place. Returns count of updated entries.
+    """
+    if not leads_rows:
+        return 0
+
+    # Build set of CPFs already sent to broker (approved/rejected) — skip these
+    broker_cpfs = set()
+    if brokers:
+        for b in brokers.get('approved', []) + brokers.get('rejected', []):
+            broker_cpfs.add(re.sub(r'[^\d]', '', b.get('cpf', '')))
+
+    # ── Build lookup maps ──
+
+    # phone → lead data (from leads CSV)
+    phone_to_lead = {}
+    for row in leads_rows:
+        phone = re.sub(r'[^\d]', '', str(row.get('phone', '')))
+        if phone:
+            phone_to_lead[phone] = row
+
+    # CPF → phone (from leads CSV, for leads that have CPF)
+    cpf_to_phone = {}
+    for row in leads_rows:
+        cpf = re.sub(r'[^\d]', '', str(row.get('cpf', '')))
+        phone = re.sub(r'[^\d]', '', str(row.get('phone', '')))
+        if len(cpf) == 11 and phone:
+            cpf_to_phone[cpf] = phone
+
+    # CPF → phone (from historico, for CPFs shared via WhatsApp messages)
+    if historico_rows:
+        for row in historico_rows:
+            phone = re.sub(r'[^\d]', '', str(row.get('phone', '')))
+            message = str(row.get('message', row.get('body', row.get('mensagem', ''))))
+            if not message or not phone:
+                continue
+            cpfs_found = extract_cpf_from_text(message)
+            for cpf in cpfs_found:
+                cpf_raw = re.sub(r'[^\d]', '', cpf)
+                if cpf_raw not in cpf_to_phone:
+                    cpf_to_phone[cpf_raw] = phone
+
+    # name (lowercased) → phone (from leads CSV, for name matching)
+    name_to_phone = {}
+    for row in leads_rows:
+        name = str(row.get('name', '')).strip().lower()
+        phone = re.sub(r'[^\d]', '', str(row.get('phone', '')))
+        if name and phone:
+            name_to_phone[name] = phone
+
+    # phone → dashboard_dados flags
+    phone_to_flags = {}
+    if dashboard_dados_rows:
+        for row in dashboard_dados_rows:
+            phone = re.sub(r'[^\d]', '', str(row.get('phone', '')))
+            if phone:
+                phone_to_flags[phone] = row
+
+    # ── Match and update each scored lead ──
+    updated = 0
+    for entry in scores:
+        cpf_raw = re.sub(r'[^\d]', '', entry.get('cpf', ''))
+
+        # Skip entries with special statuses that shouldn't be auto-updated
+        if entry.get('broker_status') in ('aprovado', 'enviado', 'recusada'):
+            continue
+        # Skip if CPF is in broker lists (approved/rejected)
+        if cpf_raw in broker_cpfs:
+            continue
+        # Skip composição leads (stored as field or in falta string)
+        if entry.get('composicao'):
+            continue
+        existing_falta = entry.get('falta', '')
+        if 'Composição' in existing_falta or 'Composição' in existing_falta:
+            continue
+        if entry.get('nao_enviar'):
+            continue
+
+        # ── Step 1: Find phone number ──
+        phone = entry.get('phone', '')
+        if not phone:
+            # Try CPF → phone
+            phone = cpf_to_phone.get(cpf_raw, '')
+        if not phone:
+            # Try name matching
+            entry_name = entry.get('name', '').strip().lower()
+            if entry_name:
+                # Try exact match first
+                phone = name_to_phone.get(entry_name, '')
+                if not phone:
+                    # Try substring match (handles "BRUNO DA COSTA BALBINOTTI" vs "Bruno")
+                    for lead_name, lead_phone in name_to_phone.items():
+                        if (entry_name in lead_name or lead_name in entry_name) and len(min(entry_name, lead_name, key=len)) > 3:
+                            phone = lead_phone
+                            break
+
+        if not phone:
+            # No match possible — leave as is
+            continue
+
+        # Store phone for future runs
+        entry['phone'] = phone
+
+        # ── Step 2: Get lead data and dashboard flags ──
+        lead_data = phone_to_lead.get(phone, {})
+        dashboard_flags = phone_to_flags.get(phone, None)
+
+        # ── Step 3: Compute falta ──
+        falta_str, is_complete = _compute_falta(lead_data, dashboard_flags)
+
+        # If _compute_falta returned None, we have no data to update — skip
+        if falta_str is None:
+            continue
+
+        # ── Step 4: Compute status ──
+        score = entry.get('score', 0)
+        status, row_class = _compute_status(
+            score, falta_str, is_complete,
+            broker_status=entry.get('broker_status'),
+            composicao=entry.get('composicao'),
+            nao_enviar=entry.get('nao_enviar', False)
+        )
+
+        # ── Step 5: Update renda from leads CSV ──
+        renda_csv = str(lead_data.get('renda', '')).strip()
+        if _is_filled(renda_csv):
+            try:
+                renda_num = float(re.sub(r'[^\d.]', '', renda_csv))
+                renda_display = f'R${renda_num:,.0f}'.replace(',', '.')
+            except (ValueError, TypeError):
+                renda_display = f'R${renda_csv}'
+        else:
+            renda_display = entry.get('renda', '—')
+
+        # ── Step 6: Update profissao from leads CSV ──
+        prof_csv = str(lead_data.get('profissao', lead_data.get('profissão', ''))).strip()
+        if _is_filled(prof_csv):
+            entry['profissao'] = prof_csv
+
+        # ── Step 7: Apply updates ──
+        old_falta = entry.get('falta', '')
+        old_status = entry.get('status', '')
+
+        entry['falta'] = falta_str
+        entry['status'] = status
+        entry['row_class'] = row_class
+        entry['renda'] = renda_display
+
+        if old_falta != falta_str or old_status != status:
+            updated += 1
+            name = entry.get('name', '?')
+            print(f"  Updated: {name} | {old_falta} → {falta_str} | {old_status} → {status}")
+
+    return updated
+
+
 def count_dados_completos(dashboard_dados_rows, cofounder_phones=None):
     """Count leads that shared ALL data (tem_cpf, tem_endereco, tem_aluguel, tem_renda = SIM).
     Uses the dashboard_dados Google Sheets tab."""

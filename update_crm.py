@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from fetch_data import (
     fetch_csv, process_leads, find_new_cpfs,
     detect_data_changes, validate_cpf, normalize_cpf, compute_kpis,
-    count_dados_completos, GIDS
+    count_dados_completos, sync_scores_with_sheets, GIDS
 )
 from generate_html import generate_html
 
@@ -253,9 +253,20 @@ def main():
 
         consultation_results = run_credit_consultations(cpfs_to_consult, config)
 
+        # Build CPF→phone map from discoveries for passing phone to new scores
+        disc_cpf_to_phone = {}
+        for disc in new_cpf_discoveries:
+            cpf_raw = re.sub(r'[^\d]', '', disc.get('cpf', ''))
+            if cpf_raw:
+                disc_cpf_to_phone[cpf_raw] = disc.get('phone_clean', disc.get('phone', ''))
+
         for result in consultation_results:
             if 'score' in result and 'error' not in result:
-                # Add to scores
+                # Find phone from discovery
+                result_cpf_raw = re.sub(r'[^\d]', '', result.get("cpf", result.get("input_cpf", "")))
+                phone = disc_cpf_to_phone.get(result_cpf_raw, '')
+
+                # Add to scores (falta/status will be computed by sync step)
                 new_entry = {
                     "name": result.get("name", "?"),
                     "cpf": result.get("cpf", normalize_cpf(result.get("input_cpf", ""))),
@@ -264,7 +275,8 @@ def main():
                     "renda": "—",
                     "falta": "Falta: Dados pessoais + imóvel",
                     "status": "Score baixo" if result["score"] < 400 else "Coletar dados",
-                    "row_class": "ry" if result["score"] >= 400 else ("ro" if result["score"] >= 277 else "rr")
+                    "row_class": "ry" if result["score"] >= 400 else ("ro" if result["score"] >= 277 else "rr"),
+                    "phone": phone
                 }
                 scores.append(new_entry)
                 new_scores.append(result)
@@ -282,6 +294,16 @@ def main():
 
     # Sort scores by score value (highest first)
     scores.sort(key=lambda x: x.get('score', 0), reverse=True)
+
+    # ── Step 4.5: Sync scores with Google Sheet data ──
+    print("\n[4.5/6] Syncing scores with Google Sheet data...")
+    if leads_rows:
+        n_updated = sync_scores_with_sheets(
+            scores, leads_rows, dashboard_dados_rows, historico_rows, brokers
+        )
+        print(f"  Synced: {n_updated} entries updated with fresh data")
+    else:
+        print("  Skipped: no leads data available")
 
     # ── Step 5: Rebuild dashboard ──
     print("\n[5/6] Generating dashboard HTML...")

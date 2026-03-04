@@ -116,12 +116,16 @@
     {
       "name": "Igaro Samuel Moraes Ortelli",
       "cpf": "609.800.030-79",
-      "broker_notes": "CPF inválido (falha validação)"
+      "broker_notes": "CPF inválido (falha validação)",
+      "nota": "CPF inválido.",
+      "nome": "Igaro Samuel Moraes Ortelli"
     },
     {
       "name": "Alessandra de A. Soares Ferraz",
       "cpf": "095.692.177-00",
-      "broker_notes": "CPF inválido (falha validação)"
+      "broker_notes": "CPF inválido (falha validação)",
+      "nota": "CPF inválido.",
+      "nome": "Alessandra de A. Soares Ferraz"
     }
   ]
 }
