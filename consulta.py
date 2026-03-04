@@ -355,8 +355,8 @@ def run_consultations_sync(cpf_list, username, password, output_dir="consultas")
 
 
 if __name__ == "__main__":
-    username = os.environ.get("CONSULTA_USER", "39723326884")
-    password = os.environ.get("CONSULTA_PASS", "Li302010!")
+    username = os.environ.get("CONSULTA_USER", "")
+    password = os.environ.get("CONSULTA_PASS", "")
 
     if len(sys.argv) >= 2 and sys.argv[1] == "--save-session":
         print("Opening browser for manual login (solve CAPTCHA)...")

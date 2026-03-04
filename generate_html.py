@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import re
 """
 generate_html.py - Generates the complete Lumi Broker CRM dashboard HTML from JSON data.
 
@@ -16,6 +15,7 @@ Usage:
 
 import json
 import os
+import re
 import sys
 from datetime import datetime
 
@@ -182,7 +182,11 @@ def get_css():
 
 
 def score_rating(score):
-    """Returns (rating_text, badge_class, row_class, score_color)."""
+    """Returns (rating_text, badge_class, row_class, score_color).
+    Sub-tiers within BAIXO (200-399):
+      - 277-399: orange row/text (borderline, some brokers may accept)
+      - 200-276: red row/text (very unlikely to be accepted)
+    """
     if score >= 600:
         return ("BOM", "b-bom", "rg", "var(--green)")
     elif score >= 400:
@@ -207,10 +211,21 @@ def score_stars(score):
 
 
 def determine_status(entry):
-    """Determine display status and CSS class for a scored lead."""
+    """Determine display status and CSS class for a scored lead.
+    Priority: stored status (Aprovado/Enviado/Recusada) > broker_status field >
+              composicao > nao_enviar > Ready > score-based."""
     score = entry.get('score', 0)
     falta = entry.get('falta', '')
     broker_status = entry.get('broker_status', '')
+    stored_status = entry.get('status', '')
+    # Preserve already-set broker statuses from scores.json
+    if stored_status.startswith('Aprovado'):
+        return ('Aprovado \u2713', 'st-env')
+    if stored_status.startswith('Enviado'):
+        return ('Enviado \u2713', 'st-env')
+    if stored_status == 'Recusada':
+        return ('Recusada', 'st-rec')
+    # Check broker_status field (set by sync)
     if broker_status in ('aprovado', 'enviado'):
         return ('Enviado \u2713', 'st-env')
     if broker_status == 'recusada':
@@ -885,9 +900,10 @@ def generate_html(scores, pendente, brokers, config, kpis, version, summary_text
         if s >= 400 and st == 'Coletar dados':
             acao_leads.append(entry)
     acao_count = len(brokers.get('invalid_cpfs', [])) + len(acao_leads)
-    enviados_count = len(brokers.get('aprovados', [])) + len(brokers.get('pending_broker', [])) + len(brokers.get('invalid_cpfs_enviados', [])) + len(brokers.get('recusadas', []))
+    capitalizacao_list = [r for r in brokers.get('recusadas', []) if r.get('dados_completos')]
+    enviados_count = len(brokers.get('aprovados', [])) + len(brokers.get('pending_broker', [])) + len(capitalizacao_list) + len(brokers.get('invalid_cpfs_enviados', [])) + len(brokers.get('recusadas', []))
     tab_counts = {'todos': ranking_count, 'acao': acao_count, 'enviados': enviados_count, 'baixo': len(pendente)}
-    footer_summary = config.get('footer_summary', f'{kpis.get("total_leads", 0)} leads, {kpis.get("cpfs", 0)} CPFs, {kpis.get("verificado", 0)} verificados, {kpis.get("sem_score", 0)} sem score, {kpis.get("enviados", 0)} enviados, {kpis.get("ready", 0)} Ready')
+    footer_summary = f'{kpis.get("total_leads", 0)} leads, {kpis.get("cpfs", 0)} CPFs, {kpis.get("verificado", 0)} verificados, {kpis.get("sem_score", 0)} sem score, {kpis.get("pending_broker", kpis.get("enviados", 0))} enviados, {kpis.get("ready", 0)} Ready'
     broker_names = brokers.get('broker_names', 'Arcoseg (Alice) \u00b7 Ittu (Itallo) \u00b7 Darqs (Graziele)')
     parts = []
     parts.append('<!DOCTYPE html>')
@@ -911,6 +927,7 @@ def generate_html(scores, pendente, brokers, config, kpis, version, summary_text
     parts.append(generate_footer(version, footer_summary, broker_names))
     parts.append(generate_js())
     parts.append('</body>')
+    parts.append('</html>')
     return '\n'.join(parts)
 
 
@@ -971,22 +988,35 @@ if __name__ == '__main__':
         pendente = _load_json(paths[1], [])
         brokers = _load_json(paths[2], {})
         config = _load_json(paths[3], {})
+    # Compute KPIs from actual data
+    nb = _normalize_brokers(brokers, scores)
+    scored_cpfs = set(re.sub(r'[^\d]', '', s.get('cpf', '')) for s in scores)
+    broker_only = [r for r in brokers.get('rejected', nb.get('recusadas', [])) if re.sub(r'[^\d]', '', r.get('cpf', '')) not in scored_cpfs]
+    n_invalid = len(brokers.get('invalid_cpf', nb.get('invalid_cpfs', [])))
+    n_pending = len(brokers.get('pending_broker', nb.get('pending_broker', [])))
+    n_approved = len(brokers.get('approved', nb.get('aprovados', [])))
+    n_rejected = len(brokers.get('rejected', nb.get('recusadas', [])))
+    n_capitalizacao = sum(1 for r in brokers.get('rejected', nb.get('recusadas', [])) if r.get('dados_completos'))
+    n_ready = sum(1 for s in scores if 'Ready' in s.get('status', ''))
+    total_cpfs = len(scores) + len(pendente) + len(broker_only) + n_invalid
+    version = config.get('version', '8.0')
     kpis = {
-        'total_leads': 249,
-        'cpfs': 77,
-        'verificado': 49,
+        'total_leads': 279,
+        'cpfs': total_cpfs,
+        'dados_completos': sum(1 for s in scores if '✓ Dados completos' in s.get('falta', '')),
+        'verificado': len(scores),
         'sem_score': len(pendente),
-        'cpf_errado': len(brokers.get('invalid_cpf', brokers.get('invalid_cpfs', []))),
-        'enviados': 7,
-        'recusadas': 6,
-        'ready': 0,
+        'cpf_errado': n_invalid,
+        'enviados': n_approved + n_rejected,
+        'pending_broker': n_pending,
+        'cotacao_enviada': n_approved,
+        'capitalizacao': n_capitalizacao,
+        'recusadas': n_rejected,
+        'ready': n_ready,
     }
-    version = '7.0'
     summary_text = (
-        '<b>Resumo v7.0:</b> <b>249 leads totais</b>. '
-        '3 novos scores: <b>Rafael de Andrade 595 REGULAR</b>, '
-        '<b>Stephanie 182 RUIM</b>, <b>Maria Bernadete 264 BAIXO</b>. '
-        '49 verificados, 21 sem score. '
+        f'<b>Resumo v{version}:</b> Audit fix — 21 issues corrected. '
+        f'{len(scores)} verificados, {len(pendente)} sem score. '
         '<span style="color:var(--green);font-weight:700">\U0001f389 Onivaldo APROVADO Porto Seguro via Darqs!</span>'
     )
     print(f'\n  Generating HTML (v{version})...')

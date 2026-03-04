@@ -63,6 +63,18 @@
     "profissao": "terapeuta"
   },
   {
+    "name": "Iriane Bastos Ribeiro",
+    "nome": "Iriane Bastos Ribeiro",
+    "cpf": "154.490.557-22",
+    "score": 468,
+    "rating": "REGULAR",
+    "renda": "—",
+    "falta": "Composição (Wanderson)",
+    "status": "Composição",
+    "row_class": "ry",
+    "composicao": true
+  },
+  {
     "name": "Thaiara B.A. Chagas Camargos",
     "cpf": "144.986.306-02",
     "score": 451,
@@ -76,8 +88,8 @@
     "profissao": "empresária"
   },
   {
-    "name": "LAVINIA SAMPAIO CALIMAN",
-    "nome": "LAVINIA SAMPAIO CALIMAN",
+    "name": "Lavinia Sampaio Caliman",
+    "nome": "Lavinia Sampaio Caliman",
     "cpf": "515.461.368-60",
     "score": 438,
     "rating": "REGULAR",
@@ -92,8 +104,8 @@
     "phone": "5515991809607"
   },
   {
-    "name": "BRUNO DA COSTA BALBINOTTI",
-    "nome": "BRUNO DA COSTA BALBINOTTI",
+    "name": "Bruno da Costa Balbinotti",
+    "nome": "Bruno da Costa Balbinotti",
     "cpf": "078.370.529-86",
     "score": 420,
     "rating": "REGULAR",
@@ -108,8 +120,8 @@
     "phone": "555496311454"
   },
   {
-    "name": "RICHARD YOHAN PEREZ DE LA ROSA",
-    "nome": "RICHARD YOHAN PEREZ DE LA ROSA",
+    "name": "Richard Yohan Perez de la Rosa",
+    "nome": "Richard Yohan Perez de la Rosa",
     "cpf": "230.141.088-98",
     "score": 408,
     "rating": "REGULAR",
@@ -124,8 +136,8 @@
     "phone": "5512981251967"
   },
   {
-    "name": "LUCAS ALMEIDA ALEIXO",
-    "nome": "LUCAS ALMEIDA ALEIXO",
+    "name": "Lucas Almeida Aleixo",
+    "nome": "Lucas Almeida Aleixo",
     "cpf": "082.987.586-76",
     "score": 403,
     "rating": "REGULAR",
@@ -142,13 +154,14 @@
   {
     "name": "Thialey Leite da Silva",
     "cpf": "053.164.979-29",
-    "score": 402,
-    "rating": "REGULAR",
+    "score": 296,
+    "rating": "BAIXO",
     "renda": "R$1.700",
     "falta": "Composição (J. Guilherme)",
-    "status": "Coletar dados",
-    "row_class": "ry",
-    "nome": "Thialey Leite da Silva"
+    "status": "Composição",
+    "row_class": "rr",
+    "nome": "Thialey Leite da Silva",
+    "composicao": true
   },
   {
     "name": "Onivaldo Menegario Sobrinho",
@@ -156,14 +169,14 @@
     "score": 399,
     "rating": "BAIXO",
     "renda": "R$7.000",
-    "falta": "✓ Dados completos",
-    "status": "Score baixo",
+    "falta": "Aprovado Porto Seguro via Darqs",
+    "status": "Aprovado ✓",
     "row_class": "ro",
     "nome": "Onivaldo Menegario Sobrinho"
   },
   {
-    "name": "EVERTON SUDRE FERREIRA",
-    "nome": "EVERTON SUDRE FERREIRA",
+    "name": "Everton Sudre Ferreira",
+    "nome": "Everton Sudre Ferreira",
     "cpf": "830.863.071-53",
     "score": 399,
     "rating": "BAIXO",
@@ -227,15 +240,15 @@
     "phone": "554792491517"
   },
   {
-    "name": "LUDMILA DE MOURA LIMA",
-    "nome": "LUDMILA DE MOURA LIMA",
+    "name": "Ludmila de Moura Lima",
+    "nome": "Ludmila de Moura Lima",
     "cpf": "438.015.278-24",
     "score": 366,
     "rating": "BAIXO",
     "renda": "R$1.900",
     "profissao": "",
-    "falta": "Falta: profissao, condominio, IPTU",
-    "status": "Score baixo",
+    "falta": "Enviado a Darqs (composição)",
+    "status": "Enviado ✓",
     "row_class": "ro",
     "nome_mae": "CRISTIANE DE MOURA LIMA",
     "nascimento": "09/11/1992",
@@ -243,8 +256,8 @@
     "phone": "5516997962616"
   },
   {
-    "name": "MARCOS VINICIUS DE OLIVEIRA MARINHEIRO",
-    "nome": "MARCOS VINICIUS DE OLIVEIRA MARINHEIRO",
+    "name": "Marcos Vinicius de Oliveira Marinheiro",
+    "nome": "Marcos Vinicius de Oliveira Marinheiro",
     "cpf": "230.042.308-10",
     "score": 357,
     "rating": "BAIXO",
@@ -307,8 +320,8 @@
     "phone": "5516997962616"
   },
   {
-    "name": "ADRIANA RIBEIRO DE SOUZA MARTINES",
-    "nome": "ADRIANA RIBEIRO DE SOUZA MARTINES",
+    "name": "Adriana Ribeiro de Souza Martines",
+    "nome": "Adriana Ribeiro de Souza Martines",
     "cpf": "859.607.216-00",
     "score": 342,
     "rating": "BAIXO",
@@ -391,7 +404,7 @@
     "score": 321,
     "rating": "BAIXO",
     "renda": "R$2.500",
-    "falta": "Falta: verificar detalhes",
+    "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
     "nome": "Veronica Luciana O. Soares",
@@ -447,18 +460,18 @@
     "phone": "556792609765"
   },
   {
-    "name": "EDNA ALVES DOS SANTOS",
-    "nome": "EDNA ALVES DOS SANTOS",
+    "name": "Edna Alves dos Santos",
+    "nome": "Edna Alves dos Santos",
     "cpf": "096.474.664-63",
     "score": 280,
     "rating": "BAIXO",
     "renda": "R$3.800",
-    "profissao": "baba",
+    "profissao": "Babá",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
     "nome_mae": "ELIENE ALVES DOS SANTOS",
-    "nascimento": "",
+    "nascimento": "27/02/1992",
     "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
     "phone": "558299729809"
   },
@@ -561,8 +574,8 @@
     "phone": "5511982199133"
   },
   {
-    "name": "LUCIENE SILVEIRA HACK",
-    "nome": "LUCIENE SILVEIRA HACK",
+    "name": "Luciene Silveira Hack",
+    "nome": "Luciene Silveira Hack",
     "cpf": "020.302.100-21",
     "score": 260,
     "rating": "BAIXO",
@@ -577,8 +590,8 @@
     "phone": "554788067076"
   },
   {
-    "name": "VERONICA GONCALVES MIRANDA",
-    "nome": "VERONICA GONCALVES MIRANDA",
+    "name": "Veronica Goncalves Miranda",
+    "nome": "Veronica Goncalves Miranda",
     "cpf": "063.999.786-45",
     "score": 251,
     "rating": "BAIXO",
@@ -618,8 +631,8 @@
     "profissao": "Motorista de aplicativo"
   },
   {
-    "name": "LUIZ FERNANDO PEREIRA",
-    "nome": "LUIZ FERNANDO PEREIRA",
+    "name": "Luiz Fernando Pereira",
+    "nome": "Luiz Fernando Pereira",
     "cpf": "305.955.028-06",
     "score": 241,
     "rating": "BAIXO",
@@ -646,8 +659,8 @@
     "phone": "5511973445539"
   },
   {
-    "name": "FELIPE LIMA FRANCA",
-    "nome": "FELIPE LIMA FRANCA",
+    "name": "Felipe Lima Franca",
+    "nome": "Felipe Lima Franca",
     "cpf": "427.885.248-70",
     "score": 233,
     "rating": "BAIXO",
@@ -686,8 +699,8 @@
     "phone": "5511962226396"
   },
   {
-    "name": "ADRIANO MOREIRA",
-    "nome": "ADRIANO MOREIRA",
+    "name": "Adriano Moreira",
+    "nome": "Adriano Moreira",
     "cpf": "087.381.466-57",
     "score": 202,
     "rating": "BAIXO",
@@ -740,8 +753,8 @@
     "phone": "5511930281238"
   },
   {
-    "name": "FABIANA MARIANO RODRIGUES",
-    "nome": "FABIANA MARIANO RODRIGUES",
+    "name": "Fabiana Mariano Rodrigues",
+    "nome": "Fabiana Mariano Rodrigues",
     "cpf": "033.938.129-98",
     "score": 191,
     "rating": "RUIM",
@@ -756,8 +769,8 @@
     "phone": "554791743939"
   },
   {
-    "name": "TATIANE HEGELE DE OLIVEIRA",
-    "nome": "TATIANE HEGELE DE OLIVEIRA",
+    "name": "Tatiane Hegele de Oliveira",
+    "nome": "Tatiane Hegele de Oliveira",
     "cpf": "375.014.488-50",
     "score": 190,
     "rating": "RUIM",
@@ -772,8 +785,8 @@
     "phone": "554584010939"
   },
   {
-    "name": "VAGNER APARECIDO DE SOUZA",
-    "nome": "VAGNER APARECIDO DE SOUZA",
+    "name": "Vagner Aparecido de Souza",
+    "nome": "Vagner Aparecido de Souza",
     "cpf": "346.496.748-40",
     "score": 185,
     "rating": "RUIM",
@@ -824,8 +837,8 @@
     "phone": "5514997610438"
   },
   {
-    "name": "WILLIAN RICARDO DA SILVA FERREIRA",
-    "nome": "WILLIAN RICARDO DA SILVA FERREIRA",
+    "name": "Willian Ricardo da Silva Ferreira",
+    "nome": "Willian Ricardo da Silva Ferreira",
     "cpf": "416.816.408-05",
     "score": 156,
     "rating": "RUIM",
@@ -877,8 +890,8 @@
     "profissao": "Autônomo"
   },
   {
-    "name": "ADRIANA STEPHANIE OLIVEIRA RODRIGUES",
-    "nome": "ADRIANA STEPHANIE OLIVEIRA RODRIGUES",
+    "name": "Adriana Stephanie Oliveira Rodrigues",
+    "nome": "Adriana Stephanie Oliveira Rodrigues",
     "cpf": "354.190.018-02",
     "score": 40,
     "rating": "RUIM",

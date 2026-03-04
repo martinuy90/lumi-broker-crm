@@ -685,6 +685,12 @@ def compute_kpis(scores, pendente, brokers, total_leads, dados_completos=0):
     # Count ready
     n_ready = sum(1 for s in scores if 'Ready' in s.get('status', ''))
 
+    # Count pending_broker and capitalizacao
+    n_pending_broker = len(brokers.get('pending_broker', []))
+    n_cotacao_enviada = n_approved
+    # Capitalização = rejected leads with dados_completos flag
+    n_capitalizacao = sum(1 for r in brokers.get('rejected', []) if r.get('dados_completos'))
+
     return {
         'total_leads': total_leads,
         'cpfs': total_cpfs,
@@ -693,6 +699,9 @@ def compute_kpis(scores, pendente, brokers, total_leads, dados_completos=0):
         'sem_score': n_pendente,
         'cpf_errado': n_invalid,
         'enviados': n_enviados,
+        'pending_broker': n_pending_broker,
+        'cotacao_enviada': n_cotacao_enviada,
+        'capitalizacao': n_capitalizacao,
         'recusadas': n_rejected,
         'ready': n_ready
     }

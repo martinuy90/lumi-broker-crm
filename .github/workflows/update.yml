@@ -41,7 +41,7 @@ jobs:
         run: |
           git config user.name "Lumi CRM Bot"
           git config user.email "bot@lumi.ai"
-          git add -A
+          git add data/ index.html
           # Check if there are changes to commit
           if git diff --staged --quiet; then
             echo "No changes to commit"
