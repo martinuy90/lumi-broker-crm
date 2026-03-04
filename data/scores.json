@@ -51,6 +51,18 @@
     "profissao": "Contador"
   },
   {
+    "name": "Iriane Bastos Ribeiro",
+    "nome": "Iriane Bastos Ribeiro",
+    "cpf": "154.490.557-22",
+    "score": 468,
+    "rating": "REGULAR",
+    "renda": "—",
+    "falta": "Composição (Wanderson)",
+    "status": "Composição",
+    "row_class": "ry",
+    "composicao": true
+  },
+  {
     "name": "Daiane Ap. Alves dos Santos",
     "cpf": "081.385.799-60",
     "score": 462,
@@ -62,18 +74,6 @@
     "nome": "Daiane Ap. Alves dos Santos",
     "phone": "554797807930",
     "profissao": "terapeuta"
-  },
-  {
-    "name": "Iriane Bastos Ribeiro",
-    "nome": "Iriane Bastos Ribeiro",
-    "cpf": "154.490.557-22",
-    "score": 468,
-    "rating": "REGULAR",
-    "renda": "—",
-    "falta": "Composição (Wanderson)",
-    "status": "Composição",
-    "row_class": "ry",
-    "composicao": true
   },
   {
     "name": "Thaiara B.A. Chagas Camargos",
@@ -151,18 +151,6 @@
     "nascimento": "",
     "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000",
     "phone": "553184973277"
-  },
-  {
-    "name": "Thialey Leite da Silva",
-    "cpf": "053.164.979-29",
-    "score": 296,
-    "rating": "BAIXO",
-    "renda": "R$1.700",
-    "falta": "Composição (J. Guilherme)",
-    "status": "Composição",
-    "row_class": "rr",
-    "nome": "Thialey Leite da Silva",
-    "composicao": true
   },
   {
     "name": "Onivaldo Menegario Sobrinho",
@@ -246,10 +234,10 @@
     "cpf": "438.015.278-24",
     "score": 366,
     "rating": "BAIXO",
-    "renda": "R$1.600",
+    "renda": "R$1.900",
     "profissao": "Auxiliar de limpeza",
-    "falta": "Recusada Darqs + Ittu (composição Jessica)",
-    "status": "Recusada",
+    "falta": "Falta: profissao, condominio, IPTU",
+    "status": "Score baixo",
     "row_class": "ro",
     "nome_mae": "CRISTIANE DE MOURA LIMA",
     "nascimento": "09/11/1992",
@@ -264,8 +252,8 @@
     "rating": "BAIXO",
     "renda": "R$3.500",
     "profissao": "Enfermeiro",
-    "falta": "Recusada Darqs — Capitalização R$5.250 via Ittu em andamento",
-    "status": "Enviado ✓",
+    "falta": "Falta: verificar detalhes",
+    "status": "Score baixo",
     "row_class": "ro",
     "nome_mae": "MARA CRISTINA O MARINHEIRO",
     "nascimento": "",
@@ -405,7 +393,7 @@
     "score": 321,
     "rating": "BAIXO",
     "renda": "R$2.500",
-    "falta": "✓ Dados completos",
+    "falta": "Falta: verificar detalhes",
     "status": "Score baixo",
     "row_class": "ro",
     "nome": "Veronica Luciana O. Soares",
@@ -461,13 +449,25 @@
     "phone": "556792609765"
   },
   {
+    "name": "Thialey Leite da Silva",
+    "cpf": "053.164.979-29",
+    "score": 296,
+    "rating": "BAIXO",
+    "renda": "R$1.700",
+    "falta": "Composição (J. Guilherme)",
+    "status": "Composição",
+    "row_class": "rr",
+    "nome": "Thialey Leite da Silva",
+    "composicao": true
+  },
+  {
     "name": "Edna Alves dos Santos",
     "nome": "Edna Alves dos Santos",
     "cpf": "096.474.664-63",
     "score": 280,
     "rating": "BAIXO",
     "renda": "R$3.800",
-    "profissao": "Babá",
+    "profissao": "baba",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
     "row_class": "ro",
