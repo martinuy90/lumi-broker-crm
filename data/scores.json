@@ -7,7 +7,8 @@
     "renda": "R$6.000/mês",
     "falta": "Falta: Dados imóvel",
     "status": "Coletar dados",
-    "row_class": "rg"
+    "row_class": "rg",
+    "nome": "Roberto Jesus da Silva"
   },
   {
     "name": "Rafael de Andrade Mendes",
@@ -17,7 +18,8 @@
     "renda": "R$7.219",
     "falta": "Falta: End. + dados imóvel",
     "status": "Coletar dados",
-    "row_class": "ry"
+    "row_class": "ry",
+    "nome": "Rafael de Andrade Mendes"
   },
   {
     "name": "Michel Gilliardi Alves Adauto",
@@ -27,7 +29,8 @@
     "renda": "R$3.200",
     "falta": "Falta: Prof + imóvel",
     "status": "Coletar dados",
-    "row_class": "ry"
+    "row_class": "ry",
+    "nome": "Michel Gilliardi Alves Adauto"
   },
   {
     "name": "Horácio Batista Matos",
@@ -37,7 +40,8 @@
     "renda": "R$7.500/mês",
     "falta": "Falta: Renda (sistema)",
     "status": "Coletar dados",
-    "row_class": "ry"
+    "row_class": "ry",
+    "nome": "Horácio Batista Matos"
   },
   {
     "name": "Daiane Ap. Alves dos Santos",
@@ -47,7 +51,8 @@
     "renda": "R$6.000/mês",
     "falta": "Falta: End. + Renda",
     "status": "Coletar dados",
-    "row_class": "ry"
+    "row_class": "ry",
+    "nome": "Daiane Ap. Alves dos Santos"
   },
   {
     "name": "Thaiara B.A. Chagas Camargos",
@@ -57,7 +62,8 @@
     "renda": "R$10.000",
     "falta": "Falta: Dados imóvel",
     "status": "Coletar dados",
-    "row_class": "ry"
+    "row_class": "ry",
+    "nome": "Thaiara B.A. Chagas Camargos"
   },
   {
     "name": "Thialey Leite da Silva",
@@ -67,7 +73,8 @@
     "renda": "R$1.700",
     "falta": "Composição (J. Guilherme)",
     "status": "Coletar dados",
-    "row_class": "ry"
+    "row_class": "ry",
+    "nome": "Thialey Leite da Silva"
   },
   {
     "name": "Onivaldo Menegario Sobrinho",
@@ -77,7 +84,8 @@
     "renda": "R$7.000",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Onivaldo Menegario Sobrinho"
   },
   {
     "name": "Marcello Rodrigues Lopes",
@@ -87,7 +95,8 @@
     "renda": "R$4.400",
     "falta": "Falta: Condo, IPTU, cob.",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Marcello Rodrigues Lopes"
   },
   {
     "name": "Cecília Regina Lombardi",
@@ -97,7 +106,8 @@
     "renda": "R$6.600",
     "falta": "Falta: Dados imóvel",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Cecília Regina Lombardi"
   },
   {
     "name": "Wanderson Gama Marques",
@@ -107,7 +117,8 @@
     "renda": "R$10.000",
     "falta": "Conferir dados",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Wanderson Gama Marques"
   },
   {
     "name": "Fernanda Almeida de Bragança",
@@ -117,7 +128,8 @@
     "renda": "R$2.500",
     "falta": "Falta: Dados imóvel",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Fernanda Almeida de Bragança"
   },
   {
     "name": "Adriana de Paula Coimbra",
@@ -127,7 +139,8 @@
     "renda": "—",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Adriana de Paula Coimbra"
   },
   {
     "name": "Andrea da Conceição F. da Cruz",
@@ -137,7 +150,8 @@
     "renda": "R$6.000",
     "falta": "Falta: Dados imóvel",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Andrea da Conceição F. da Cruz"
   },
   {
     "name": "Rogerio Fernando Bittar Perez",
@@ -147,7 +161,8 @@
     "renda": "—",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Rogerio Fernando Bittar Perez"
   },
   {
     "name": "Jéssica Cristina Jordão",
@@ -157,7 +172,8 @@
     "renda": "R$1.900",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Jéssica Cristina Jordão"
   },
   {
     "name": "Gabriela Vitória da Silva Lima",
@@ -167,7 +183,8 @@
     "renda": "R$1.401-2.000*",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Gabriela Vitória da Silva Lima"
   },
   {
     "name": "Maria Lucia Correa",
@@ -177,7 +194,8 @@
     "renda": "R$1.800",
     "falta": "Falta: Condo, coberturas",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Maria Lucia Correa"
   },
   {
     "name": "Poliana Conovalow Tartaro",
@@ -187,7 +205,8 @@
     "renda": "R$1.401-2.000*",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Poliana Conovalow Tartaro"
   },
   {
     "name": "Grazielle Carlos dos Santos",
@@ -197,7 +216,8 @@
     "renda": "R$1.401-2.000*",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Grazielle Carlos dos Santos"
   },
   {
     "name": "Franciele Aparecida Silva Moschiar",
@@ -207,7 +227,8 @@
     "renda": "R$20.000",
     "falta": "Falta: Dados pessoais",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Franciele Aparecida Silva Moschiar"
   },
   {
     "name": "Veronica Luciana O. Soares",
@@ -217,7 +238,8 @@
     "renda": "R$2.500",
     "falta": "✓ Dados completos",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Veronica Luciana O. Soares"
   },
   {
     "name": "Fabricia Pinheiro de Oliveira",
@@ -227,7 +249,8 @@
     "renda": "—",
     "falta": "Falta: Endereço",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Fabricia Pinheiro de Oliveira"
   },
   {
     "name": "Estela Mariana Gomes",
@@ -237,7 +260,8 @@
     "renda": "R$7.000",
     "falta": "Falta: Dados imóvel",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Estela Mariana Gomes"
   },
   {
     "name": "Marcos Vinicius de Mesquita",
@@ -247,7 +271,8 @@
     "renda": "R$3.484",
     "falta": "Falta: Conferir dados",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Marcos Vinicius de Mesquita"
   },
   {
     "name": "Ana Cristina do Couto",
@@ -257,7 +282,8 @@
     "renda": "R$1.700",
     "falta": "Falta: Conferir dados",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Ana Cristina do Couto"
   },
   {
     "name": "Ana Paula Martendal",
@@ -267,7 +293,8 @@
     "renda": "R$12.000",
     "falta": "Conferir dados",
     "status": "Score baixo",
-    "row_class": "ro"
+    "row_class": "ro",
+    "nome": "Ana Paula Martendal"
   },
   {
     "name": "Ed Carlos Feliceto dos Anjos",
@@ -277,7 +304,8 @@
     "renda": "R$9.000",
     "falta": "Falta: Dados imóvel",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Ed Carlos Feliceto dos Anjos"
   },
   {
     "name": "Bruna Aparecida dos Santos Lopes",
@@ -287,7 +315,8 @@
     "renda": "R$6.000",
     "falta": "Falta: Endereço",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Bruna Aparecida dos Santos Lopes"
   },
   {
     "name": "Maria Carolina Madazio",
@@ -297,7 +326,8 @@
     "renda": "R$5.000",
     "falta": "Falta: Dados imóvel",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Maria Carolina Madazio"
   },
   {
     "name": "Keila Maria de Sousa",
@@ -307,7 +337,8 @@
     "renda": "R$1.860",
     "falta": "Falta: Dados imóvel",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Keila Maria de Sousa"
   },
   {
     "name": "Simone Manfrin",
@@ -317,7 +348,8 @@
     "renda": "R$12.000",
     "falta": "Falta: Dados imóvel",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Simone Manfrin"
   },
   {
     "name": "Maria Bernadete S.V. Strauch",
@@ -327,7 +359,8 @@
     "renda": "R$8.000",
     "falta": "Falta: Dados pessoais + imóvel",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Maria Bernadete S.V. Strauch"
   },
   {
     "name": "Oldemar Fernandes Magesky",
@@ -337,7 +370,8 @@
     "renda": "R$15.000",
     "falta": "Falta: Dados imóvel",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Oldemar Fernandes Magesky"
   },
   {
     "name": "Claudio Ubiratan de Almeida",
@@ -347,7 +381,8 @@
     "renda": "R$5.001-7.000*",
     "falta": "Falta: Endereço",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Claudio Ubiratan de Almeida"
   },
   {
     "name": "Rogerio Jose Costa",
@@ -357,7 +392,8 @@
     "renda": "R$6.000",
     "falta": "Falta: Endereço",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Rogerio Jose Costa"
   },
   {
     "name": "Alan Felipe de Pina Lopes",
@@ -367,7 +403,8 @@
     "renda": "R$1.800",
     "falta": "Conferir dados",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Alan Felipe de Pina Lopes"
   },
   {
     "name": "José Martinez Ramos",
@@ -377,7 +414,8 @@
     "renda": "R$1.401-2.000*",
     "falta": "Sem dados no sistema",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "José Martinez Ramos"
   },
   {
     "name": "Rosangela Aparecida de Oliveira",
@@ -387,7 +425,8 @@
     "renda": "R$7.000",
     "falta": "Falta: Conferir dados",
     "status": "Score baixo",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Rosangela Aparecida de Oliveira"
   },
   {
     "name": "Rafael Pereira dos Santos",
@@ -397,7 +436,8 @@
     "renda": "R$4.000",
     "falta": "✓ Dados completos",
     "status": "Sem chance",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Rafael Pereira dos Santos"
   },
   {
     "name": "Nicola Carone Dias",
@@ -407,7 +447,8 @@
     "renda": "R$10.000",
     "falta": "Falta: Dados imóvel",
     "status": "Sem chance",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Nicola Carone Dias"
   },
   {
     "name": "Francy Kelly Francetto de Lima",
@@ -417,7 +458,8 @@
     "renda": "R$15.000",
     "falta": "Falta: Dados imóvel",
     "status": "Sem chance",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Francy Kelly Francetto de Lima"
   },
   {
     "name": "Stephanie Diniz de Almeida",
@@ -427,7 +469,8 @@
     "renda": "R$8.000",
     "falta": "Falta: Dados imóvel",
     "status": "Sem chance",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Stephanie Diniz de Almeida"
   },
   {
     "name": "João Guilherme Antunes Ramos",
@@ -437,7 +480,8 @@
     "renda": "—",
     "falta": "Sem dados no sistema",
     "status": "Sem chance",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "João Guilherme Antunes Ramos"
   },
   {
     "name": "Marta Guedes da Silva",
@@ -447,7 +491,8 @@
     "renda": "R$1.401-2.000*",
     "falta": "Falta: Renda",
     "status": "Sem chance",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Marta Guedes da Silva"
   },
   {
     "name": "Misaelly Karolaine da Silva Santos",
@@ -457,7 +502,8 @@
     "renda": "R$2.200",
     "falta": "Falta: Dados imóvel",
     "status": "Sem chance",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Misaelly Karolaine da Silva Santos"
   },
   {
     "name": "Janaína Tinoco Ribeiro",
@@ -467,7 +513,8 @@
     "renda": "R$6.500",
     "falta": "Falta: Conferir dados",
     "status": "Sem chance",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Janaína Tinoco Ribeiro"
   },
   {
     "name": "Luan Peques",
@@ -477,7 +524,8 @@
     "renda": "R$1.401-2.000*",
     "falta": "Falta: Renda",
     "status": "Sem chance",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Luan Peques"
   },
   {
     "name": "Adilson Modesto Simoes Junior",
@@ -487,6 +535,7 @@
     "renda": "R$3.630",
     "falta": "Falta: Conferir dados",
     "status": "Sem chance",
-    "row_class": "rr"
+    "row_class": "rr",
+    "nome": "Adilson Modesto Simoes Junior"
   }
 ]

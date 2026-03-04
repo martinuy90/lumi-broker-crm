@@ -7,7 +7,16 @@
       "broker": "Darqs",
       "insurer": "",
       "valor": "R$8.648,50 à vista ou 10x R$864,85",
-      "vigencia": "10/03/2026 – 10/09/2028"
+      "vigencia": "10/03/2026 – 10/09/2028",
+      "details": {
+        "Broker": {
+          "text": "Darqs APROVADO",
+          "style": "color:var(--green)"
+        },
+        "Valor": "R$8.648,50 à vista ou 10x R$864,85",
+        "Vigência": "10/03/2026 – 10/09/2028"
+      },
+      "nome": "Onivaldo Menegario Sobrinho"
     }
   ],
   "rejected": [
@@ -16,7 +25,12 @@
       "cpf": "133.776.378-00",
       "profissao": "Sup. merchandising",
       "renda": "",
-      "broker_notes": "Darqs ✗ (apontamentos CPF) · Ittu pendente"
+      "broker_notes": "Darqs ✗ (apontamentos CPF) · Ittu pendente",
+      "details": {
+        "Profissão": "Sup. merchandising",
+        "Broker": "Darqs ✗ (apontamentos CPF) · Ittu pendente"
+      },
+      "nome": "Kátia Aparecida da Silva"
     },
     {
       "name": "Jéssica Cristina Jordão",
@@ -24,35 +38,60 @@
       "profissao": "Balconista",
       "renda": "",
       "broker_notes": "Darqs ✗ · Ittu pendente",
-      "score": 343
+      "score": 343,
+      "details": {
+        "Profissão": "Balconista",
+        "Broker": "Darqs ✗ · Ittu pendente"
+      },
+      "nome": "Jéssica Cristina Jordão"
     },
     {
       "name": "Izabel Aparecida de Carvalho",
       "cpf": "031.720.268-50",
       "profissao": "Corretora",
       "renda": "",
-      "broker_notes": "Ittu ✗ (Pottencial + Porto) · Darqs ✗ · Arcoseg pendente"
+      "broker_notes": "Ittu ✗ (Pottencial + Porto) · Darqs ✗ · Arcoseg pendente",
+      "details": {
+        "Profissão": "Corretora",
+        "Broker": "Ittu ✗ (Pottencial + Porto) · Darqs ✗ · Arcoseg pendente"
+      },
+      "nome": "Izabel Aparecida de Carvalho"
     },
     {
       "name": "Vando Rocha da Silva",
       "cpf": "103.792.557-23",
       "profissao": "Professor",
       "renda": "",
-      "broker_notes": "Ittu ✗ · Darqs ✗ · Arcoseg pendente"
+      "broker_notes": "Ittu ✗ · Darqs ✗ · Arcoseg pendente",
+      "details": {
+        "Profissão": "Professor",
+        "Broker": "Ittu ✗ · Darqs ✗ · Arcoseg pendente"
+      },
+      "nome": "Vando Rocha da Silva"
     },
     {
       "name": "Josemery Margarida Déa",
       "cpf": "865.176.519-34",
       "profissao": "Professora",
       "renda": "",
-      "broker_notes": "Ittu ✗ · Darqs ✗ · Arcoseg pendente"
+      "broker_notes": "Ittu ✗ · Darqs ✗ · Arcoseg pendente",
+      "details": {
+        "Profissão": "Professora",
+        "Broker": "Ittu ✗ · Darqs ✗ · Arcoseg pendente"
+      },
+      "nome": "Josemery Margarida Déa"
     },
     {
       "name": "Paulo Cesar Gonçalves de Santana",
       "cpf": "820.233.791-72",
       "profissao": "Vendedor externo",
       "renda": "",
-      "broker_notes": "Darqs ✗ · Ittu aguardando CEP"
+      "broker_notes": "Darqs ✗ · Ittu aguardando CEP",
+      "details": {
+        "Profissão": "Vendedor externo",
+        "Broker": "Darqs ✗ · Ittu aguardando CEP"
+      },
+      "nome": "Paulo Cesar Gonçalves de Santana"
     }
   ],
   "invalid_cpf": [
@@ -60,11 +99,19 @@
       "name": "Fabiana Pereira",
       "cpf": "032.736.629-07",
       "renda": "R$5.000",
-      "phone": "+55 41 9606-1530"
+      "phone": "+55 41 9606-1530",
+      "details": {
+        "Renda": "R$5.000",
+        "Telefone": "+55 41 9606-1530"
+      },
+      "nota": "CPF inválido.",
+      "nome": "Fabiana Pereira"
     },
     {
       "name": "Bruna Caroline Santos Cordeiro",
-      "cpf": "445.337.188-00"
+      "cpf": "445.337.188-00",
+      "nota": "CPF inválido.",
+      "nome": "Bruna Caroline Santos Cordeiro"
     }
   ]
 }
