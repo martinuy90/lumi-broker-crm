@@ -650,11 +650,39 @@ def generate_enviados_card_recusada(entry):
     return '\n'.join(L)
 
 
+def generate_capitalizacao_card(entry):
+    """Generate a card for a capitalização candidate (rejected lead with complete data)."""
+    nome = entry.get('nome', '')
+    cpf = entry.get('cpf', '')
+    score = entry.get('score', 0)
+    details = entry.get('details', {})
+    sub_parts = [f'CPF {cpf}']
+    if score:
+        sub_parts.append(f'Score {score}')
+    sub_text = ' \u00b7 '.join(sub_parts)
+    L = []
+    L.append(f'<div class="crd" style="border-left:4px solid var(--yellow)" onclick="this.classList.toggle(\'open\')">')
+    L.append('  <div class="crd-h">')
+    L.append(f'    <div><div class="crd-n">{_e(nome)}</div><div class="crd-sub">{_e(sub_text)}</div></div>')
+    L.append('    <span class="badge" style="background:rgba(245,158,11,.18);color:var(--yellow);border:1px solid rgba(245,158,11,.4);font-weight:700">CAPITALIZA\u00c7\u00c3O</span>')
+    L.append('  </div>')
+    L.append('  <div class="crd-body">')
+    L.extend(_render_details(details))
+    nota = entry.get('nota', 'Recusado no seguro fian\u00e7a. Dados completos \u2014 candidato para seguro de capitaliza\u00e7\u00e3o.')
+    L.append(_card_note(nota, 'var(--yellow)'))
+    L.append('  </div>')
+    L.append('</div>')
+    return '\n'.join(L)
+
+
 def generate_enviados_tab(brokers):
     """Generate Tab 3: Enviados/Recusados."""
     aprovados = brokers.get('aprovados', [])
     invalid_enviados = brokers.get('invalid_cpfs_enviados', [])
     recusadas = brokers.get('recusadas', [])
+    # Filter rejected leads with complete data for capitalização section
+    capitalizacao = [r for r in recusadas if r.get('dados_completos')]
+    recusadas_sem_dados = [r for r in recusadas if not r.get('dados_completos')]
     L = []
     L.append('<!-- ============ TAB 3: ENVIADOS / RECUSADOS ============ -->')
     L.append('<div id="s-enviados" class="sec">')
@@ -667,6 +695,15 @@ def generate_enviados_tab(brokers):
             L.append(generate_enviados_card_aprovado(e))
         L.append('</div>')
         L.append('</div>')
+    if capitalizacao:
+        L.append('<div style="margin-bottom:20px">')
+        L.append(f'<div class="stitle" style="color:var(--yellow);border-left-color:var(--yellow)">Capitaliza\u00e7\u00e3o \u2014 Recusados com Dados Completos ({len(capitalizacao)})</div>')
+        L.append('<p style="font-size:12px;color:var(--txt2);margin-bottom:12px;padding-left:13px">Leads recusados no seguro fian\u00e7a que possuem dados completos. Candidatos para oferta de seguro de capitaliza\u00e7\u00e3o como alternativa.</p>')
+        L.append('<div class="cards">')
+        for e in capitalizacao:
+            L.append(generate_capitalizacao_card(e))
+        L.append('</div>')
+        L.append('</div>')
     if invalid_enviados:
         L.append('<div style="margin-bottom:20px">')
         L.append(f'<div class="stitle" style="color:var(--red);border-left-color:var(--red)">CPF Inv\u00e1lido ({len(invalid_enviados)})</div>')
@@ -675,15 +712,16 @@ def generate_enviados_tab(brokers):
             L.append(generate_enviados_card_invalid(e))
         L.append('</div>')
         L.append('</div>')
-    if recusadas:
+    all_recusadas = recusadas  # Show ALL rejected in the collapsible (including capitalização ones)
+    if all_recusadas:
         coll_onclick = "var c=this.nextElementSibling;c.classList.toggle('open');this.querySelector('.chv').style.transform=c.classList.contains('open')?'rotate(180deg)':'rotate(0)'"
         L.append(f'<div class="coll-h" onclick="{coll_onclick}">')
-        L.append('  <span class="coll-t">Recusadas pelo Broker</span>')
-        L.append(f'  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">{len(recusadas)}</span><span class="chv">\u25bc</span></div>')
+        L.append('  <span class="coll-t">Todas as Recusadas pelo Broker</span>')
+        L.append(f'  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">{len(all_recusadas)}</span><span class="chv">\u25bc</span></div>')
         L.append('</div>')
         L.append('<div class="coll-b">')
         L.append('<div class="cards">')
-        for e in recusadas:
+        for e in all_recusadas:
             L.append(generate_enviados_card_recusada(e))
         L.append('</div>')
         L.append('</div>')

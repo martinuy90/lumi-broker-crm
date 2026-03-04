@@ -21,6 +21,56 @@
   ],
   "rejected": [
     {
+      "name": "Bruno da Costa Balbinotti",
+      "cpf": "078.370.529-86",
+      "profissao": "Operador de estocagem",
+      "renda": "R$2.670",
+      "score": 420,
+      "broker_notes": "Darqs ✗",
+      "dados_completos": true,
+      "details": {
+        "Score": "420 REGULAR",
+        "Profissão": "Operador de estocagem",
+        "Renda": "R$2.670",
+        "Broker": "Darqs ✗"
+      },
+      "nome": "Bruno da Costa Balbinotti"
+    },
+    {
+      "name": "Marcello Rodrigues Lopes",
+      "cpf": "266.803.538-40",
+      "profissao": "Vigia noturno, motorista de app e MEI",
+      "renda": "R$4.400",
+      "score": 389,
+      "broker_notes": "Darqs ✗",
+      "dados_completos": true,
+      "details": {
+        "Score": "389 BAIXO",
+        "Profissão": "Vigia noturno, motorista de app e MEI",
+        "Renda comprovada": "R$4.400",
+        "Obs": "Restrição de cartão por desemprego, já empregado novamente",
+        "Broker": "Darqs ✗"
+      },
+      "nome": "Marcello Rodrigues Lopes"
+    },
+    {
+      "name": "Jéssica Cristina Jordão",
+      "cpf": "420.648.618-23",
+      "profissao": "Balconista",
+      "renda": "R$1.900",
+      "score": 343,
+      "broker_notes": "Darqs ✗ · Ittu pendente",
+      "dados_completos": true,
+      "details": {
+        "Score": "343 BAIXO",
+        "Profissão": "Balconista",
+        "Renda": "R$1.900",
+        "Composição": "Ludmila de Moura Lima (aux. limpeza, R$1.600)",
+        "Broker": "Darqs ✗ · Ittu pendente"
+      },
+      "nome": "Jéssica Cristina Jordão"
+    },
+    {
       "name": "Kátia Aparecida da Silva",
       "cpf": "133.776.378-00",
       "profissao": "Sup. merchandising",
@@ -31,19 +81,6 @@
         "Broker": "Darqs ✗ (apontamentos CPF) · Ittu pendente"
       },
       "nome": "Kátia Aparecida da Silva"
-    },
-    {
-      "name": "Jéssica Cristina Jordão",
-      "cpf": "420.648.618-23",
-      "profissao": "Balconista",
-      "renda": "",
-      "broker_notes": "Darqs ✗ · Ittu pendente",
-      "score": 343,
-      "details": {
-        "Profissão": "Balconista",
-        "Broker": "Darqs ✗ · Ittu pendente"
-      },
-      "nome": "Jéssica Cristina Jordão"
     },
     {
       "name": "Izabel Aparecida de Carvalho",

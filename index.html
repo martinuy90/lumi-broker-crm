@@ -77,27 +77,27 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 04/03/2026 — v7.5</div>
+    <div class="ts">Atualizado: 04/03/2026 — v7.8</div>
   </div>
   <div class="kpis">
     <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">279</div><div class="kpi-l">Total Leads</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">77</div><div class="kpi-l">CPFs Compartilhados</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#34d399">39</div><div class="kpi-l">Dados Completos</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">68</div><div class="kpi-l">CPFs Compartilhados</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#34d399">5</div><div class="kpi-l">Dados Completos</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">68</div><div class="kpi-l">Crédito Verificado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">0</div><div class="kpi-l">CPF Sem Score</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--orange)">4</div><div class="kpi-l">CPF Errado</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">7</div><div class="kpi-l">Enviados a Broker</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--red)">6</div><div class="kpi-l">Recusadas Broker</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--green)">3</div><div class="kpi-l">Ready to Send</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--orange)">0</div><div class="kpi-l">CPF Errado</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">9</div><div class="kpi-l">Enviados a Broker</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--red)">8</div><div class="kpi-l">Recusadas Broker</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--green)">0</div><div class="kpi-l">Ready to Send</div></div>
   </div>
   <div class="summ">
-    <b>Resumo v7.5:</b> Atualização automática. Sem alterações detectadas.
+    v7.8: Capitalização section + Bruno/Marcello rejections
   </div>
 </div>
 <div class="tabs">
   <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">77</span></button>
-  <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">12</span></button>
-  <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">11</span></button>
+  <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">15</span></button>
+  <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">13</span></button>
   <button class="tab" onclick="sw('baixo',this)">Sem Score<span class="cnt">0</span></button>
 </div>
 <!-- ============ TAB 1: RANKING COMPLETO ============ -->
@@ -122,8 +122,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--green)">683</td>
   <td><span class="badge b-bom">BOM</span></td>
   <td>R$6.000/mês</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
-  <td><span class="st st-rdy">Ready ✓</span></td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
+  <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
   <td style="font-weight:700;color:var(--purpleL)">2</td>
@@ -132,7 +132,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--yellow)">595</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$7.219</td>
-  <td style="color:var(--orange);font-size:11px">Falta: renda, endereco</td>
+  <td style="color:var(--orange);font-size:11px">Falta: email, endereco, CEP, tipo imovel, uso imovel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
@@ -142,7 +142,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--yellow)">495</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$3.200</td>
-  <td style="color:var(--orange);font-size:11px">Falta: endereco</td>
+  <td style="color:var(--orange);font-size:11px">Falta: profissao, endereco, CEP, uso imovel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
@@ -152,7 +152,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--yellow)">475</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$7.500</td>
-  <td style="color:var(--orange);font-size:11px">Falta: renda</td>
+  <td style="color:var(--orange);font-size:11px">Falta: endereco, CEP, tipo imovel, uso imovel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
@@ -162,7 +162,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--yellow)">462</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$6.000</td>
-  <td style="color:var(--orange);font-size:11px">Falta: renda, endereco</td>
+  <td style="color:var(--orange);font-size:11px">Falta: endereco, CEP, tipo imovel, uso imovel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
@@ -172,7 +172,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--yellow)">451</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$10.000</td>
-  <td style="color:var(--orange);font-size:11px">Falta: endereco, aluguel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: endereco, CEP, tipo imovel, uso imovel, aluguel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
@@ -192,8 +192,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--yellow)">420</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$2.670</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
-  <td><span class="st st-rdy">Ready ✓</span></td>
+  <td style="color:var(--orange);font-size:11px">Recusada Darqs</td>
+  <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
   <td>9</td>
@@ -212,8 +212,8 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--yellow)">403</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$4.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
-  <td><span class="st st-rdy">Ready ✓</span></td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
+  <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
   <td>11</td>
@@ -252,7 +252,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">389</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$4.400</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Recusada Darqs</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -262,7 +262,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">389</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$6.600</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -292,7 +292,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">366</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.900</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: profissao, condominio, IPTU</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -302,7 +302,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">357</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$3.500</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -312,7 +312,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">350</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.800</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: profissao, CEP, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -332,7 +332,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">350</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -352,7 +352,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">342</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$2.900</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -372,7 +372,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">328</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.800</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: email, renda, endereco, tipo imovel, uso imovel, aluguel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -382,7 +382,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">328</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$2.100</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: endereco, CEP, tipo imovel, uso imovel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -392,7 +392,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">321</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$3.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: profissao, endereco, CEP, tipo imovel, uso imovel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -412,7 +412,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">321</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$2.500</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -422,7 +422,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">312</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$3.860</td>
-  <td style="color:var(--orange);font-size:11px">Falta: endereco</td>
+  <td style="color:var(--orange);font-size:11px">Falta: estado civil, endereco, CEP, tipo imovel, uso imovel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -432,7 +432,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">308</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$7.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -472,7 +472,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">277</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$12.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -482,7 +482,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">273</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$9.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -492,7 +492,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">272</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$6.000</td>
-  <td style="color:var(--orange);font-size:11px">Falta: endereco</td>
+  <td style="color:var(--orange);font-size:11px">Falta: estado civil, renda, endereco, CEP, tipo imovel, uso imovel, aluguel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -522,7 +522,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">264</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$12.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -532,7 +532,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">264</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$8.000</td>
-  <td style="color:var(--orange);font-size:11px">Falta: email, nascimento, estado civil, profissao, renda, endereco, CEP, tipo imovel, uso imovel, aluguel, condominio, IPTU, prazo contrato</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -542,7 +542,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">261</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$15.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -552,7 +552,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">260</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -572,7 +572,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">247</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$5.001-7.000*</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -592,7 +592,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">241</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$4.200</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -622,7 +622,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">232</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$1.401-2.000*</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: email, estado civil, profissao, renda, endereco, tipo imovel, uso imovel, aluguel, condominio, IPTU</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -632,7 +632,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">222</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$7.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -662,7 +662,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">194</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$10.000</td>
-  <td style="color:var(--orange);font-size:11px">Falta: endereco</td>
+  <td style="color:var(--orange);font-size:11px">Falta: nascimento, endereco, CEP, tipo imovel, uso imovel, IPTU, prazo contrato</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -672,7 +672,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">193</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$15.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -712,7 +712,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">182</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$8.000</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -732,7 +732,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">165</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$2.000</td>
-  <td style="color:var(--orange);font-size:11px">Falta: renda</td>
+  <td style="color:var(--orange);font-size:11px">Falta: email, profissao, endereco, CEP, condominio, IPTU</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -742,7 +742,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">156</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$3.700</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -752,7 +752,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">138</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$2.200</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -772,7 +772,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">101</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$2.783</td>
-  <td style="color:var(--orange);font-size:11px">Falta: renda</td>
+  <td style="color:var(--orange);font-size:11px">Falta: endereco, CEP, tipo imovel, uso imovel, condominio, IPTU, prazo contrato</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -782,7 +782,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">40</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$4.500</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -792,7 +792,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">26</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$3.630</td>
-  <td style="color:var(--green);font-size:11px">✓ Dados completos</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <!-- ── Verificados pelo broker (sem score numérico) ── -->
@@ -958,6 +958,26 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="crd crd-gl" onclick="this.classList.toggle('open')">
   <div class="crd-h">
     <div>
+      <div class="crd-n">Roberto Jesus da Silva</div>
+      <div class="crd-sub">CPF 739.976.929-04</div>
+    </div>
+    <div class="crd-sc"><b style="color:var(--green)">683</b>
+<div class="stars">★★★</div>
+</div>
+  </div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
+    <span class="badge b-bom">BOM</span>
+    <span class="st st-imo">Falta: verificar detalhes</span>
+  </div>
+  <div class="crd-body">
+  </div>
+</div>
+</div>
+<div class="stitle" style="margin-top:24px">Coletar Dados — Score REGULAR (Prioridade)</div>
+<div class="cards">
+<div class="crd crd-gl" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div>
       <div class="crd-n">Rafael de Andrade Mendes</div>
       <div class="crd-sub">CPF 402.349.028-84</div>
     </div>
@@ -967,14 +987,11 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-imo">Falta: renda, endereco</span>
+    <span class="st st-imo">Falta: email, endereco, CEP, tipo imovel, uso imovel, condominio, IPTU, prazo contrato</span>
   </div>
   <div class="crd-body">
   </div>
 </div>
-</div>
-<div class="stitle" style="margin-top:24px">Coletar Dados — Score REGULAR (Prioridade)</div>
-<div class="cards">
 <div class="crd crd-gl" onclick="this.classList.toggle('open')">
   <div class="crd-h">
     <div>
@@ -987,7 +1004,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-imo">Falta: endereco</span>
+    <span class="st st-imo">Falta: profissao, endereco, CEP, uso imovel, condominio, IPTU, prazo contrato</span>
   </div>
   <div class="crd-body">
   </div>
@@ -1004,7 +1021,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-imo">Falta: renda</span>
+    <span class="st st-imo">Falta: endereco, CEP, tipo imovel, uso imovel, condominio, IPTU, prazo contrato</span>
   </div>
   <div class="crd-body">
   </div>
@@ -1021,7 +1038,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-imo">Falta: renda, endereco</span>
+    <span class="st st-imo">Falta: endereco, CEP, tipo imovel, uso imovel, condominio, IPTU, prazo contrato</span>
   </div>
   <div class="crd-body">
   </div>
@@ -1038,7 +1055,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-imo">Falta: endereco, aluguel</span>
+    <span class="st st-imo">Falta: endereco, CEP, tipo imovel, uso imovel, aluguel, condominio, IPTU, prazo contrato</span>
   </div>
   <div class="crd-body">
   </div>
@@ -1063,6 +1080,23 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="crd crd-gl" onclick="this.classList.toggle('open')">
   <div class="crd-h">
     <div>
+      <div class="crd-n">BRUNO DA COSTA BALBINOTTI</div>
+      <div class="crd-sub">CPF 078.370.529-86</div>
+    </div>
+    <div class="crd-sc"><b style="color:var(--yellow)">420</b>
+<div class="stars">★</div>
+</div>
+  </div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
+    <span class="badge b-reg">REGULAR</span>
+    <span class="st st-imo">Recusada Darqs</span>
+  </div>
+  <div class="crd-body">
+  </div>
+</div>
+<div class="crd crd-gl" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div>
       <div class="crd-n">RICHARD YOHAN PEREZ DE LA ROSA</div>
       <div class="crd-sub">CPF 230.141.088-98</div>
     </div>
@@ -1073,6 +1107,23 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
     <span class="st st-imo">Falta: renda, endereco, aluguel</span>
+  </div>
+  <div class="crd-body">
+  </div>
+</div>
+<div class="crd crd-gl" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div>
+      <div class="crd-n">LUCAS ALMEIDA ALEIXO</div>
+      <div class="crd-sub">CPF 082.987.586-76</div>
+    </div>
+    <div class="crd-sc"><b style="color:var(--yellow)">403</b>
+<div class="stars">★</div>
+</div>
+  </div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
+    <span class="badge b-reg">REGULAR</span>
+    <span class="st st-imo">Falta: verificar detalhes</span>
   </div>
   <div class="crd-body">
   </div>
@@ -1111,6 +1162,59 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
     <div class="crd-row"><span class="l">Broker:</span><span class="v" style="color:var(--green)">Darqs APROVADO</span></div>
     <div class="crd-row"><span class="l">Valor:</span><span class="v">R$8.648,50 à vista ou 10x R$864,85</span></div>
     <div class="crd-row"><span class="l">Vigência:</span><span class="v">10/03/2026 – 10/09/2028</span></div>
+  </div>
+</div>
+</div>
+</div>
+<div style="margin-bottom:20px">
+<div class="stitle" style="color:var(--yellow);border-left-color:var(--yellow)">Capitalização — Recusados com Dados Completos (3)</div>
+<p style="font-size:12px;color:var(--txt2);margin-bottom:12px;padding-left:13px">Leads recusados no seguro fiança que possuem dados completos. Candidatos para oferta de seguro de capitalização como alternativa.</p>
+<div class="cards">
+<div class="crd" style="border-left:4px solid var(--yellow)" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div><div class="crd-n">Bruno da Costa Balbinotti</div><div class="crd-sub">CPF 078.370.529-86 · Score 420</div></div>
+    <span class="badge" style="background:rgba(245,158,11,.18);color:var(--yellow);border:1px solid rgba(245,158,11,.4);font-weight:700">CAPITALIZAÇÃO</span>
+  </div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Score:</span><span class="v">420 REGULAR</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Operador de estocagem</span></div>
+    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$2.670</span></div>
+    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗</span></div>
+    <div class="crd-note" style="border-left-color:var(--yellow)">
+      Recusado no seguro fiança. Dados completos — candidato para seguro de capitalização.
+    </div>
+  </div>
+</div>
+<div class="crd" style="border-left:4px solid var(--yellow)" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div><div class="crd-n">Marcello Rodrigues Lopes</div><div class="crd-sub">CPF 266.803.538-40 · Score 389</div></div>
+    <span class="badge" style="background:rgba(245,158,11,.18);color:var(--yellow);border:1px solid rgba(245,158,11,.4);font-weight:700">CAPITALIZAÇÃO</span>
+  </div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Score:</span><span class="v">389 BAIXO</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Vigia noturno, motorista de app e MEI</span></div>
+    <div class="crd-row"><span class="l">Renda comprovada:</span><span class="v">R$4.400</span></div>
+    <div class="crd-row"><span class="l">Obs:</span><span class="v">Restrição de cartão por desemprego, já empregado novamente</span></div>
+    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗</span></div>
+    <div class="crd-note" style="border-left-color:var(--yellow)">
+      Recusado no seguro fiança. Dados completos — candidato para seguro de capitalização.
+    </div>
+  </div>
+</div>
+<div class="crd" style="border-left:4px solid var(--yellow)" onclick="this.classList.toggle('open')">
+  <div class="crd-h">
+    <div><div class="crd-n">Jéssica Cristina Jordão</div><div class="crd-sub">CPF 420.648.618-23 · Score 343</div></div>
+    <span class="badge" style="background:rgba(245,158,11,.18);color:var(--yellow);border:1px solid rgba(245,158,11,.4);font-weight:700">CAPITALIZAÇÃO</span>
+  </div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Score:</span><span class="v">343 BAIXO</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Balconista</span></div>
+    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$1.900</span></div>
+    <div class="crd-row"><span class="l">Composição:</span><span class="v">Ludmila de Moura Lima (aux. limpeza, R$1.600)</span></div>
+    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ · Ittu pendente</span></div>
+    <div class="crd-note" style="border-left-color:var(--yellow)">
+      Recusado no seguro fiança. Dados completos — candidato para seguro de capitalização.
+    </div>
   </div>
 </div>
 </div>
@@ -1167,23 +1271,45 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 </div>
 </div>
 <div class="coll-h" onclick="var c=this.nextElementSibling;c.classList.toggle('open');this.querySelector('.chv').style.transform=c.classList.contains('open')?'rotate(180deg)':'rotate(0)'">
-  <span class="coll-t">Recusadas pelo Broker</span>
-  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">6</span><span class="chv">▼</span></div>
+  <span class="coll-t">Todas as Recusadas pelo Broker</span>
+  <div style="display:flex;align-items:center;gap:8px"><span class="coll-c">8</span><span class="chv">▼</span></div>
 </div>
 <div class="coll-b">
 <div class="cards">
 <div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
-  <div class="crd-h"><div><div class="crd-n">Kátia Aparecida da Silva</div><div class="crd-sub">CPF 133.776.378-00</div></div><span class="badge b-rec">RECUSADA</span></div>
+  <div class="crd-h"><div><div class="crd-n">Bruno da Costa Balbinotti</div><div class="crd-sub">CPF 078.370.529-86 · Score 420</div></div><span class="badge b-rec">RECUSADA</span></div>
   <div class="crd-body">
-    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Sup. merchandising</span></div>
-    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ (apontamentos CPF) · Ittu pendente</span></div>
+    <div class="crd-row"><span class="l">Score:</span><span class="v">420 REGULAR</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Operador de estocagem</span></div>
+    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$2.670</span></div>
+    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗</span></div>
+  </div>
+</div>
+<div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
+  <div class="crd-h"><div><div class="crd-n">Marcello Rodrigues Lopes</div><div class="crd-sub">CPF 266.803.538-40 · Score 389</div></div><span class="badge b-rec">RECUSADA</span></div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Score:</span><span class="v">389 BAIXO</span></div>
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Vigia noturno, motorista de app e MEI</span></div>
+    <div class="crd-row"><span class="l">Renda comprovada:</span><span class="v">R$4.400</span></div>
+    <div class="crd-row"><span class="l">Obs:</span><span class="v">Restrição de cartão por desemprego, já empregado novamente</span></div>
+    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗</span></div>
   </div>
 </div>
 <div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
   <div class="crd-h"><div><div class="crd-n">Jéssica Cristina Jordão</div><div class="crd-sub">CPF 420.648.618-23 · Score 343</div></div><span class="badge b-rec">RECUSADA</span></div>
   <div class="crd-body">
+    <div class="crd-row"><span class="l">Score:</span><span class="v">343 BAIXO</span></div>
     <div class="crd-row"><span class="l">Profissão:</span><span class="v">Balconista</span></div>
+    <div class="crd-row"><span class="l">Renda:</span><span class="v">R$1.900</span></div>
+    <div class="crd-row"><span class="l">Composição:</span><span class="v">Ludmila de Moura Lima (aux. limpeza, R$1.600)</span></div>
     <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ · Ittu pendente</span></div>
+  </div>
+</div>
+<div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
+  <div class="crd-h"><div><div class="crd-n">Kátia Aparecida da Silva</div><div class="crd-sub">CPF 133.776.378-00</div></div><span class="badge b-rec">RECUSADA</span></div>
+  <div class="crd-body">
+    <div class="crd-row"><span class="l">Profissão:</span><span class="v">Sup. merchandising</span></div>
+    <div class="crd-row"><span class="l">Broker:</span><span class="v">Darqs ✗ (apontamentos CPF) · Ittu pendente</span></div>
   </div>
 </div>
 <div class="crd crd-rl" onclick="event.stopPropagation();this.classList.toggle('open')">
@@ -1238,7 +1364,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <p style="font-size:10px;color:var(--txt2);margin-top:8px">★ TOP = dados completos, se score ≥ 400 será Ready imediatamente. Alta = renda alta ou profissão estável. Média = aguardando mais dados. Baixa = renda baixa ou dados insuficientes.</p>
 </div>
 <footer>
-  <p>Lumi Broker CRM — v7.5 — 279 leads, 77 CPFs, 68 verificados, 0 sem score, 7 enviados, 3 Ready</p>
+  <p>Lumi Broker CRM — v7.8 — 279 leads, 68 CPFs, 68 verificados, 0 sem score, 9 enviados, 0 Ready</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
