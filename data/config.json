@@ -1,5 +1,5 @@
 {
-  "version": "7.9",
+  "version": "7.10",
   "google_sheet_id": "1AuW-FQKAOIpb-BAkZqmbfejeTn98qhgCm8HlhWH5Cgo",
   "gids": {
     "leads": "0",
@@ -22,9 +22,9 @@
     "baixo": 200
   },
   "tracking": {
-    "last_leads_row": 274,
-    "last_historico_row": 4707,
+    "last_leads_row": 276,
+    "last_historico_row": 4757,
     "last_dashboard_dados_row": 224
   },
-  "last_update": "04/03/2026 13:35"
+  "last_update": "04/03/2026 15:02"
 }
