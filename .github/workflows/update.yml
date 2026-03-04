@@ -34,6 +34,7 @@ jobs:
         env:
           CONSULTA_USER: ${{ secrets.CONSULTA_USER }}
           CONSULTA_PASS: ${{ secrets.CONSULTA_PASS }}
+          CONSULTA_COOKIES: ${{ secrets.CONSULTA_COOKIES }}
         run: python update_crm.py
 
       - name: Commit and push changes

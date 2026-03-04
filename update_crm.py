@@ -58,6 +58,30 @@ def increment_version(current_version):
     return f"{major}.{minor}"
 
 
+def restore_cookies_from_env():
+    """Restore session cookies from CONSULTA_COOKIES env var (GitHub secret).
+    This allows headless consultations without interactive login."""
+    cookies_json = os.environ.get('CONSULTA_COOKIES', '')
+    if not cookies_json:
+        return False
+    try:
+        cookie_file = os.path.join(DATA_DIR, "session_cookies.json")
+        # Only write if file doesn't exist or is empty
+        if not os.path.exists(cookie_file) or os.path.getsize(cookie_file) < 10:
+            os.makedirs(DATA_DIR, exist_ok=True)
+            with open(cookie_file, 'w') as f:
+                f.write(cookies_json)
+            cookies = json.loads(cookies_json)
+            print(f"  Restored {len(cookies)} cookies from CONSULTA_COOKIES secret")
+            return True
+        else:
+            print(f"  Cookie file already exists, using local version")
+            return True
+    except Exception as e:
+        print(f"  WARNING: Failed to restore cookies: {e}")
+        return False
+
+
 def run_credit_consultations(new_cpfs, config):
     """Run credit consultations for new CPFs via Playwright.
     Returns list of result dicts."""
@@ -71,6 +95,9 @@ def run_credit_consultations(new_cpfs, config):
     if not username or not password:
         print("  WARNING: CONSULTA_USER/CONSULTA_PASS not set. Skipping consultations.")
         return []
+
+    # Restore session cookies from environment (for GitHub Actions)
+    restore_cookies_from_env()
 
     try:
         from consulta import run_consultations_sync

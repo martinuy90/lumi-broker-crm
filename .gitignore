@@ -1,5 +1,6 @@
 __pycache__/
 *.pyc
 data/cache/
+data/session_cookies.json
 *.egg-info/
 .env
