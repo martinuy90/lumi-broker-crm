@@ -250,50 +250,92 @@ def _compute_falta(lead_data, dashboard_flags=None):
     """Compute the 'falta' string from actual field data.
 
     Strategy:
-    1. dashboard_dados flags are the PRIMARY authority (the bot tracks data accurately)
-    2. leads CSV fields provide GRANULAR detail when available
-    3. If dashboard_dados says all SIM → trust it as "Dados completos"
+    1. dashboard_dados flags give a BROAD picture (tem_cpf, tem_endereco, etc.)
+    2. leads CSV structured columns are the GRANULAR authority
+    3. Even when all 4 flags = SIM, we MUST check granular fields
+       because the flags don't track CEP, IPTU, condominio, prazo, etc.
+    4. If leads CSV has structured data, use it for specific missing-field detection
+    5. If leads CSV is empty (data only in chat), note that verification is needed
 
-    lead_data: dict from leads CSV (or empty dict if no match)
+    lead_data: dict from leads CSV raw row (or empty dict if no match)
     dashboard_flags: dict with tem_cpf/tem_endereco/tem_aluguel/tem_renda (or None)
 
     Returns (falta_string, is_complete) tuple.
     """
-    # ── Check dashboard_dados flags first (primary authority) ──
+    # ── Check dashboard_dados flags first ──
     if dashboard_flags:
         has_cpf = dashboard_flags.get('tem_cpf', '') == 'SIM'
         has_endereco = dashboard_flags.get('tem_endereco', '') == 'SIM'
         has_aluguel = dashboard_flags.get('tem_aluguel', '') == 'SIM'
         has_renda = dashboard_flags.get('tem_renda', '') == 'SIM'
 
-        # If ALL flags are SIM → dados completos (trust the bot)
-        if has_cpf and has_endereco and has_aluguel and has_renda:
-            return ('\u2713 Dados completos', True)
+        all_flags_sim = has_cpf and has_endereco and has_aluguel and has_renda
 
-        # If some flags are NAO → determine what's missing
-        missing = []
-        if not has_renda:
-            missing.append('renda')
-        if not has_endereco:
-            missing.append('endereco')
-        if not has_aluguel:
-            missing.append('aluguel')
+        # ── GRANULAR CHECK: even when all flags = SIM, verify specific fields ──
+        if lead_data:
+            # Count how many structured fields the leads CSV actually has
+            csv_filled_count = _count_filled_csv_fields(lead_data)
 
-        # If we also have leads CSV data, try to be more specific
-        if lead_data and has_aluguel and has_endereco and has_renda:
-            # Flags say data is there, but check CSV for specific missing fields
-            specific_missing = _check_fields_from_csv(lead_data)
-            if specific_missing:
-                return ('Falta: ' + ', '.join(specific_missing), False)
+            if csv_filled_count >= 3:
+                # Leads CSV has meaningful structured data → do granular check
+                specific_missing = _check_fields_from_csv(lead_data)
 
-        if missing:
-            return ('Falta: ' + ', '.join(missing), False)
+                if not specific_missing:
+                    # All granular fields confirmed present in CSV
+                    return ('\u2713 Dados completos', True)
+
+                if all_flags_sim:
+                    # Dashboard says complete, but CSV reveals missing fields
+                    # Don't mark as complete — return specific missing fields
+                    return ('Falta: ' + ', '.join(specific_missing), False)
+                else:
+                    # Some flags NAO + CSV confirms specific gaps
+                    return ('Falta: ' + ', '.join(specific_missing), False)
+
+            else:
+                # Leads CSV has little/no structured data (data is in chat only)
+                if all_flags_sim:
+                    # Flags say complete, but we can't verify granular fields
+                    # Mark as needing verification rather than blindly trusting
+                    return ('Falta: verificar detalhes', False)
+                else:
+                    # Some flags NAO and no CSV data — report what flags say is missing
+                    # Note: CPF is NOT included here because scored leads already have CPF
+                    # (from credit consultation), and this function is only called for scored leads
+                    missing = []
+                    if not has_renda:
+                        missing.append('renda')
+                    if not has_endereco:
+                        missing.append('endereco')
+                    if not has_aluguel:
+                        missing.append('aluguel')
+                    if missing:
+                        return ('Falta: ' + ', '.join(missing), False)
+                    return ('Falta: verificar detalhes', False)
+
         else:
-            # All flags SIM but somehow we got here
-            return ('\u2713 Dados completos', True)
+            # No leads CSV match at all
+            if all_flags_sim:
+                return ('Falta: verificar detalhes', False)
 
-    # ── Fallback: use leads CSV fields directly ──
+            missing = []
+            if not has_renda:
+                missing.append('renda')
+            if not has_endereco:
+                missing.append('endereco')
+            if not has_aluguel:
+                missing.append('aluguel')
+            if missing:
+                return ('Falta: ' + ', '.join(missing), False)
+            return ('Falta: verificar detalhes', False)
+
+    # ── Fallback: no dashboard flags, use leads CSV fields directly ──
     if lead_data:
+        csv_filled_count = _count_filled_csv_fields(lead_data)
+        if csv_filled_count < 3:
+            # Almost no structured data — can't determine
+            return (None, False)
+
         specific_missing = _check_fields_from_csv(lead_data)
         if not specific_missing:
             return ('\u2713 Dados completos', True)
@@ -310,9 +352,48 @@ def _compute_falta(lead_data, dashboard_flags=None):
     return (None, False)
 
 
+def _count_filled_csv_fields(lead_data):
+    """Count how many of the broker-required fields have data in the leads CSV.
+    Used to determine if the CSV has meaningful structured data or is mostly empty.
+    Returns count of filled fields (0-14)."""
+    all_keys = [
+        'email', 'birth_date', 'estado_civil', 'profissao', 'renda',
+        'cpf', 'endereco_imovel', 'cep_imovel', 'tipo_imovel', 'uso_imovel',
+        'aluguel', 'condominio', 'iptu', 'periodo_contrato'
+    ]
+    alt_keys = {
+        'profissao': ['profissão', 'Profissão'],
+        'birth_date': ['nascimento', 'data_nascimento'],
+        'estado_civil': ['Estado Civil'],
+        'endereco_imovel': ['endereco', 'endereço'],
+        'cep_imovel': ['cep', 'CEP'],
+        'periodo_contrato': ['prazo', 'prazo_contrato'],
+        'cpf': ['CPF'],
+    }
+    count = 0
+    for key in all_keys:
+        val = lead_data.get(key, '')
+        if _is_filled(val):
+            count += 1
+        else:
+            # Try alternate keys
+            for alt in alt_keys.get(key, []):
+                if _is_filled(lead_data.get(alt, '')):
+                    count += 1
+                    break
+    return count
+
+
 def _check_fields_from_csv(lead_data):
-    """Check which specific fields are missing from leads CSV data.
-    Returns list of missing field labels."""
+    """Check which specific broker-required fields are missing from leads CSV data.
+    Returns list of missing field labels.
+
+    Broker-required fields:
+      Personal: email, nascimento, estado civil, profissao, renda
+      Property: endereco, CEP (CRITICAL), tipo imovel, uso imovel, aluguel,
+                condominio, IPTU, prazo contrato
+    Note: CPF and nome are tracked separately (via scores.json), not checked here.
+    """
     personal_fields = {
         'email': 'email',
         'birth_date': 'nascimento',
