@@ -1,0 +1,29 @@
+{
+  "version": "7.0",
+  "google_sheet_id": "1AuW-FQKAOIpb-BAkZqmbfejeTn98qhgCm8HlhWH5Cgo",
+  "gids": {
+    "leads": "0",
+    "dashboard_dados": "739841676",
+    "historico": "2069959500"
+  },
+  "cofounders_phones": [
+    "59899143298",
+    "5521964436960"
+  ],
+  "cofounders_names": [
+    "Martin Coulthurst",
+    "Bernardo Precht",
+    "Elisa Pereira",
+    "Martin Cultru"
+  ],
+  "score_thresholds": {
+    "bom": 600,
+    "regular": 400,
+    "baixo": 200
+  },
+  "tracking": {
+    "last_leads_row": 251,
+    "last_historico_row": 4240,
+    "last_dashboard_dados_row": 224
+  }
+}

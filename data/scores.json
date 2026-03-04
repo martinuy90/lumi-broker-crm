@@ -1,0 +1,492 @@
+[
+  {
+    "name": "Roberto Jesus da Silva",
+    "cpf": "739.976.929-04",
+    "score": 683,
+    "rating": "BOM",
+    "renda": "R$6.000/mês",
+    "falta": "Falta: Dados imóvel",
+    "status": "Coletar dados",
+    "row_class": "rg"
+  },
+  {
+    "name": "Rafael de Andrade Mendes",
+    "cpf": "402.349.028-84",
+    "score": 595,
+    "rating": "REGULAR",
+    "renda": "R$7.219",
+    "falta": "Falta: End. + dados imóvel",
+    "status": "Coletar dados",
+    "row_class": "ry"
+  },
+  {
+    "name": "Michel Gilliardi Alves Adauto",
+    "cpf": "290.945.278-63",
+    "score": 495,
+    "rating": "REGULAR",
+    "renda": "R$3.200",
+    "falta": "Falta: Prof + imóvel",
+    "status": "Coletar dados",
+    "row_class": "ry"
+  },
+  {
+    "name": "Horácio Batista Matos",
+    "cpf": "012.754.096-28",
+    "score": 475,
+    "rating": "REGULAR",
+    "renda": "R$7.500/mês",
+    "falta": "Falta: Renda (sistema)",
+    "status": "Coletar dados",
+    "row_class": "ry"
+  },
+  {
+    "name": "Daiane Ap. Alves dos Santos",
+    "cpf": "081.385.799-60",
+    "score": 462,
+    "rating": "REGULAR",
+    "renda": "R$6.000/mês",
+    "falta": "Falta: End. + Renda",
+    "status": "Coletar dados",
+    "row_class": "ry"
+  },
+  {
+    "name": "Thaiara B.A. Chagas Camargos",
+    "cpf": "144.986.306-02",
+    "score": 451,
+    "rating": "REGULAR",
+    "renda": "R$10.000",
+    "falta": "Falta: Dados imóvel",
+    "status": "Coletar dados",
+    "row_class": "ry"
+  },
+  {
+    "name": "Thialey Leite da Silva",
+    "cpf": "053.164.979-29",
+    "score": 402,
+    "rating": "REGULAR",
+    "renda": "R$1.700",
+    "falta": "Composição (J. Guilherme)",
+    "status": "Coletar dados",
+    "row_class": "ry"
+  },
+  {
+    "name": "Onivaldo Menegario Sobrinho",
+    "cpf": "742.194.648-91",
+    "score": 399,
+    "rating": "BAIXO",
+    "renda": "R$7.000",
+    "falta": "✓ Dados completos",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Marcello Rodrigues Lopes",
+    "cpf": "266.803.538-40",
+    "score": 389,
+    "rating": "BAIXO",
+    "renda": "R$4.400",
+    "falta": "Falta: Condo, IPTU, cob.",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Cecília Regina Lombardi",
+    "cpf": "184.612.608-80",
+    "score": 389,
+    "rating": "BAIXO",
+    "renda": "R$6.600",
+    "falta": "Falta: Dados imóvel",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Wanderson Gama Marques",
+    "cpf": "146.059.137-26",
+    "score": 374,
+    "rating": "BAIXO",
+    "renda": "R$10.000",
+    "falta": "Conferir dados",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Fernanda Almeida de Bragança",
+    "cpf": "007.273.730-13",
+    "score": 372,
+    "rating": "BAIXO",
+    "renda": "R$2.500",
+    "falta": "Falta: Dados imóvel",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Adriana de Paula Coimbra",
+    "cpf": "089.634.317-03",
+    "score": 350,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "✓ Dados completos",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Andrea da Conceição F. da Cruz",
+    "cpf": "289.441.048-40",
+    "score": 350,
+    "rating": "BAIXO",
+    "renda": "R$6.000",
+    "falta": "Falta: Dados imóvel",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Rogerio Fernando Bittar Perez",
+    "cpf": "165.920.968-45",
+    "score": 350,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "✓ Dados completos",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Jéssica Cristina Jordão",
+    "cpf": "420.648.618-23",
+    "score": 343,
+    "rating": "BAIXO",
+    "renda": "R$1.900",
+    "falta": "✓ Dados completos",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Gabriela Vitória da Silva Lima",
+    "cpf": "546.545.788-03",
+    "score": 333,
+    "rating": "BAIXO",
+    "renda": "R$1.401-2.000*",
+    "falta": "✓ Dados completos",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Maria Lucia Correa",
+    "cpf": "044.141.906-22",
+    "score": 328,
+    "rating": "BAIXO",
+    "renda": "R$1.800",
+    "falta": "Falta: Condo, coberturas",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Poliana Conovalow Tartaro",
+    "cpf": "357.812.168-12",
+    "score": 328,
+    "rating": "BAIXO",
+    "renda": "R$1.401-2.000*",
+    "falta": "✓ Dados completos",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Grazielle Carlos dos Santos",
+    "cpf": "418.796.818-03",
+    "score": 321,
+    "rating": "BAIXO",
+    "renda": "R$1.401-2.000*",
+    "falta": "✓ Dados completos",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Franciele Aparecida Silva Moschiar",
+    "cpf": "363.361.018-94",
+    "score": 321,
+    "rating": "BAIXO",
+    "renda": "R$20.000",
+    "falta": "Falta: Dados pessoais",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Veronica Luciana O. Soares",
+    "cpf": "167.303.456-08",
+    "score": 321,
+    "rating": "BAIXO",
+    "renda": "R$2.500",
+    "falta": "✓ Dados completos",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Fabricia Pinheiro de Oliveira",
+    "cpf": "000.429.656-75",
+    "score": 312,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Endereço",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Estela Mariana Gomes",
+    "cpf": "343.390.408-19",
+    "score": 308,
+    "rating": "BAIXO",
+    "renda": "R$7.000",
+    "falta": "Falta: Dados imóvel",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Marcos Vinicius de Mesquita",
+    "cpf": "144.746.276-95",
+    "score": 306,
+    "rating": "BAIXO",
+    "renda": "R$3.484",
+    "falta": "Falta: Conferir dados",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Ana Cristina do Couto",
+    "cpf": "609.710.371-91",
+    "score": 301,
+    "rating": "BAIXO",
+    "renda": "R$1.700",
+    "falta": "Falta: Conferir dados",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Ana Paula Martendal",
+    "cpf": "047.392.319-05",
+    "score": 277,
+    "rating": "BAIXO",
+    "renda": "R$12.000",
+    "falta": "Conferir dados",
+    "status": "Score baixo",
+    "row_class": "ro"
+  },
+  {
+    "name": "Ed Carlos Feliceto dos Anjos",
+    "cpf": "249.891.808-60",
+    "score": 273,
+    "rating": "BAIXO",
+    "renda": "R$9.000",
+    "falta": "Falta: Dados imóvel",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Bruna Aparecida dos Santos Lopes",
+    "cpf": "387.102.988-27",
+    "score": 272,
+    "rating": "BAIXO",
+    "renda": "R$6.000",
+    "falta": "Falta: Endereço",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Maria Carolina Madazio",
+    "cpf": "300.620.428-07",
+    "score": 271,
+    "rating": "BAIXO",
+    "renda": "R$5.000",
+    "falta": "Falta: Dados imóvel",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Keila Maria de Sousa",
+    "cpf": "324.627.558-02",
+    "score": 265,
+    "rating": "BAIXO",
+    "renda": "R$1.860",
+    "falta": "Falta: Dados imóvel",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Simone Manfrin",
+    "cpf": "015.026.664-21",
+    "score": 264,
+    "rating": "BAIXO",
+    "renda": "R$12.000",
+    "falta": "Falta: Dados imóvel",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Maria Bernadete S.V. Strauch",
+    "cpf": "063.918.425-15",
+    "score": 264,
+    "rating": "BAIXO",
+    "renda": "R$8.000",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Oldemar Fernandes Magesky",
+    "cpf": "040.790.878-10",
+    "score": 261,
+    "rating": "BAIXO",
+    "renda": "R$15.000",
+    "falta": "Falta: Dados imóvel",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Claudio Ubiratan de Almeida",
+    "cpf": "200.811.549-68",
+    "score": 247,
+    "rating": "BAIXO",
+    "renda": "R$5.001-7.000*",
+    "falta": "Falta: Endereço",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Rogerio Jose Costa",
+    "cpf": "985.424.866-68",
+    "score": 246,
+    "rating": "BAIXO",
+    "renda": "R$6.000",
+    "falta": "Falta: Endereço",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Alan Felipe de Pina Lopes",
+    "cpf": "300.384.118-14",
+    "score": 239,
+    "rating": "BAIXO",
+    "renda": "R$1.800",
+    "falta": "Conferir dados",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "José Martinez Ramos",
+    "cpf": "905.312.138-20",
+    "score": 232,
+    "rating": "BAIXO",
+    "renda": "R$1.401-2.000*",
+    "falta": "Sem dados no sistema",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Rosangela Aparecida de Oliveira",
+    "cpf": "322.141.888-43",
+    "score": 222,
+    "rating": "BAIXO",
+    "renda": "R$7.000",
+    "falta": "Falta: Conferir dados",
+    "status": "Score baixo",
+    "row_class": "rr"
+  },
+  {
+    "name": "Rafael Pereira dos Santos",
+    "cpf": "465.174.778-70",
+    "score": 197,
+    "rating": "RUIM",
+    "renda": "R$4.000",
+    "falta": "✓ Dados completos",
+    "status": "Sem chance",
+    "row_class": "rr"
+  },
+  {
+    "name": "Nicola Carone Dias",
+    "cpf": "132.071.288-66",
+    "score": 194,
+    "rating": "RUIM",
+    "renda": "R$10.000",
+    "falta": "Falta: Dados imóvel",
+    "status": "Sem chance",
+    "row_class": "rr"
+  },
+  {
+    "name": "Francy Kelly Francetto de Lima",
+    "cpf": "323.719.918-48",
+    "score": 193,
+    "rating": "RUIM",
+    "renda": "R$15.000",
+    "falta": "Falta: Dados imóvel",
+    "status": "Sem chance",
+    "row_class": "rr"
+  },
+  {
+    "name": "Stephanie Diniz de Almeida",
+    "cpf": "400.741.078-01",
+    "score": 182,
+    "rating": "RUIM",
+    "renda": "R$8.000",
+    "falta": "Falta: Dados imóvel",
+    "status": "Sem chance",
+    "row_class": "rr"
+  },
+  {
+    "name": "João Guilherme Antunes Ramos",
+    "cpf": "037.452.639-79",
+    "score": 171,
+    "rating": "RUIM",
+    "renda": "—",
+    "falta": "Sem dados no sistema",
+    "status": "Sem chance",
+    "row_class": "rr"
+  },
+  {
+    "name": "Marta Guedes da Silva",
+    "cpf": "367.317.208-52",
+    "score": 165,
+    "rating": "RUIM",
+    "renda": "R$1.401-2.000*",
+    "falta": "Falta: Renda",
+    "status": "Sem chance",
+    "row_class": "rr"
+  },
+  {
+    "name": "Misaelly Karolaine da Silva Santos",
+    "cpf": "398.106.808-48",
+    "score": 138,
+    "rating": "RUIM",
+    "renda": "R$2.200",
+    "falta": "Falta: Dados imóvel",
+    "status": "Sem chance",
+    "row_class": "rr"
+  },
+  {
+    "name": "Janaína Tinoco Ribeiro",
+    "cpf": "042.945.737-59",
+    "score": 136,
+    "rating": "RUIM",
+    "renda": "R$6.500",
+    "falta": "Falta: Conferir dados",
+    "status": "Sem chance",
+    "row_class": "rr"
+  },
+  {
+    "name": "Luan Peques",
+    "cpf": "143.001.877-11",
+    "score": 101,
+    "rating": "RUIM",
+    "renda": "R$1.401-2.000*",
+    "falta": "Falta: Renda",
+    "status": "Sem chance",
+    "row_class": "rr"
+  },
+  {
+    "name": "Adilson Modesto Simoes Junior",
+    "cpf": "429.816.928-60",
+    "score": 26,
+    "rating": "RUIM",
+    "renda": "R$3.630",
+    "falta": "Falta: Conferir dados",
+    "status": "Sem chance",
+    "row_class": "rr"
+  }
+]

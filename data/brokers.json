@@ -1,0 +1,70 @@
+{
+  "approved": [
+    {
+      "name": "Onivaldo Menegario Sobrinho",
+      "cpf": "742.194.648-91",
+      "score": 399,
+      "broker": "Darqs",
+      "insurer": "",
+      "valor": "R$8.648,50 à vista ou 10x R$864,85",
+      "vigencia": "10/03/2026 – 10/09/2028"
+    }
+  ],
+  "rejected": [
+    {
+      "name": "Kátia Aparecida da Silva",
+      "cpf": "133.776.378-00",
+      "profissao": "Sup. merchandising",
+      "renda": "",
+      "broker_notes": "Darqs ✗ (apontamentos CPF) · Ittu pendente"
+    },
+    {
+      "name": "Jéssica Cristina Jordão",
+      "cpf": "420.648.618-23",
+      "profissao": "Balconista",
+      "renda": "",
+      "broker_notes": "Darqs ✗ · Ittu pendente",
+      "score": 343
+    },
+    {
+      "name": "Izabel Aparecida de Carvalho",
+      "cpf": "031.720.268-50",
+      "profissao": "Corretora",
+      "renda": "",
+      "broker_notes": "Ittu ✗ (Pottencial + Porto) · Darqs ✗ · Arcoseg pendente"
+    },
+    {
+      "name": "Vando Rocha da Silva",
+      "cpf": "103.792.557-23",
+      "profissao": "Professor",
+      "renda": "",
+      "broker_notes": "Ittu ✗ · Darqs ✗ · Arcoseg pendente"
+    },
+    {
+      "name": "Josemery Margarida Déa",
+      "cpf": "865.176.519-34",
+      "profissao": "Professora",
+      "renda": "",
+      "broker_notes": "Ittu ✗ · Darqs ✗ · Arcoseg pendente"
+    },
+    {
+      "name": "Paulo Cesar Gonçalves de Santana",
+      "cpf": "820.233.791-72",
+      "profissao": "Vendedor externo",
+      "renda": "",
+      "broker_notes": "Darqs ✗ · Ittu aguardando CEP"
+    }
+  ],
+  "invalid_cpf": [
+    {
+      "name": "Fabiana Pereira",
+      "cpf": "032.736.629-07",
+      "renda": "R$5.000",
+      "phone": "+55 41 9606-1530"
+    },
+    {
+      "name": "Bruna Caroline Santos Cordeiro",
+      "cpf": "445.337.188-00"
+    }
+  ]
+}
