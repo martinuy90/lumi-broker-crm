@@ -112,6 +112,16 @@
       "cpf": "445.337.188-00",
       "nota": "CPF inválido.",
       "nome": "Bruna Caroline Santos Cordeiro"
+    },
+    {
+      "name": "Igaro Samuel Moraes Ortelli",
+      "cpf": "609.800.030-79",
+      "broker_notes": "CPF inválido (falha validação)"
+    },
+    {
+      "name": "Alessandra de A. Soares Ferraz",
+      "cpf": "095.692.177-00",
+      "broker_notes": "CPF inválido (falha validação)"
     }
   ]
 }

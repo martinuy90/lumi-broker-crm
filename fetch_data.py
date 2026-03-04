@@ -238,7 +238,31 @@ def detect_data_changes(leads_rows, known_data):
     return changes
 
 
-def compute_kpis(scores, pendente, brokers, total_leads):
+def count_dados_completos(dashboard_dados_rows, cofounder_phones=None):
+    """Count leads that shared ALL data (tem_cpf, tem_endereco, tem_aluguel, tem_renda = SIM).
+    Uses the dashboard_dados Google Sheets tab."""
+    if not dashboard_dados_rows:
+        return 0
+    if cofounder_phones is None:
+        cofounder_phones = {'59899143298', '5599143298'}  # Martin
+    count = 0
+    for r in dashboard_dados_rows:
+        phone = r.get('phone', '')
+        name = r.get('name', '').lower()
+        # Filter cofounders
+        if any(c in phone for c in cofounder_phones):
+            continue
+        if any(x in name for x in ['martin', 'bernardo', 'elisa pereira']):
+            continue
+        if (r.get('tem_cpf', '') == 'SIM' and
+            r.get('tem_endereco', '') == 'SIM' and
+            r.get('tem_aluguel', '') == 'SIM' and
+            r.get('tem_renda', '') == 'SIM'):
+            count += 1
+    return count
+
+
+def compute_kpis(scores, pendente, brokers, total_leads, dados_completos=0):
     """Calculate KPI values for the dashboard."""
     n_scores = len(scores)
     n_pendente = len(pendente)
@@ -275,6 +299,7 @@ def compute_kpis(scores, pendente, brokers, total_leads):
     return {
         'total_leads': total_leads,
         'cpfs': total_cpfs,
+        'dados_completos': dados_completos,
         'verificado': n_scores,
         'sem_score': n_pendente,
         'cpf_errado': n_invalid,

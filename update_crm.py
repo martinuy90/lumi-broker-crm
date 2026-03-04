@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from fetch_data import (
     fetch_csv, process_leads, find_new_cpfs,
     detect_data_changes, validate_cpf, normalize_cpf, compute_kpis,
-    GIDS
+    count_dados_completos, GIDS
 )
 from generate_html import generate_html
 
@@ -175,10 +175,12 @@ def main():
 
     # ── Step 2: Fetch fresh CSVs ──
     print("\n[2/6] Fetching Google Sheets CSVs...")
+    dashboard_dados_rows = []
     try:
         leads_rows = fetch_csv(GIDS["leads"])
         historico_rows = fetch_csv(GIDS["historico"])
-        print(f"  Fetched: {len(leads_rows)} leads rows, {len(historico_rows)} historico rows")
+        dashboard_dados_rows = fetch_csv(GIDS["dashboard_dados"])
+        print(f"  Fetched: {len(leads_rows)} leads, {len(historico_rows)} historico, {len(dashboard_dados_rows)} dashboard_dados")
     except Exception as e:
         print(f"  ERROR fetching CSVs: {e}")
         print("  Continuing with existing data...")
@@ -286,7 +288,8 @@ def main():
     new_version = increment_version(current_version)
 
     # Compute KPIs
-    kpis = compute_kpis(scores, pendente, brokers, total_leads)
+    n_dados_completos = count_dados_completos(dashboard_dados_rows)
+    kpis = compute_kpis(scores, pendente, brokers, total_leads, dados_completos=n_dados_completos)
     print(f"  KPIs: {json.dumps(kpis)}")
 
     # Build summary
