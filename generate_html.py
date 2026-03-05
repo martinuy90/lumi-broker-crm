@@ -274,11 +274,8 @@ def generate_header(kpis, version, summary_text):
         ('verificado', 'var(--yellow)', 'Cr\u00e9dito Verificado'),
         ('sem_score', 'var(--yellow)', 'CPF Sem Score'),
         ('cpf_errado', 'var(--orange)', 'CPF Errado'),
-        ('pending_broker', '#60a5fa', 'Enviados ao Broker'),
-        ('cotacao_enviada', 'var(--green)', 'Cota\u00e7\u00e3o Enviada'),
-        ('recusadas', 'var(--red)', 'Recusadas Broker'),
-        ('capitalizacao', 'var(--yellow)', 'Capitaliza\u00e7\u00e3o'),
-        ('ready', 'var(--green)', 'Ready to Send'),
+        ('cotacao_enviada', 'var(--green)', 'Cota\u00e7\u00e3o Seguro Fian\u00e7a'),
+        ('capitalizacao', 'var(--yellow)', 'Capitaliza\u00e7\u00e3o Enviada'),
     ]
     lines = []
     lines.append('<div class="hdr">')
@@ -903,7 +900,7 @@ def generate_html(scores, pendente, brokers, config, kpis, version, summary_text
     capitalizacao_list = [r for r in brokers.get('recusadas', []) if r.get('dados_completos')]
     enviados_count = len(brokers.get('aprovados', [])) + len(brokers.get('pending_broker', [])) + len(capitalizacao_list) + len(brokers.get('invalid_cpfs_enviados', [])) + len(brokers.get('recusadas', []))
     tab_counts = {'todos': ranking_count, 'acao': acao_count, 'enviados': enviados_count, 'baixo': len(pendente)}
-    footer_summary = f'{kpis.get("total_leads", 0)} leads, {kpis.get("cpfs", 0)} CPFs, {kpis.get("verificado", 0)} verificados, {kpis.get("sem_score", 0)} sem score, {kpis.get("pending_broker", kpis.get("enviados", 0))} enviados, {kpis.get("ready", 0)} Ready'
+    footer_summary = f'{kpis.get("total_leads", 0)} leads, {kpis.get("cpfs", 0)} CPFs, {kpis.get("verificado", 0)} verificados, {kpis.get("sem_score", 0)} sem score, {kpis.get("cotacao_enviada", 0)} cota\u00e7\u00f5es seguro fian\u00e7a, {kpis.get("capitalizacao", 0)} capitaliza\u00e7\u00e3o'
     broker_names = brokers.get('broker_names', 'Arcoseg (Alice) \u00b7 Ittu (Itallo) \u00b7 Darqs (Graziele)')
     parts = []
     parts.append('<!DOCTYPE html>')
@@ -996,8 +993,7 @@ if __name__ == '__main__':
     n_pending = len(brokers.get('pending_broker', nb.get('pending_broker', [])))
     n_approved = len(brokers.get('approved', nb.get('aprovados', [])))
     n_rejected = len(brokers.get('rejected', nb.get('recusadas', [])))
-    n_capitalizacao = sum(1 for r in brokers.get('rejected', nb.get('recusadas', [])) if r.get('dados_completos'))
-    n_ready = sum(1 for s in scores if 'Ready' in s.get('status', ''))
+    n_capitalizacao = sum(1 for r in brokers.get('pending_broker', []) if 'capitaliza' in r.get('broker', '').lower())
     total_cpfs = len(scores) + len(pendente) + len(broker_only) + n_invalid
     version = config.get('version', '8.0')
     kpis = {
@@ -1007,12 +1003,9 @@ if __name__ == '__main__':
         'verificado': len(scores),
         'sem_score': len(pendente),
         'cpf_errado': n_invalid,
-        'enviados': n_approved + n_rejected,
         'pending_broker': n_pending,
         'cotacao_enviada': n_approved,
         'capitalizacao': n_capitalizacao,
-        'recusadas': n_rejected,
-        'ready': n_ready,
     }
     summary_text = (
         f'<b>Resumo v{version}:</b> Audit fix — 21 issues corrected. '
