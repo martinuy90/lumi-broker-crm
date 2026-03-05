@@ -968,6 +968,42 @@ def _create_sample_data(data_dir):
     return scores, pendente, brokers, config
 
 
+def _build_business_summary(scores, brokers, nb, version):
+    """Build a business-focused summary from current data."""
+    parts = [f'<b>Status v{version}:</b>']
+
+    # Approved leads
+    aprovados = brokers.get('approved', nb.get('aprovados', []))
+    for a in aprovados:
+        nome = a.get('nome', a.get('name', '?')).split()[0]
+        status_text = a.get('details', {}).get('Status', {})
+        if isinstance(status_text, dict):
+            status_text = status_text.get('text', '')
+        insurer = a.get('insurer', '')
+        valor = a.get('valor', '')
+        if 'transferida' in str(a.get('nota', '')).lower() or 'transferida' in str(status_text).lower():
+            parts.append(f'<span style="color:var(--orange)">⚠ {nome} — re-análise pendente (corretagem transferida)</span>')
+        elif valor:
+            parts.append(f'<span style="color:var(--green)">✅ {nome} APROVADO {insurer} — {valor}</span>')
+        else:
+            parts.append(f'<span style="color:var(--green)">✅ {nome} APROVADO</span>')
+
+    # Capitalização in progress
+    pending = brokers.get('pending_broker', nb.get('pending_broker', []))
+    for p in pending:
+        if 'capitaliza' in p.get('broker', '').lower():
+            nome = p.get('nome', p.get('name', '?')).split()[0]
+            cap_detail = p.get('details', {}).get('Capitalização', '')
+            parts.append(f'<span style="color:var(--yellow)">📋 {nome} — Capitalização em andamento</span>')
+
+    # Rejected count + next step
+    recusadas = brokers.get('rejected', nb.get('recusadas', []))
+    if recusadas:
+        parts.append(f'<span style="color:var(--txt2)">{len(recusadas)} recusadas — próximo passo: oferecer Título de Capitalização</span>')
+
+    return ' · '.join(parts)
+
+
 if __name__ == '__main__':
     print('=' * 60)
     print('Lumi Broker CRM \u2014 HTML Generator (Test Mode)')
@@ -1012,11 +1048,7 @@ if __name__ == '__main__':
         'cotacao_enviada': n_approved,
         'capitalizacao': n_capitalizacao,
     }
-    summary_text = (
-        f'<b>Resumo v{version}:</b> Audit fix — 21 issues corrected. '
-        f'{len(scores)} verificados, {len(pendente)} sem score. '
-        '<span style="color:var(--green);font-weight:700">\U0001f389 Onivaldo APROVADO Porto Seguro via Darqs!</span>'
-    )
+    summary_text = _build_business_summary(scores, brokers, nb, version)
     print(f'\n  Generating HTML (v{version})...')
     html = generate_html(scores, pendente, brokers, config, kpis, version, summary_text)
     with open(output_path, 'w', encoding='utf-8') as f:

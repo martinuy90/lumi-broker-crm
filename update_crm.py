@@ -126,29 +126,24 @@ def run_credit_consultations(new_cpfs, config):
     return results
 
 
-def build_summary(changes, new_scores, new_cpfs, new_leads_count, version):
-    """Build the summary text for the dashboard header."""
-    parts = [f"<b>Resumo v{version}:</b>"]
-
+def build_summary(changes, new_scores, new_cpfs, new_leads_count, version, brokers=None):
+    """Build a business-focused summary for the dashboard header."""
+    from generate_html import _build_business_summary, _normalize_brokers
+    if brokers:
+        nb = _normalize_brokers(brokers, [])
+        return _build_business_summary([], brokers, nb, version)
+    # Fallback if brokers not available
+    parts = [f"<b>Status v{version}:</b>"]
     if new_leads_count > 0:
         parts.append(f"+{new_leads_count} novos leads.")
-
     if new_scores:
         score_texts = []
-        for s in new_scores[:3]:  # Max 3 in summary
-            name = s.get('name', '?').split()[0]  # First name only
+        for s in new_scores[:3]:
+            name = s.get('name', '?').split()[0]
             score_texts.append(f"<b>{name} {s['score']} {s['rating']}</b>")
         parts.append(f"{len(new_scores)} novos scores: {', '.join(score_texts)}.")
-
     if new_cpfs:
         parts.append(f"{len(new_cpfs)} novos CPFs descobertos.")
-
-    if changes:
-        parts.append(f"{len(changes)} leads com dados atualizados.")
-
-    # Check for ready leads
-    # (computed later from KPIs)
-
     return " ".join(parts)
 
 
@@ -314,10 +309,8 @@ def main():
     kpis = compute_kpis(scores, pendente, brokers, total_leads, dados_completos=n_dados_completos)
     print(f"  KPIs: {json.dumps(kpis)}")
 
-    # Build summary
-    summary = build_summary(changes, new_scores, new_cpf_discoveries, new_leads_count, new_version)
-    if not new_scores and not new_cpf_discoveries and new_leads_count == 0:
-        summary = f"<b>Resumo v{new_version}:</b> Atualização automática. Sem alterações detectadas."
+    # Build business-focused summary
+    summary = build_summary(changes, new_scores, new_cpf_discoveries, new_leads_count, new_version, brokers=brokers)
 
     # Generate HTML
     html = generate_html(scores, pendente, brokers, config, kpis, new_version, summary)
