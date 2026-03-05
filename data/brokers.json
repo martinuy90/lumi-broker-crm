@@ -8,7 +8,7 @@
       "insurer": "Porto Seguro",
       "valor": "R$2.455,70 à vista ou 10x R$245,57",
       "vigencia": "20/03/2026 – 20/03/2029",
-      "cotacao_enviada": false,
+      "cotacao_enviada": true,
       "details": {
         "Broker": {
           "text": "Darqs APROVADO",
@@ -19,11 +19,11 @@
         "Vigência": "20/03/2026 – 20/03/2029 (36 meses)",
         "Coberturas": "Aluguel R$1.100 + Condo R$250 + IPTU R$100 + Danos + Multa + Pintura interna",
         "Status": {
-          "text": "Aguardando: IPTU exato + enviar cotação ao cliente",
-          "style": "color:var(--yellow);font-weight:700"
+          "text": "✅ Cotação enviada ao cliente — aguardando resposta",
+          "style": "color:var(--green);font-weight:700"
         }
       },
-      "nota": "<b>2º aprovado!</b> Score 683 BOM. Falta confirmar IPTU (valor provisório R$100) e enviar cotação ao Roberto.",
+      "nota": "<b>2º aprovado!</b> Score 683 BOM. Cotação enviada ao Roberto em 05/03.",
       "nome": "Roberto Jesus da Silva"
     },
     {
@@ -44,11 +44,11 @@
         "Valor": "R$8.648,50 à vista ou 10x R$864,85",
         "Vigência": "10/03/2026 – 10/09/2028",
         "Status": {
-          "text": "⚠ Corretagem transferida — re-análise solicitada 04/03",
+          "text": "✅ Cotação enviada ao cliente — ⚠ re-análise pendente (corretagem transferida)",
           "style": "color:var(--orange);font-weight:700"
         }
       },
-      "nota": "<b>Aprovação original invalidada</b> por transferência de corretagem a outro broker. Re-análise solicitada à Graziele em 04/03, aguardando resposta.",
+      "nota": "Cotação enviada. <b>⚠ Re-análise pendente</b> — corretagem transferida a outro broker, aguardando resposta da Graziele.",
       "nome": "Onivaldo Menegario Sobrinho"
     }
   ],

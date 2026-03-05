@@ -972,34 +972,35 @@ def _build_business_summary(scores, brokers, nb, version):
     """Build a business-focused summary from current data."""
     parts = [f'<b>Status v{version}:</b>']
 
-    # Approved leads
+    # Cotações enviadas (approved with cotacao_enviada=true)
     aprovados = brokers.get('approved', nb.get('aprovados', []))
+    cotacao_enviada = [a for a in aprovados if a.get('cotacao_enviada')]
+    if cotacao_enviada:
+        nomes = ' e '.join(a.get('nome', a.get('name', '?')).split()[0] for a in cotacao_enviada)
+        parts.append(f'<span style="color:var(--green)">✅ Cotação seguro fiança enviada a {nomes} — aguardando resposta</span>')
+
+    # Onivaldo special case — re-análise
     for a in aprovados:
-        nome = a.get('nome', a.get('name', '?')).split()[0]
-        status_text = a.get('details', {}).get('Status', {})
-        if isinstance(status_text, dict):
-            status_text = status_text.get('text', '')
-        insurer = a.get('insurer', '')
-        valor = a.get('valor', '')
-        if 'transferida' in str(a.get('nota', '')).lower() or 'transferida' in str(status_text).lower():
+        nota = str(a.get('nota', '')).lower()
+        if 're-análise' in nota or 'transferida' in nota:
+            nome = a.get('nome', a.get('name', '?')).split()[0]
             parts.append(f'<span style="color:var(--orange)">⚠ {nome} — re-análise pendente (corretagem transferida)</span>')
-        elif valor:
-            parts.append(f'<span style="color:var(--green)">✅ {nome} APROVADO {insurer} — {valor}</span>')
-        else:
-            parts.append(f'<span style="color:var(--green)">✅ {nome} APROVADO</span>')
 
     # Capitalização in progress
     pending = brokers.get('pending_broker', nb.get('pending_broker', []))
     for p in pending:
         if 'capitaliza' in p.get('broker', '').lower():
             nome = p.get('nome', p.get('name', '?')).split()[0]
-            cap_detail = p.get('details', {}).get('Capitalização', '')
             parts.append(f'<span style="color:var(--yellow)">📋 {nome} — Capitalização em andamento</span>')
 
-    # Rejected count + next step
+    # Rejected with dados completos — ready for capitalização offer
     recusadas = brokers.get('rejected', nb.get('recusadas', []))
+    n_dados_completos = sum(1 for r in recusadas if r.get('dados_completos'))
     if recusadas:
-        parts.append(f'<span style="color:var(--txt2)">{len(recusadas)} recusadas — próximo passo: oferecer Título de Capitalização</span>')
+        if n_dados_completos > 0:
+            parts.append(f'<span style="color:var(--txt2)">{len(recusadas)} recusadas ({n_dados_completos} com dados completos) — oferecer Título de Capitalização</span>')
+        else:
+            parts.append(f'<span style="color:var(--txt2)">{len(recusadas)} recusadas — oferecer Título de Capitalização</span>')
 
     return ' · '.join(parts)
 
