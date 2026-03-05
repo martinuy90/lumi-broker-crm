@@ -996,10 +996,15 @@ if __name__ == '__main__':
     n_capitalizacao = sum(1 for r in brokers.get('pending_broker', []) if 'capitaliza' in r.get('broker', '').lower())
     total_cpfs = len(scores) + len(pendente) + len(broker_only) + n_invalid
     version = config.get('version', '8.0')
+    # Use tracking data from config for total_leads (auto-update keeps this current)
+    total_leads_from_config = config.get('tracking', {}).get('last_leads_row', 279)
+    # Dados completos: count from falta field + any approved/pending with complete data
+    n_dados_completos = sum(1 for s in scores if '✓ Dados completos' in s.get('falta', '') or s.get('status', '').startswith('Aprovado') or s.get('status', '') == 'Ready ✓')
+    n_dados_completos += sum(1 for r in brokers.get('rejected', nb.get('recusadas', [])) if r.get('dados_completos'))
     kpis = {
-        'total_leads': 279,
+        'total_leads': total_leads_from_config,
         'cpfs': total_cpfs,
-        'dados_completos': sum(1 for s in scores if '✓ Dados completos' in s.get('falta', '')),
+        'dados_completos': n_dados_completos,
         'verificado': len(scores),
         'sem_score': len(pendente),
         'cpf_errado': n_invalid,
