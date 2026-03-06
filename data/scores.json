@@ -26,6 +26,38 @@
     "profissao": "Garçom embarcado"
   },
   {
+    "name": "Valdir Amancio Lucio",
+    "cpf": "130.514.287-01",
+    "score": 569,
+    "rating": "REGULAR",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Coletar dados",
+    "row_class": "ry",
+    "phone": "5524992391883",
+    "details": {
+      "Nascimento": "—",
+      "Mãe": "Naria das Graças Amancio",
+      "Renda Presumida": "R$5.001-7.000"
+    }
+  },
+  {
+    "name": "Ronaldo de Carvalho Marcolan",
+    "cpf": "021.320.497-50",
+    "score": 511,
+    "rating": "REGULAR",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Coletar dados",
+    "row_class": "ry",
+    "phone": "5524974009689",
+    "details": {
+      "Nascimento": "09/08/1970",
+      "Mãe": "Maria Aparecida de Carvalho",
+      "Renda Presumida": "R$1.401-2.000"
+    }
+  },
+  {
     "name": "Michel Gilliardi Alves Adauto",
     "cpf": "290.945.278-63",
     "score": 495,
@@ -217,6 +249,22 @@
     "phone": "5528999067301"
   },
   {
+    "name": "Axel Meira Vasconcelos",
+    "cpf": "234.644.613-00",
+    "score": 374,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "558592312650",
+    "details": {
+      "Nascimento": "05/07/1966",
+      "Mãe": "Maria de Lurdes Meira Vasconcelos",
+      "Renda Presumida": "R$1.401-2.000"
+    }
+  },
+  {
     "name": "Fernanda Almeida de Bragança",
     "cpf": "007.273.730-13",
     "score": 372,
@@ -325,6 +373,22 @@
     "phone": "553584111387"
   },
   {
+    "name": "Amanda Matias dos Santos",
+    "cpf": "042.548.570-63",
+    "score": 335,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "555497101694",
+    "details": {
+      "Nascimento": "—",
+      "Mãe": "Daniela Matias",
+      "Renda Presumida": "R$3.001-3.500"
+    }
+  },
+  {
     "name": "Gabriela Vitória da Silva Lima",
     "cpf": "546.545.788-03",
     "score": 333,
@@ -425,6 +489,22 @@
     "phone": "5516992807776"
   },
   {
+    "name": "Maikon Jefferson Bonora da Luz",
+    "cpf": "073.804.209-92",
+    "score": 308,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "556697119976",
+    "details": {
+      "Nascimento": "11/07/1991",
+      "Mãe": "Margarida Rosani Bonora",
+      "Renda Presumida": "R$1.401-2.000"
+    }
+  },
+  {
     "name": "Marcos Vinicius de Mesquita",
     "cpf": "144.746.276-95",
     "score": 306,
@@ -459,6 +539,22 @@
     "row_class": "rr",
     "nome": "Thialey Leite da Silva",
     "composicao": true
+  },
+  {
+    "name": "Carlos Antonio de Mamede",
+    "cpf": "255.397.058-74",
+    "score": 291,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "5511912642790",
+    "details": {
+      "Nascimento": "07/04/1976",
+      "Mãe": "Sonia Maria Araujo de Mamede",
+      "Renda Presumida": "R$1.401-2.000"
+    }
   },
   {
     "name": "Edna Alves dos Santos",
@@ -676,6 +772,22 @@
     "phone": "5511976829817"
   },
   {
+    "name": "Deisy Anny Cristiane Alves",
+    "cpf": "347.872.398-13",
+    "score": 233,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5517992171507",
+    "details": {
+      "Nascimento": "08/05/1985",
+      "Mãe": "Deiva Duarte Alves",
+      "Renda Presumida": "R$1.401-2.000"
+    }
+  },
+  {
     "name": "José Martinez Ramos",
     "cpf": "905.312.138-20",
     "score": 232,
@@ -688,6 +800,22 @@
     "phone": "5511986722660"
   },
   {
+    "name": "Marlon Ferreira Monteiro",
+    "cpf": "110.257.677-80",
+    "score": 231,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5511947990504",
+    "details": {
+      "Nascimento": "—",
+      "Mãe": "Jacira Silva Ferreira",
+      "Renda Presumida": "R$1.401-2.000"
+    }
+  },
+  {
     "name": "Rosangela Aparecida de Oliveira",
     "cpf": "322.141.888-43",
     "score": 222,
@@ -698,6 +826,22 @@
     "row_class": "rr",
     "nome": "Rosangela Aparecida de Oliveira",
     "phone": "5511962226396"
+  },
+  {
+    "name": "Matheus de Alvarenga Gardiolo",
+    "cpf": "500.144.758-55",
+    "score": 203,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5512991654303",
+    "details": {
+      "Nascimento": "—",
+      "Mãe": "Maria Helena de Alvarenga Gardiolo",
+      "Renda Presumida": "R$1.401-2.000"
+    }
   },
   {
     "name": "Adriano Moreira",
@@ -836,6 +980,22 @@
     "row_class": "rr",
     "nome": "Marta Guedes da Silva",
     "phone": "5514997610438"
+  },
+  {
+    "name": "Raissa Rangel Gipione",
+    "cpf": "064.251.847-52",
+    "score": 165,
+    "rating": "RUIM",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5522981047061",
+    "details": {
+      "Nascimento": "11/07/2005",
+      "Mãe": "-",
+      "Renda Presumida": "Até R$1.400"
+    }
   },
   {
     "name": "Willian Ricardo da Silva Ferreira",
