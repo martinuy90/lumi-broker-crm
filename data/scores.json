@@ -30,8 +30,8 @@
     "cpf": "130.514.287-01",
     "score": 569,
     "rating": "REGULAR",
-    "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "renda": "R$4.000",
+    "falta": "Falta: condominio",
     "status": "Coletar dados",
     "row_class": "ry",
     "phone": "5524992391883",
@@ -39,7 +39,9 @@
       "Nascimento": "—",
       "Mãe": "Naria das Graças Amancio",
       "Renda Presumida": "R$5.001-7.000"
-    }
+    },
+    "profissao": "empresário",
+    "nome": "Valdir Amancio Lucio"
   },
   {
     "name": "Ronaldo de Carvalho Marcolan",
@@ -55,7 +57,8 @@
       "Nascimento": "09/08/1970",
       "Mãe": "Maria Aparecida de Carvalho",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Ronaldo de Carvalho Marcolan"
   },
   {
     "name": "Michel Gilliardi Alves Adauto",
@@ -254,7 +257,7 @@
     "score": 374,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Score baixo",
     "row_class": "ro",
     "phone": "558592312650",
@@ -262,7 +265,8 @@
       "Nascimento": "05/07/1966",
       "Mãe": "Maria de Lurdes Meira Vasconcelos",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Axel Meira Vasconcelos"
   },
   {
     "name": "Fernanda Almeida de Bragança",
@@ -386,7 +390,8 @@
       "Nascimento": "—",
       "Mãe": "Daniela Matias",
       "Renda Presumida": "R$3.001-3.500"
-    }
+    },
+    "nome": "Amanda Matias dos Santos"
   },
   {
     "name": "Gabriela Vitória da Silva Lima",
@@ -502,7 +507,8 @@
       "Nascimento": "11/07/1991",
       "Mãe": "Margarida Rosani Bonora",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Maikon Jefferson Bonora da Luz"
   },
   {
     "name": "Marcos Vinicius de Mesquita",
@@ -554,7 +560,8 @@
       "Nascimento": "07/04/1976",
       "Mãe": "Sonia Maria Araujo de Mamede",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Carlos Antonio de Mamede"
   },
   {
     "name": "Edna Alves dos Santos",
@@ -785,7 +792,8 @@
       "Nascimento": "08/05/1985",
       "Mãe": "Deiva Duarte Alves",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Deisy Anny Cristiane Alves"
   },
   {
     "name": "José Martinez Ramos",
@@ -813,7 +821,8 @@
       "Nascimento": "—",
       "Mãe": "Jacira Silva Ferreira",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Marlon Ferreira Monteiro"
   },
   {
     "name": "Rosangela Aparecida de Oliveira",
@@ -841,7 +850,8 @@
       "Nascimento": "—",
       "Mãe": "Maria Helena de Alvarenga Gardiolo",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Matheus de Alvarenga Gardiolo"
   },
   {
     "name": "Adriano Moreira",
@@ -995,7 +1005,8 @@
       "Nascimento": "11/07/2005",
       "Mãe": "-",
       "Renda Presumida": "Até R$1.400"
-    }
+    },
+    "nome": "Raissa Rangel Gipione"
   },
   {
     "name": "Willian Ricardo da Silva Ferreira",
