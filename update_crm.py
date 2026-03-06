@@ -255,11 +255,15 @@ def main():
             if cpf_raw:
                 disc_cpf_to_phone[cpf_raw] = disc.get('phone_clean', disc.get('phone', ''))
 
+        # Track which CPFs were successfully consulted
+        consulted_cpfs = set()
+
         for result in consultation_results:
             if 'score' in result and 'error' not in result:
                 # Find phone from discovery
                 result_cpf_raw = re.sub(r'[^\d]', '', result.get("cpf", result.get("input_cpf", "")))
                 phone = disc_cpf_to_phone.get(result_cpf_raw, '')
+                consulted_cpfs.add(result_cpf_raw)
 
                 # Add to scores (falta/status will be computed by sync step)
                 new_entry = {
@@ -281,9 +285,23 @@ def main():
                 pendente = [p for p in pendente if re.sub(r'[^\d]', '', p.get('cpf', '')) != cpf_raw]
 
                 print(f"  NEW SCORE: {result.get('name', '?')} → {result['score']} {result.get('rating', '?')}")
-            elif 'error' not in result:
-                # No score but no error — add to pendente
-                pass
+
+        # Any CPFs that were NOT successfully consulted → add to pendente
+        pendente_cpfs = set(re.sub(r'[^\d]', '', p.get('cpf', '')) for p in pendente)
+        for disc in cpfs_to_consult:
+            cpf_raw = re.sub(r'[^\d]', '', disc.get('cpf', ''))
+            if cpf_raw and cpf_raw not in consulted_cpfs and cpf_raw not in pendente_cpfs:
+                pendente.append({
+                    "nome": disc.get("name", "?"),
+                    "cpf": normalize_cpf(disc['cpf']) if len(cpf_raw) == 11 else disc['cpf'],
+                    "renda": "—",
+                    "aluguel": "—",
+                    "profissao": "—",
+                    "documentacao": "Aguardando consulta",
+                    "prioridade": "Média",
+                    "phone": disc.get('phone_clean', disc.get('phone', ''))
+                })
+                print(f"  PENDENTE: {disc.get('name', '?')} (CPF {disc['cpf']}) — consulta pendente")
     else:
         print("  No new CPFs to consult.")
 
