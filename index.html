@@ -77,27 +77,27 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 08/03/2026 — v8.76</div>
+    <div class="ts">Atualizado: 08/03/2026 — v8.77</div>
   </div>
   <div class="kpis">
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">502</div><div class="kpi-l">Total Leads</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">89</div><div class="kpi-l">CPFs Compartilhados</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#34d399">39</div><div class="kpi-l">Dados Completos</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">504</div><div class="kpi-l">Total Leads</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">90</div><div class="kpi-l">CPFs Compartilhados</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#34d399">68</div><div class="kpi-l">Dados Completos</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">80</div><div class="kpi-l">Crédito Verificado</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">0</div><div class="kpi-l">CPF Sem Score</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">1</div><div class="kpi-l">CPF Sem Score</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--orange)">4</div><div class="kpi-l">CPF Errado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--green)">2</div><div class="kpi-l">Cotação Seguro Fiança</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">1</div><div class="kpi-l">Capitalização Enviada</div></div>
   </div>
   <div class="summ">
-    <b>Status v8.76:</b> · <span style="color:var(--green)">✅ Cotação seguro fiança enviada a Roberto e Onivaldo — aguardando resposta</span> · <span style="color:var(--orange)">⚠ Onivaldo — re-análise pendente (corretagem transferida)</span> · <span style="color:var(--yellow)">📋 Marcos — Capitalização em andamento</span> · <span style="color:var(--txt2)">9 recusadas (2 com dados completos) — oferecer Título de Capitalização</span>
+    <b>Status v8.77:</b> · <span style="color:var(--green)">✅ Cotação seguro fiança enviada a Roberto e Onivaldo — aguardando resposta</span> · <span style="color:var(--orange)">⚠ Onivaldo — re-análise pendente (corretagem transferida)</span> · <span style="color:var(--yellow)">📋 Marcos — Capitalização em andamento</span> · <span style="color:var(--txt2)">9 recusadas (2 com dados completos) — oferecer Título de Capitalização</span>
   </div>
 </div>
 <div class="tabs">
-  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">89</span></button>
+  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">90</span></button>
   <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">13</span></button>
   <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">18</span></button>
-  <button class="tab" onclick="sw('baixo',this)">Sem Score<span class="cnt">0</span></button>
+  <button class="tab" onclick="sw('baixo',this)">Sem Score<span class="cnt">1</span></button>
 </div>
 <!-- ============ TAB 1: RANKING COMPLETO ============ -->
 <div id="s-todos" class="sec on">
@@ -151,7 +151,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--yellow)">511</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
@@ -231,7 +231,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--yellow)">408</td>
   <td><span class="badge b-reg">REGULAR</span></td>
   <td>R$5.000</td>
-  <td style="color:var(--orange);font-size:11px">Falta: renda, endereco, aluguel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: endereco</td>
   <td><span class="st st-imo">Coletar dados</span></td>
 </tr>
 <tr class="ry">
@@ -291,7 +291,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">377</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: endereco</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -311,7 +311,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">374</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: renda, endereco, aluguel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -401,7 +401,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">335</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -491,7 +491,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">308</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -531,7 +531,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--orange)">291</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="ro">
@@ -641,7 +641,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">251</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$3.000</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: endereco</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -701,7 +701,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">233</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: endereco</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -721,7 +721,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">231</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -741,7 +741,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">203</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -751,7 +751,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">202</td>
   <td><span class="badge b-bai">BAIXO</span></td>
   <td>R$6.000</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: renda, endereco</td>
   <td><span class="st st-nao">Score baixo</span></td>
 </tr>
 <tr class="rr">
@@ -791,7 +791,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">191</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: renda, endereco</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -801,7 +801,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">190</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>R$2.500</td>
-  <td style="color:var(--orange);font-size:11px">Falta: renda, endereco, aluguel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -851,7 +851,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td class="sc" style="color:var(--red)">165</td>
   <td><span class="badge b-rui">RUIM</span></td>
   <td>—</td>
-  <td style="color:var(--orange);font-size:11px">Falta: Dados pessoais + imóvel</td>
+  <td style="color:var(--orange);font-size:11px">Falta: endereco</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
 <tr class="rr">
@@ -913,6 +913,17 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td>R$3.630</td>
   <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Sem chance</span></td>
+</tr>
+<!-- ── CPFs Sem Score (aguardando consulta) ── -->
+<tr class="rx">
+  <td>—</td>
+  <td>?</td>
+  <td class="mono">103.631.299-28</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
 </tr>
 <!-- ── Verificados pelo broker (sem score numérico) ── -->
 <tr class="rx">
@@ -1126,7 +1137,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-imo">Falta: Dados pessoais + imóvel</span>
+    <span class="st st-imo">Falta: verificar detalhes</span>
   </div>
   <div class="crd-body">
     <div class="crd-row"><span class="l">Nascimento:</span><span class="v">09/08/1970</span></div>
@@ -1231,7 +1242,7 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   </div>
   <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px">
     <span class="badge b-reg">REGULAR</span>
-    <span class="st st-imo">Falta: renda, endereco, aluguel</span>
+    <span class="st st-imo">Falta: endereco</span>
   </div>
   <div class="crd-body">
   </div>
@@ -1491,12 +1502,22 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <th style="width:9%">Prioridade</th>
 </tr></thead>
 <tbody>
+<tr class="rx">
+  <td>1</td>
+  <td>?</td>
+  <td style="font-size:11px">—</td>
+  <td class="mono">103.631.299-28</td>
+  <td>—</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Aguardando consulta</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
 </tbody>
 </table>
 <p style="font-size:10px;color:var(--txt2);margin-top:8px">★ TOP = dados completos, se score ≥ 400 será Ready imediatamente. Alta = renda alta ou profissão estável. Média = aguardando mais dados. Baixa = renda baixa ou dados insuficientes.</p>
 </div>
 <footer>
-  <p>Lumi Broker CRM — v8.76 — 502 leads, 89 CPFs, 80 verificados, 0 sem score, 2 cotações seguro fiança, 1 capitalização</p>
+  <p>Lumi Broker CRM — v8.77 — 504 leads, 90 CPFs, 80 verificados, 1 sem score, 2 cotações seguro fiança, 1 capitalização</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
