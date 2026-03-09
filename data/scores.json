@@ -339,6 +339,18 @@
     "phone": "554792491517"
   },
   {
+    "name": "RICARDO HENRIQUE DE MORAIS",
+    "cpf": "349.976.248-02",
+    "score": 368,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: renda, endereco, aluguel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "5519994374065",
+    "nome": "RICARDO HENRIQUE DE MORAIS"
+  },
+  {
     "name": "Ludmila de Moura Lima",
     "nome": "Ludmila de Moura Lima",
     "cpf": "438.015.278-24",
@@ -1238,6 +1250,18 @@
     "row_class": "rr",
     "nome": "Janaína Tinoco Ribeiro",
     "phone": "5521988653694"
+  },
+  {
+    "name": "RITA DE CASSIA ERDEG GASPAROTI",
+    "cpf": "353.771.308-80",
+    "score": 113,
+    "rating": "RUIM",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5511915372654",
+    "nome": "RITA DE CASSIA ERDEG GASPAROTI"
   },
   {
     "name": "Luan Peques",
