@@ -77,27 +77,27 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
 <div class="hdr">
   <div class="hdr-top">
     <h1>Lumi Broker CRM <span>Gestão de Leads Seguro Fiança</span></h1>
-    <div class="ts">Atualizado: 09/03/2026 — v8.86</div>
+    <div class="ts">Atualizado: 09/03/2026 — v8.87</div>
   </div>
   <div class="kpis">
-    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">527</div><div class="kpi-l">Total Leads</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">105</div><div class="kpi-l">CPFs Compartilhados</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--purpleL)">529</div><div class="kpi-l">Total Leads</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:#60a5fa">107</div><div class="kpi-l">CPFs Compartilhados</div></div>
     <div class="kpi"><div class="kpi-v" style="color:#34d399">75</div><div class="kpi-l">Dados Completos</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">96</div><div class="kpi-l">Crédito Verificado</div></div>
-    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">0</div><div class="kpi-l">CPF Sem Score</div></div>
+    <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">2</div><div class="kpi-l">CPF Sem Score</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--orange)">4</div><div class="kpi-l">CPF Errado</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--green)">2</div><div class="kpi-l">Cotação Seguro Fiança</div></div>
     <div class="kpi"><div class="kpi-v" style="color:var(--yellow)">1</div><div class="kpi-l">Capitalização Enviada</div></div>
   </div>
   <div class="summ">
-    <b>Status v8.86:</b> · <span style="color:var(--green)">✅ Cotação seguro fiança enviada a Roberto e Onivaldo — aguardando resposta</span> · <span style="color:var(--orange)">⚠ Onivaldo — re-análise pendente (corretagem transferida)</span> · <span style="color:var(--yellow)">📋 Marcos — Capitalização em andamento</span> · <span style="color:var(--txt2)">9 recusadas (2 com dados completos) — oferecer Título de Capitalização</span>
+    <b>Status v8.87:</b> · <span style="color:var(--green)">✅ Cotação seguro fiança enviada a Roberto e Onivaldo — aguardando resposta</span> · <span style="color:var(--orange)">⚠ Onivaldo — re-análise pendente (corretagem transferida)</span> · <span style="color:var(--yellow)">📋 Marcos — Capitalização em andamento</span> · <span style="color:var(--txt2)">9 recusadas (2 com dados completos) — oferecer Título de Capitalização</span>
   </div>
 </div>
 <div class="tabs">
-  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">105</span></button>
+  <button class="tab on" onclick="sw('todos',this)">Ranking Completo<span class="cnt">107</span></button>
   <button class="tab" onclick="sw('acao',this)">Ação Necessária<span class="cnt">14</span></button>
   <button class="tab" onclick="sw('enviados',this)">Enviados/Recusados<span class="cnt">18</span></button>
-  <button class="tab" onclick="sw('baixo',this)">Sem Score<span class="cnt">0</span></button>
+  <button class="tab" onclick="sw('baixo',this)">Sem Score<span class="cnt">2</span></button>
 </div>
 <!-- ============ TAB 1: RANKING COMPLETO ============ -->
 <div id="s-todos" class="sec on">
@@ -1074,6 +1074,27 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <td style="color:var(--orange);font-size:11px">Falta: verificar detalhes</td>
   <td><span class="st st-nao">Sem chance</span></td>
 </tr>
+<!-- ── CPFs Sem Score (aguardando consulta) ── -->
+<tr class="rx">
+  <td>—</td>
+  <td>?</td>
+  <td class="mono">046.260.541-88</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
+<tr class="rx">
+  <td>—</td>
+  <td>?</td>
+  <td class="mono">012.941.411-55</td>
+  <td class="sc" style="color:var(--txt2)">?</td>
+  <td><span class="badge" style="background:rgba(107,114,128,.15);color:var(--txt2)">PENDENTE</span></td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Falta: Score</td>
+  <td><span class="st st-col">Consultar</span></td>
+</tr>
 <!-- ── Verificados pelo broker (sem score numérico) ── -->
 <tr class="rx">
   <td>—</td>
@@ -1671,12 +1692,32 @@ footer{text-align:center;padding:24px;border-top:1px solid var(--border);color:v
   <th style="width:9%">Prioridade</th>
 </tr></thead>
 <tbody>
+<tr class="rx">
+  <td>1</td>
+  <td>?</td>
+  <td style="font-size:11px">—</td>
+  <td class="mono">046.260.541-88</td>
+  <td>—</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Aguardando consulta</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
+<tr class="rx">
+  <td>2</td>
+  <td>?</td>
+  <td style="font-size:11px">—</td>
+  <td class="mono">012.941.411-55</td>
+  <td>—</td>
+  <td>—</td>
+  <td style="color:var(--orange);font-size:11px">Aguardando consulta</td>
+  <td><span class="st st-col">Média</span></td>
+</tr>
 </tbody>
 </table>
 <p style="font-size:10px;color:var(--txt2);margin-top:8px">★ TOP = dados completos, se score ≥ 400 será Ready imediatamente. Alta = renda alta ou profissão estável. Média = aguardando mais dados. Baixa = renda baixa ou dados insuficientes.</p>
 </div>
 <footer>
-  <p>Lumi Broker CRM — v8.86 — 527 leads, 105 CPFs, 96 verificados, 0 sem score, 2 cotações seguro fiança, 1 capitalização</p>
+  <p>Lumi Broker CRM — v8.87 — 529 leads, 107 CPFs, 96 verificados, 2 sem score, 2 cotações seguro fiança, 1 capitalização</p>
   <p>Brokers: Arcoseg (Alice) · Ittu (Itallo) · Darqs (Graziele)</p>
 </footer>
 <script>
