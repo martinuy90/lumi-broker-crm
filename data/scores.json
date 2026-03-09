@@ -44,6 +44,22 @@
     "nome": "Valdir Amancio Lucio"
   },
   {
+    "name": "Claudia Maria Mattana",
+    "cpf": "020.099.819-60",
+    "score": 559,
+    "rating": "REGULAR",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Coletar dados",
+    "row_class": "ry",
+    "phone": "554888150125",
+    "details": {
+      "Nascimento": "09/09/1975",
+      "Mãe": "Salete Mattana",
+      "Renda Presumida": "R$2.001-3.000"
+    }
+  },
+  {
     "name": "Ronaldo de Carvalho Marcolan",
     "cpf": "021.320.497-50",
     "score": 511,
@@ -252,6 +268,22 @@
     "nome": "JAQUELINE MARIA DA CONCEICAO"
   },
   {
+    "name": "Jose Victor da Silva",
+    "cpf": "214.071.108-45",
+    "score": 377,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "5516992300858",
+    "details": {
+      "Nascimento": "—",
+      "Mãe": "Maria do Carmo de Jorge Silva",
+      "Renda Presumida": "R$1.401-2.000"
+    }
+  },
+  {
     "name": "Wanderson Gama Marques",
     "cpf": "146.059.137-26",
     "score": 374,
@@ -389,6 +421,22 @@
     "phone": "553584111387"
   },
   {
+    "name": "Raquel de Oliveira Nunes",
+    "cpf": "084.884.316-94",
+    "score": 341,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "553173609362",
+    "details": {
+      "Nascimento": "01/03/1989",
+      "Mãe": "Marta Rodrigues Nunes",
+      "Renda Presumida": "R$1.401-2.000"
+    }
+  },
+  {
     "name": "Amanda Matias dos Santos",
     "cpf": "042.548.570-63",
     "score": 335,
@@ -417,6 +465,22 @@
     "nome": "Gabriela Vitória da Silva Lima",
     "phone": "5511970636638",
     "profissao": "Autônoma (área da beleza)"
+  },
+  {
+    "name": "Erivaldo Silva de Menezes",
+    "cpf": "786.744.251-00",
+    "score": 332,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "556184256692",
+    "details": {
+      "Nascimento": "07/09/1977",
+      "Mãe": "Railda Silva de Menezes",
+      "Renda Presumida": "R$1.401-2.000"
+    }
   },
   {
     "name": "Maria Lucia Correa",
@@ -521,6 +585,22 @@
       "Renda Presumida": "R$1.401-2.000"
     },
     "nome": "Maikon Jefferson Bonora da Luz"
+  },
+  {
+    "name": "Bruno Henrique Soares da Conceicao",
+    "cpf": "353.433.458-24",
+    "score": 307,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "5511971696221",
+    "details": {
+      "Nascimento": "—",
+      "Mãe": "Maria Fatima Soares Conceicao",
+      "Renda Presumida": "R$1.401-2.000"
+    }
   },
   {
     "name": "Marcos Vinicius de Mesquita",
@@ -775,6 +855,22 @@
     "phone": "5511973445539"
   },
   {
+    "name": "Nicolas Charles Oliveira Medeiro",
+    "cpf": "103.631.299-28",
+    "score": 238,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "554299618959",
+    "details": {
+      "Nascimento": "09/02/1996",
+      "Mãe": "Debora Gessilis de Oliveira",
+      "Renda Presumida": "R$2.001-3.000"
+    }
+  },
+  {
     "name": "Felipe Lima Franca",
     "nome": "Felipe Lima Franca",
     "cpf": "427.885.248-70",
@@ -847,6 +943,22 @@
     "row_class": "rr",
     "nome": "Rosangela Aparecida de Oliveira",
     "phone": "5511962226396"
+  },
+  {
+    "name": "Wesley Veiga Oliveira",
+    "cpf": "478.149.158-80",
+    "score": 213,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5519984574559",
+    "details": {
+      "Nascimento": "—",
+      "Mãe": "Giovana Veiga",
+      "Renda Presumida": "R$1.401-2.000"
+    }
   },
   {
     "name": "Matheus de Alvarenga Gardiolo",
