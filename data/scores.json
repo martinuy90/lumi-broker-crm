@@ -610,6 +610,18 @@
     "profissao": "Gerente de vendas"
   },
   {
+    "name": "VALDIRENE FERNANDES ROCHA",
+    "cpf": "212.977.028-24",
+    "score": 312,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "5519989414224",
+    "nome": "VALDIRENE FERNANDES ROCHA"
+  },
+  {
     "name": "Estela Mariana Gomes",
     "cpf": "343.390.408-19",
     "score": 308,
@@ -1169,6 +1181,18 @@
     "row_class": "rr",
     "nome": "Stephanie Diniz de Almeida",
     "phone": "5511951976827"
+  },
+  {
+    "name": "CASSIANO DE MELLO",
+    "cpf": "063.551.669-12",
+    "score": 181,
+    "rating": "RUIM",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "554999599909",
+    "nome": "CASSIANO DE MELLO"
   },
   {
     "name": "João Guilherme Antunes Ramos",
