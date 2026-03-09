@@ -49,7 +49,7 @@
     "score": 559,
     "rating": "REGULAR",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Coletar dados",
     "row_class": "ry",
     "phone": "554888150125",
@@ -57,7 +57,8 @@
       "Nascimento": "09/09/1975",
       "Mãe": "Salete Mattana",
       "Renda Presumida": "R$2.001-3.000"
-    }
+    },
+    "nome": "Claudia Maria Mattana"
   },
   {
     "name": "Ronaldo de Carvalho Marcolan",
@@ -281,7 +282,20 @@
       "Nascimento": "—",
       "Mãe": "Maria do Carmo de Jorge Silva",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Jose Victor da Silva"
+  },
+  {
+    "name": "ALESSANDRO MENDES",
+    "cpf": "028.479.870-37",
+    "score": 375,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "554888477091",
+    "nome": "ALESSANDRO MENDES"
   },
   {
     "name": "Wanderson Gama Marques",
@@ -426,7 +440,7 @@
     "score": 341,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Score baixo",
     "row_class": "ro",
     "phone": "553173609362",
@@ -434,7 +448,8 @@
       "Nascimento": "01/03/1989",
       "Mãe": "Marta Rodrigues Nunes",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Raquel de Oliveira Nunes"
   },
   {
     "name": "Amanda Matias dos Santos",
@@ -472,7 +487,7 @@
     "score": 332,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco",
     "status": "Score baixo",
     "row_class": "ro",
     "phone": "556184256692",
@@ -480,7 +495,8 @@
       "Nascimento": "07/09/1977",
       "Mãe": "Railda Silva de Menezes",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Erivaldo Silva de Menezes"
   },
   {
     "name": "Maria Lucia Correa",
@@ -507,6 +523,18 @@
     "nome": "Poliana Conovalow Tartaro",
     "phone": "5511952473628",
     "profissao": "Vendedora"
+  },
+  {
+    "name": "DEIVA DUARTE",
+    "cpf": "039.069.458-47",
+    "score": 323,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: endereco",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "5517992171507",
+    "nome": "DEIVA DUARTE"
   },
   {
     "name": "Grazielle Carlos dos Santos",
@@ -543,6 +571,18 @@
     "row_class": "ro",
     "nome": "Veronica Luciana O. Soares",
     "phone": "553499528551"
+  },
+  {
+    "name": "DEIVYD DE SOUZA FERREIRA",
+    "cpf": "383.548.138-00",
+    "score": 316,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: endereco",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "5517992171507",
+    "nome": "DEIVYD DE SOUZA FERREIRA"
   },
   {
     "name": "Fabricia Pinheiro de Oliveira",
@@ -592,7 +632,7 @@
     "score": 307,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Score baixo",
     "row_class": "ro",
     "phone": "5511971696221",
@@ -600,7 +640,8 @@
       "Nascimento": "—",
       "Mãe": "Maria Fatima Soares Conceicao",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Bruno Henrique Soares da Conceicao"
   },
   {
     "name": "Marcos Vinicius de Mesquita",
@@ -625,6 +666,18 @@
     "row_class": "ro",
     "nome": "Ana Cristina do Couto",
     "phone": "556792609765"
+  },
+  {
+    "name": "VITORIA SOARES DOS SANTOS",
+    "cpf": "489.667.688-22",
+    "score": 299,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: endereco",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "5517992171507",
+    "nome": "VITORIA SOARES DOS SANTOS"
   },
   {
     "name": "Thialey Leite da Silva",
@@ -786,6 +839,18 @@
     "phone": "554788067076"
   },
   {
+    "name": "MARCIA REGINA MENDES DE ALMEIDA",
+    "cpf": "053.636.856-20",
+    "score": 258,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: renda, endereco, aluguel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5516991928030",
+    "nome": "MARCIA REGINA MENDES DE ALMEIDA"
+  },
+  {
     "name": "Veronica Goncalves Miranda",
     "nome": "Veronica Goncalves Miranda",
     "cpf": "063.999.786-45",
@@ -860,7 +925,7 @@
     "score": 238,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: verificar detalhes",
     "status": "Score baixo",
     "row_class": "rr",
     "phone": "554299618959",
@@ -868,7 +933,8 @@
       "Nascimento": "09/02/1996",
       "Mãe": "Debora Gessilis de Oliveira",
       "Renda Presumida": "R$2.001-3.000"
-    }
+    },
+    "nome": "Nicolas Charles Oliveira Medeiro"
   },
   {
     "name": "Felipe Lima Franca",
@@ -950,7 +1016,7 @@
     "score": 213,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Score baixo",
     "row_class": "rr",
     "phone": "5519984574559",
@@ -958,7 +1024,8 @@
       "Nascimento": "—",
       "Mãe": "Giovana Veiga",
       "Renda Presumida": "R$1.401-2.000"
-    }
+    },
+    "nome": "Wesley Veiga Oliveira"
   },
   {
     "name": "Matheus de Alvarenga Gardiolo",
