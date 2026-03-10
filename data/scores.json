@@ -120,10 +120,11 @@
     "score": 463,
     "rating": "REGULAR",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Coletar dados",
     "row_class": "ry",
-    "phone": "558598348527"
+    "phone": "558598348527",
+    "nome": "?"
   },
   {
     "name": "Daiane Ap. Alves dos Santos",
@@ -720,10 +721,11 @@
     "score": 298,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Score baixo",
     "row_class": "ro",
-    "phone": "556493001259"
+    "phone": "556493001259",
+    "nome": "?"
   },
   {
     "name": "Thialey Leite da Silva",
@@ -763,7 +765,8 @@
     "falta": "Falta: Dados pessoais + imóvel",
     "status": "Score baixo",
     "row_class": "ro",
-    "phone": "554198848403"
+    "phone": "554198848403",
+    "nome": "?"
   },
   {
     "name": "Edna Alves dos Santos",
@@ -787,10 +790,11 @@
     "score": 280,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Score baixo",
     "row_class": "ro",
-    "phone": "5516992382261"
+    "phone": "5516992382261",
+    "nome": "?"
   },
   {
     "name": "Ana Paula Martendal",
@@ -848,10 +852,11 @@
     "score": 267,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Score baixo",
     "row_class": "rr",
-    "phone": "5511995433884"
+    "phone": "5511995433884",
+    "nome": "?"
   },
   {
     "name": "Keila Maria de Sousa",
@@ -871,10 +876,11 @@
     "score": 265,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Score baixo",
     "row_class": "rr",
-    "phone": "5511944407715"
+    "phone": "5511944407715",
+    "nome": "?"
   },
   {
     "name": "Simone Manfrin",
@@ -949,7 +955,8 @@
     "falta": "Falta: Dados pessoais + imóvel",
     "status": "Score baixo",
     "row_class": "rr",
-    "phone": "5514998358057"
+    "phone": "5514998358057",
+    "nome": "?"
   },
   {
     "name": "Veronica Goncalves Miranda",
@@ -1001,7 +1008,8 @@
     "falta": "Falta: Dados pessoais + imóvel",
     "status": "Score baixo",
     "row_class": "rr",
-    "phone": "5519993380151"
+    "phone": "5519993380151",
+    "nome": "?"
   },
   {
     "name": "Luiz Fernando Pereira",
@@ -1025,10 +1033,11 @@
     "score": 240,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Score baixo",
     "row_class": "rr",
-    "phone": "5511940645177"
+    "phone": "5511940645177",
+    "nome": "?"
   },
   {
     "name": "Alan Felipe de Pina Lopes",
@@ -1127,10 +1136,11 @@
     "score": 227,
     "rating": "BAIXO",
     "renda": "—",
-    "falta": "Falta: Dados pessoais + imóvel",
+    "falta": "Falta: renda, endereco, aluguel",
     "status": "Score baixo",
     "row_class": "rr",
-    "phone": "556493001259"
+    "phone": "556493001259",
+    "nome": "?"
   },
   {
     "name": "Rosangela Aparecida de Oliveira",
@@ -1241,7 +1251,8 @@
     "falta": "Falta: Dados pessoais + imóvel",
     "status": "Score baixo",
     "row_class": "rr",
-    "phone": "5519993380151"
+    "phone": "5519993380151",
+    "nome": "?"
   },
   {
     "name": "Fabiana Mariano Rodrigues",
@@ -1284,7 +1295,8 @@
     "falta": "Falta: Dados pessoais + imóvel",
     "status": "Score baixo",
     "row_class": "rr",
-    "phone": "5511958247629"
+    "phone": "5511958247629",
+    "nome": "?"
   },
   {
     "name": "Vagner Aparecido de Souza",
@@ -1335,7 +1347,8 @@
     "falta": "Falta: Dados pessoais + imóvel",
     "status": "Score baixo",
     "row_class": "rr",
-    "phone": "5518996569519"
+    "phone": "5518996569519",
+    "nome": "?"
   },
   {
     "name": "João Guilherme Antunes Ramos",
@@ -1427,7 +1440,8 @@
     "falta": "Falta: Dados pessoais + imóvel",
     "status": "Score baixo",
     "row_class": "rr",
-    "phone": "5511958247629"
+    "phone": "5511958247629",
+    "nome": "?"
   },
   {
     "name": "RITA DE CASSIA ERDEG GASPAROTI",

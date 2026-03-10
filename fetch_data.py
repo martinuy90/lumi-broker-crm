@@ -652,8 +652,9 @@ def count_dados_completos(dashboard_dados_rows, cofounder_phones=None):
     return count
 
 
-def compute_kpis(scores, pendente, brokers, total_leads, dados_completos=0):
-    """Calculate KPI values for the dashboard."""
+def compute_kpis(scores, pendente, brokers, total_leads, dados_completos=None):
+    """Calculate KPI values for the dashboard.
+    dados_completos: if None, computed from scores/brokers data (truly complete leads)."""
     n_scores = len(scores)
     n_pendente = len(pendente)
     n_invalid = len(brokers.get('invalid_cpf', []))
@@ -692,10 +693,19 @@ def compute_kpis(scores, pendente, brokers, total_leads, dados_completos=0):
     # Capitalização = leads in pending_broker with Capitalização broker type
     n_capitalizacao = sum(1 for r in brokers.get('pending_broker', []) if 'capitaliza' in r.get('broker', '').lower())
 
+    # Dados Completos = truly complete leads (all personal + property data)
+    if dados_completos is None:
+        n_dados_completos = sum(1 for s in scores if '\u2713 Dados completos' in s.get('falta', '')
+                                or s.get('status', '').startswith('Aprovado')
+                                or s.get('status', '') == 'Ready \u2713')
+        n_dados_completos += sum(1 for r in brokers.get('rejected', []) if r.get('dados_completos'))
+    else:
+        n_dados_completos = dados_completos
+
     return {
         'total_leads': total_leads,
         'cpfs': total_cpfs,
-        'dados_completos': dados_completos,
+        'dados_completos': n_dados_completos,
         'verificado': n_scores,
         'sem_score': n_pendente,
         'cpf_errado': n_invalid,

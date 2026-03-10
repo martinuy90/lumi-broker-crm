@@ -322,9 +322,8 @@ def main():
     print("\n[5/6] Generating dashboard HTML...")
     new_version = increment_version(current_version)
 
-    # Compute KPIs
-    n_dados_completos = count_dados_completos(dashboard_dados_rows)
-    kpis = compute_kpis(scores, pendente, brokers, total_leads, dados_completos=n_dados_completos)
+    # Compute KPIs (dados_completos=None → auto-computed from scores/brokers as truly complete)
+    kpis = compute_kpis(scores, pendente, brokers, total_leads)
     print(f"  KPIs: {json.dumps(kpis)}")
 
     # Build business-focused summary
