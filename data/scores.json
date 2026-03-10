@@ -115,6 +115,17 @@
     "composicao": true
   },
   {
+    "name": "?",
+    "cpf": "610.956.093-60",
+    "score": 463,
+    "rating": "REGULAR",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Coletar dados",
+    "row_class": "ry",
+    "phone": "558598348527"
+  },
+  {
     "name": "Daiane Ap. Alves dos Santos",
     "cpf": "081.385.799-60",
     "score": 462,
@@ -704,6 +715,17 @@
     "nome": "VITORIA SOARES DOS SANTOS"
   },
   {
+    "name": "?",
+    "cpf": "046.260.541-88",
+    "score": 298,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "556493001259"
+  },
+  {
     "name": "Thialey Leite da Silva",
     "cpf": "053.164.979-29",
     "score": 296,
@@ -733,6 +755,17 @@
     "nome": "Carlos Antonio de Mamede"
   },
   {
+    "name": "?",
+    "cpf": "091.734.469-39",
+    "score": 284,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "554198848403"
+  },
+  {
     "name": "Edna Alves dos Santos",
     "nome": "Edna Alves dos Santos",
     "cpf": "096.474.664-63",
@@ -747,6 +780,17 @@
     "nascimento": "27/02/1992",
     "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
     "phone": "558299729809"
+  },
+  {
+    "name": "?",
+    "cpf": "214.977.688-02",
+    "score": 280,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "ro",
+    "phone": "5516992382261"
   },
   {
     "name": "Ana Paula Martendal",
@@ -799,6 +843,17 @@
     "profissao": "Vendedora"
   },
   {
+    "name": "?",
+    "cpf": "326.893.868-01",
+    "score": 267,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5511995433884"
+  },
+  {
     "name": "Keila Maria de Sousa",
     "cpf": "324.627.558-02",
     "score": 265,
@@ -809,6 +864,17 @@
     "row_class": "rr",
     "nome": "Keila Maria de Sousa",
     "phone": "553584017046"
+  },
+  {
+    "name": "?",
+    "cpf": "176.229.618-76",
+    "score": 265,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5511944407715"
   },
   {
     "name": "Simone Manfrin",
@@ -875,6 +941,17 @@
     "nome": "MARCIA REGINA MENDES DE ALMEIDA"
   },
   {
+    "name": "?",
+    "cpf": "374.711.598-55",
+    "score": 254,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5514998358057"
+  },
+  {
     "name": "Veronica Goncalves Miranda",
     "nome": "Veronica Goncalves Miranda",
     "cpf": "063.999.786-45",
@@ -916,6 +993,17 @@
     "profissao": "Motorista de aplicativo"
   },
   {
+    "name": "?",
+    "cpf": "335.252.058-56",
+    "score": 242,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5519993380151"
+  },
+  {
     "name": "Luiz Fernando Pereira",
     "nome": "Luiz Fernando Pereira",
     "cpf": "305.955.028-06",
@@ -930,6 +1018,17 @@
     "nascimento": "",
     "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 2.001 ate R$ 3.000",
     "phone": "5517992172384"
+  },
+  {
+    "name": "?",
+    "cpf": "273.397.108-50",
+    "score": 240,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5511940645177"
   },
   {
     "name": "Alan Felipe de Pina Lopes",
@@ -1021,6 +1120,17 @@
       "Renda Presumida": "R$1.401-2.000"
     },
     "nome": "Marlon Ferreira Monteiro"
+  },
+  {
+    "name": "?",
+    "cpf": "012.941.411-55",
+    "score": 227,
+    "rating": "BAIXO",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "556493001259"
   },
   {
     "name": "Rosangela Aparecida de Oliveira",
@@ -1123,6 +1233,17 @@
     "phone": "5511930281238"
   },
   {
+    "name": "?",
+    "cpf": "501.603.298-09",
+    "score": 193,
+    "rating": "RUIM",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5519993380151"
+  },
+  {
     "name": "Fabiana Mariano Rodrigues",
     "nome": "Fabiana Mariano Rodrigues",
     "cpf": "033.938.129-98",
@@ -1153,6 +1274,17 @@
     "nascimento": "",
     "renda_presumida": "RENDA PRESUMIDA POSITIVA: De R$ 1.401 ate R$ 2.000",
     "phone": "554584010939"
+  },
+  {
+    "name": "?",
+    "cpf": "428.037.088-50",
+    "score": 187,
+    "rating": "RUIM",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5511958247629"
   },
   {
     "name": "Vagner Aparecido de Souza",
@@ -1193,6 +1325,17 @@
     "row_class": "rr",
     "phone": "554999599909",
     "nome": "CASSIANO DE MELLO"
+  },
+  {
+    "name": "?",
+    "cpf": "496.283.238-73",
+    "score": 178,
+    "rating": "RUIM",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5518996569519"
   },
   {
     "name": "João Guilherme Antunes Ramos",
@@ -1274,6 +1417,17 @@
     "row_class": "rr",
     "nome": "Janaína Tinoco Ribeiro",
     "phone": "5521988653694"
+  },
+  {
+    "name": "?",
+    "cpf": "464.672.638-63",
+    "score": 122,
+    "rating": "RUIM",
+    "renda": "—",
+    "falta": "Falta: Dados pessoais + imóvel",
+    "status": "Score baixo",
+    "row_class": "rr",
+    "phone": "5511958247629"
   },
   {
     "name": "RITA DE CASSIA ERDEG GASPAROTI",

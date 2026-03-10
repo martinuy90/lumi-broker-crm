@@ -628,8 +628,9 @@ def sync_scores_with_sheets(scores, leads_rows, dashboard_dados_rows=None, histo
 
 
 def count_dados_completos(dashboard_dados_rows, cofounder_phones=None):
-    """Count leads that shared ALL data (tem_cpf, tem_endereco, tem_aluguel, tem_renda = SIM).
-    Uses the dashboard_dados Google Sheets tab."""
+    """Count leads that shared ALL basic data (tem_cpf, tem_endereco, tem_aluguel, tem_renda = SIM).
+    Uses the dashboard_dados Google Sheets tab.
+    NOTE: This is basic WhatsApp data sharing, NOT broker-ready completeness."""
     if not dashboard_dados_rows:
         return 0
     if cofounder_phones is None:

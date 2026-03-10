@@ -270,7 +270,7 @@ def generate_header(kpis, version, summary_text):
     kpi_defs = [
         ('total_leads', 'var(--purpleL)', 'Total Leads'),
         ('cpfs', '#60a5fa', 'CPFs Compartilhados'),
-        ('dados_completos', '#34d399', 'Dados Completos'),
+        ('dados_completos', '#34d399', 'Info B\u00e1sica Compartilhada'),
         ('verificado', 'var(--yellow)', 'Cr\u00e9dito Verificado'),
         ('sem_score', 'var(--yellow)', 'CPF Sem Score'),
         ('cpf_errado', 'var(--orange)', 'CPF Errado'),
