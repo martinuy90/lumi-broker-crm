@@ -1,16 +1,146 @@
 [
   {
-    "nome": "?",
-    "cpf": "939.201.489-91",
+    "nome": "João Bosco Efrem Natividade",
+    "cpf": "487.119.426-49",
+    "renda": "R$13.000",
+    "aluguel": "R$1.900",
+    "profissao": "Comerciante",
+    "documentacao": "✓ Dados completos",
+    "prioridade": "🔥 Alta",
+    "phone": "553599439913"
+  },
+  {
+    "nome": "Diego Luiz da Silva",
+    "cpf": "317.983.688-11",
+    "renda": "R$9.000",
+    "aluguel": "R$1.700",
+    "profissao": "Autônomo",
+    "documentacao": "✓ Dados completos",
+    "prioridade": "🔥 Alta",
+    "phone": "5517996129194"
+  },
+  {
+    "nome": "David Jansen do Prado Contri",
+    "cpf": "110.490.196-01",
+    "renda": "R$7.000",
+    "aluguel": "R$1.300",
+    "profissao": "Taxista",
+    "documentacao": "✓ Dados completos (⚠️ nome sujo)",
+    "prioridade": "Média",
+    "phone": "5517996587514"
+  },
+  {
+    "nome": "Mônica Ap. da Silva Cabral",
+    "cpf": "081.456.589-18",
+    "renda": "R$6.600",
+    "aluguel": "R$2.800",
+    "profissao": "Autônoma",
+    "documentacao": "Falta: dados imóvel",
+    "prioridade": "Alta",
+    "phone": "554398247731"
+  },
+  {
+    "nome": "Sueli Oliveira da Silva",
+    "cpf": "073.414.218-86",
+    "renda": "R$6.000",
+    "aluguel": "R$1.600",
+    "profissao": "Supervisora de vendas",
+    "documentacao": "✓ Dados completos (⚠️ restrição)",
+    "prioridade": "Média",
+    "phone": "5511973256954"
+  },
+  {
+    "nome": "Luciana Furtado",
+    "cpf": "009.950.831-18",
+    "renda": "R$5.000",
+    "aluguel": "R$2.550",
+    "profissao": "Gerente de Varejo",
+    "documentacao": "✓ Dados completos",
+    "prioridade": "🔥 Alta",
+    "phone": "554195606535"
+  },
+  {
+    "nome": "Marise Sawczuk Teixeira",
+    "cpf": "040.706.859-79",
     "renda": "—",
+    "aluguel": "R$1.800",
+    "profissao": "—",
+    "documentacao": "✓ Dados completos",
+    "prioridade": "🔥 Alta",
+    "phone": "554195196228"
+  },
+  {
+    "nome": "Ed Carlos Jose Sipriano",
+    "cpf": "267.949.878-05",
+    "renda": "R$4.200",
+    "aluguel": "R$2.300",
+    "profissao": "Operador injetora",
+    "documentacao": "✓ Dados completos (⚠️ nome sujo)",
+    "prioridade": "Média",
+    "phone": "5519960002086"
+  },
+  {
+    "nome": "Marcelo Henrique da Silva",
+    "cpf": "363.471.898-60",
+    "renda": "R$2.500",
     "aluguel": "—",
     "profissao": "—",
     "documentacao": "Aguardando consulta",
     "prioridade": "Média",
+    "phone": "553591303868"
+  },
+  {
+    "nome": "Luciane Arndt De Oliveira",
+    "cpf": "939.201.489-91",
+    "renda": "R$2.500",
+    "aluguel": "—",
+    "profissao": "Autônoma",
+    "documentacao": "Dados pessoais completos",
+    "prioridade": "Média",
     "phone": "554891143507"
   },
   {
-    "nome": "?",
+    "nome": "Altina Vitória da Silva",
+    "cpf": "442.806.728-30",
+    "renda": "R$2.030",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta",
+    "prioridade": "Baixa",
+    "phone": "5516993283706"
+  },
+  {
+    "nome": "Joziane Maria dos Santos",
+    "cpf": "856.423.554-49",
+    "renda": "R$2.000",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta",
+    "prioridade": "Baixa",
+    "phone": "5511983656110"
+  },
+  {
+    "nome": "Renata Coelho de Mello",
+    "cpf": "004.232.260-02",
+    "renda": "R$1.689",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta",
+    "prioridade": "Baixa",
+    "phone": "555592015793"
+  },
+  {
+    "nome": "Symone Barbosa Santos",
+    "cpf": "133.983.808-75",
+    "renda": "R$1.600",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta",
+    "prioridade": "Baixa",
+    "phone": "5513991389697"
+  },
+  {
+    "nome": "Emilio Carlos de Andrade",
     "cpf": "034.984.538-74",
     "renda": "—",
     "aluguel": "—",
@@ -20,67 +150,7 @@
     "phone": "5511945084588"
   },
   {
-    "nome": "?",
-    "cpf": "004.232.260-02",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "555592015793"
-  },
-  {
-    "nome": "?",
-    "cpf": "856.423.554-49",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5511983656110"
-  },
-  {
-    "nome": "?",
-    "cpf": "009.950.831-18",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "554195606535"
-  },
-  {
-    "nome": "?",
-    "cpf": "317.983.688-11",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5517996129194"
-  },
-  {
-    "nome": "?",
-    "cpf": "442.806.728-30",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5516993283706"
-  },
-  {
-    "nome": "?",
-    "cpf": "081.456.589-18",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "554398247731"
-  },
-  {
-    "nome": "?",
+    "nome": "Eloi Valdecir da Rocha",
     "cpf": "610.470.820-04",
     "renda": "—",
     "aluguel": "—",
@@ -90,7 +160,7 @@
     "phone": "554799366839"
   },
   {
-    "nome": "?",
+    "nome": "Marcus Sakata",
     "cpf": "010.673.079-74",
     "renda": "—",
     "aluguel": "—",
@@ -100,37 +170,7 @@
     "phone": "554184279904"
   },
   {
-    "nome": "?",
-    "cpf": "267.949.878-05",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5519960002086"
-  },
-  {
-    "nome": "?",
-    "cpf": "133.983.808-75",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5513991389697"
-  },
-  {
-    "nome": "?",
-    "cpf": "110.490.196-01",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5517996587514"
-  },
-  {
-    "nome": "?",
+    "nome": "Itamara",
     "cpf": "083.210.904-51",
     "renda": "—",
     "aluguel": "—",
@@ -140,7 +180,7 @@
     "phone": "5511921988612"
   },
   {
-    "nome": "?",
+    "nome": "Michelly Machado",
     "cpf": "478.206.128-51",
     "renda": "—",
     "aluguel": "—",
@@ -150,27 +190,7 @@
     "phone": "5516991063971"
   },
   {
-    "nome": "?",
-    "cpf": "073.414.218-86",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5511973256954"
-  },
-  {
-    "nome": "?",
-    "cpf": "487.119.426-49",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "553599439913"
-  },
-  {
-    "nome": "?",
+    "nome": "Taysa Bertuci",
     "cpf": "054.445.309-37",
     "renda": "—",
     "aluguel": "—",
@@ -180,37 +200,7 @@
     "phone": "5519988130663"
   },
   {
-    "nome": "?",
-    "cpf": "377.990.948-00",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5511981365099"
-  },
-  {
-    "nome": "?",
-    "cpf": "363.471.898-60",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "553591303868"
-  },
-  {
-    "nome": "?",
-    "cpf": "040.706.859-79",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "554195196228"
-  },
-  {
-    "nome": "?",
+    "nome": "Giovanna Vieira",
     "cpf": "465.178.948-02",
     "renda": "—",
     "aluguel": "—",
@@ -218,5 +208,15 @@
     "documentacao": "Aguardando consulta",
     "prioridade": "Média",
     "phone": "5516982620678"
+  },
+  {
+    "nome": "Cah",
+    "cpf": "377.990.948-00",
+    "renda": "—",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta",
+    "prioridade": "Média",
+    "phone": "5511981365099"
   }
 ]
