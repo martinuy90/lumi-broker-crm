@@ -220,7 +220,97 @@
     "phone": "5511981365099"
   },
   {
-    "nome": "?",
+    "nome": "Gisele Cristina dos Santos",
+    "cpf": "267.770.318-12",
+    "renda": "R$15.000",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta",
+    "prioridade": "🔥 Alta",
+    "phone": "5519996166442"
+  },
+  {
+    "nome": "Eduardo A. B. de Albuquerque",
+    "cpf": "101.905.248-12",
+    "renda": "R$6.500",
+    "aluguel": "—",
+    "profissao": "Corretor de Seguros",
+    "documentacao": "Dados pessoais completos",
+    "prioridade": "Alta",
+    "phone": "5511996263851"
+  },
+  {
+    "nome": "Roberto Antonio Denaro Junior",
+    "cpf": "075.376.298-62",
+    "renda": "R$6.000",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta (⚠️ Serasa)",
+    "prioridade": "Média",
+    "phone": "5512996992636"
+  },
+  {
+    "nome": "Lucas Henrique Silva Santos",
+    "cpf": "523.023.908-57",
+    "renda": "R$5.000",
+    "aluguel": "R$300",
+    "profissao": "—",
+    "documentacao": "✓ Dados completos",
+    "prioridade": "🔥 Alta",
+    "phone": "554797093583"
+  },
+  {
+    "nome": "Saimon Felipe Souza Silva",
+    "cpf": "030.156.992-45",
+    "renda": "R$4.500",
+    "aluguel": "—",
+    "profissao": "Vigia",
+    "documentacao": "Dados pessoais completos",
+    "prioridade": "Alta",
+    "phone": "556899009209"
+  },
+  {
+    "nome": "Rodrigo de Moura Machado",
+    "cpf": "021.981.660-38",
+    "renda": "R$4.400",
+    "aluguel": "—",
+    "profissao": "Motorista",
+    "documentacao": "Dados pessoais completos",
+    "prioridade": "Alta",
+    "phone": "555181184323"
+  },
+  {
+    "nome": "Alexandre Pereira Alcântara",
+    "cpf": "026.040.211-70",
+    "renda": "R$4.000",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta",
+    "prioridade": "Alta",
+    "phone": "554399373024"
+  },
+  {
+    "nome": "Thiago Simões Sadock de Sá Motta",
+    "cpf": "055.684.757-17",
+    "renda": "R$3.180",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta",
+    "prioridade": "Média",
+    "phone": "5521965376799"
+  },
+  {
+    "nome": "Elizabeth C. Passari Ananias",
+    "cpf": "449.422.138-43",
+    "renda": "R$2.400",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta",
+    "prioridade": "Baixa",
+    "phone": "5517988107474"
+  },
+  {
+    "nome": "Luciana",
     "cpf": "139.589.968-17",
     "renda": "—",
     "aluguel": "—",
@@ -230,27 +320,7 @@
     "phone": "5519999922533"
   },
   {
-    "nome": "?",
-    "cpf": "075.376.298-62",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5512996992636"
-  },
-  {
-    "nome": "?",
-    "cpf": "267.770.318-12",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5519996166442"
-  },
-  {
-    "nome": "?",
+    "nome": "Thalita Fazion",
     "cpf": "379.387.398-63",
     "renda": "—",
     "aluguel": "—",
@@ -260,7 +330,7 @@
     "phone": "5511943378640"
   },
   {
-    "nome": "?",
+    "nome": "Thalita Fazion (composição)",
     "cpf": "402.805.298-05",
     "renda": "—",
     "aluguel": "—",
@@ -270,17 +340,7 @@
     "phone": "5511943378640"
   },
   {
-    "nome": "?",
-    "cpf": "030.156.992-45",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "556899009209"
-  },
-  {
-    "nome": "?",
+    "nome": "Lucileide Cardoso de Lima",
     "cpf": "010.506.636-24",
     "renda": "—",
     "aluguel": "—",
@@ -290,27 +350,7 @@
     "phone": "553898670481"
   },
   {
-    "nome": "?",
-    "cpf": "101.905.248-12",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5511996263851"
-  },
-  {
-    "nome": "?",
-    "cpf": "026.040.211-70",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "554399373024"
-  },
-  {
-    "nome": "?",
+    "nome": "Eric S Rocha",
     "cpf": "405.056.248-00",
     "renda": "—",
     "aluguel": "—",
@@ -320,17 +360,7 @@
     "phone": "5521979284787"
   },
   {
-    "nome": "?",
-    "cpf": "449.422.138-43",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5517988107474"
-  },
-  {
-    "nome": "?",
+    "nome": "Lucinda das Dores Dias",
     "cpf": "109.276.838-65",
     "renda": "—",
     "aluguel": "—",
@@ -340,17 +370,7 @@
     "phone": "5517996643561"
   },
   {
-    "nome": "?",
-    "cpf": "055.684.757-17",
-    "renda": "—",
-    "aluguel": "—",
-    "profissao": "—",
-    "documentacao": "Aguardando consulta",
-    "prioridade": "Média",
-    "phone": "5521965376799"
-  },
-  {
-    "nome": "?",
+    "nome": "Helena Mônica",
     "cpf": "263.680.918-00",
     "renda": "—",
     "aluguel": "—",
@@ -358,5 +378,15 @@
     "documentacao": "Aguardando consulta",
     "prioridade": "Média",
     "phone": "5511996474402"
+  },
+  {
+    "nome": "Wilber Mesquita",
+    "cpf": "176.189.227-48",
+    "renda": "—",
+    "aluguel": "—",
+    "profissao": "—",
+    "documentacao": "Aguardando consulta",
+    "prioridade": "Média",
+    "phone": "5511963639064"
   }
 ]
